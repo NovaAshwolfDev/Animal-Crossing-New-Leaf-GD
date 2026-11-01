@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="1.4.1" xmlns="http://www.collada.org/2005/11/COLLADASchema">
+  <asset>
+    <created>2026-11-01T23:37:26.60409+00:00</created>
+    <modified>2026-11-01T23:37:26.6040904+00:00</modified>
+    <up_axis>Y_UP</up_axis>
+  </asset>
+  <library_images>
+    <image id="m32_image_32">
+      <init_from>t_fg_book.png</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="m32_material_0" name="m_fg_book">
+      <instance_effect url="#m32_effect_0" />
+    </material>
+  </library_materials>
+  <library_effects>
+    <effect id="m32_effect_0" name="m_fg_book">
+      <profile_COMMON>
+        <newparam sid="surface_0">
+          <surface type="2D">
+            <init_from>m32_image_32</init_from>
+            <format>PNG</format>
+          </surface>
+        </newparam>
+        <newparam sid="sampler_0">
+          <sampler2D>
+            <source>surface_0</source>
+            <wrap_s>WRAP</wrap_s>
+            <wrap_t>WRAP</wrap_t>
+            <minfilter>LINEAR_MIPMAP_NEAREST</minfilter>
+            <magfilter>LINEAR</magfilter>
+            <mipfilter>LINEAR</mipfilter>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color>0 0 0 0</color>
+            </emission>
+            <ambient>
+              <color>1 1 1 0</color>
+            </ambient>
+            <diffuse>
+              <texture texture="sampler_0" texcoord="UV0" />
+            </diffuse>
+            <specular>
+              <color>0.8 0.8 0.8 0</color>
+            </specular>
+            <transparent opaque="A_ONE">
+              <texture texture="sampler_0" texcoord="UV0" />
+            </transparent>
+          </phong>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="SPICA">
+          <pica_material encoding="json" xmlns="urn:spica:collada:1">{"Name":"m_fg_book","textureNames":["t_fg_book",null,null],"EnabledTextures":[true,false,false,false],"TextureMappers":[{"WrapU":"Repeat","WrapV":"Repeat","SamplerType":0,"MagFilter":"Linear","MinFilter":"LinearMipmapNearest","MinLOD":0,"LODBias":0,"BorderColor":{"R":0,"G":0,"B":0,"A":255}},{"WrapU":"ClampToEdge","WrapV":"ClampToEdge","SamplerType":0,"MagFilter":"Nearest","MinFilter":"Nearest","MinLOD":0,"LODBias":0,"BorderColor":{"R":0,"G":0,"B":0,"A":0}},{"WrapU":"ClampToEdge","WrapV":"ClampToEdge","SamplerType":0,"MagFilter":"Nearest","MinFilter":"Nearest","MinLOD":0,"LODBias":0,"BorderColor":{"R":0,"G":0,"B":0,"A":0}}],"TextureCoords":[{"Flags":0,"TransformType":"DccMaya","MappingType":"UvCoordinateMap","ReferenceCameraIndex":0,"Scale":{"X":1,"Y":1},"Rotation":0,"Translation":{"X":0,"Y":0}},{"Flags":0,"TransformType":"DccMaya","MappingType":"UvCoordinateMap","ReferenceCameraIndex":0,"Scale":{"X":0,"Y":0},"Rotation":0,"Translation":{"X":0,"Y":0}},{"Flags":0,"TransformType":"DccMaya","MappingType":"UvCoordinateMap","ReferenceCameraIndex":0,"Scale":{"X":0,"Y":0},"Rotation":0,"Translation":{"X":0,"Y":0}}],"TextureSources":[0,0,0,0],"TexCoordConfig":"Config0120","EmissionColor":{"R":0,"G":0,"B":0,"A":0},"AmbientColor":{"R":255,"G":255,"B":255,"A":0},"DiffuseColor":{"R":255,"G":255,"B":255,"A":255},"Specular0Color":{"R":204,"G":204,"B":204,"A":0},"Specular1Color":{"R":204,"G":204,"B":204,"A":0},"Constant0Color":{"R":0,"G":0,"B":0,"A":255},"Constant1Color":{"R":0,"G":0,"B":0,"A":255},"Constant2Color":{"R":0,"G":0,"B":0,"A":255},"Constant3Color":{"R":0,"G":0,"B":0,"A":255},"Constant4Color":{"R":0,"G":0,"B":0,"A":255},"Constant5Color":{"R":0,"G":0,"B":0,"A":255},"ColorScale":0,"TexEnvStages":[{"IsColorPassThrough":false,"IsAlphaPassThrough":false,"Source":{"Color":["FragmentPrimaryColor","PrimaryColor","PrimaryColor"],"Alpha":["PrimaryColor","Texture0","Constant"]},"Operand":{"Color":["Color","Color","Alpha"],"Alpha":["Alpha","Alpha","Alpha"]},"Combiner":{"Color":"AddMult","Alpha":"Modulate"},"Color":{"R":0,"G":0,"B":0,"A":255},"Scale":{"Color":"One","Alpha":"One"},"UpdateColorBuffer":false,"UpdateAlphaBuffer":false},{"IsColorPassThrough":false,"IsAlphaPassThrough":true,"Source":{"Color":["Texture0","FragmentSecondaryColor","Constant"],"Alpha":["Previous","FragmentPrimaryColor","Constant"]},"Operand":{"Color":["Alpha","Color","Color"],"Alpha":["Alpha","Alpha","Alpha"]},"Combiner":{"Color":"Modulate","Alpha":"Replace"},"Color":{"R":0,"G":0,"B":0,"A":255},"Scale":{"Color":"One","Alpha":"One"},"UpdateColorBuffer":true,"UpdateAlphaBuffer":false},{"IsColorPassThrough":false,"IsAlphaPassThrough":true,"Source":{"Color":["Previous","PreviousBuffer","Constant"],"Alpha":["Previous","FragmentPrimaryColor","Constant"]},"Operand":{"Color":["Color","Color","Color"],"Alpha":["Alpha","Alpha","Alpha"]},"Combiner":{"Color":"Modulate","Alpha":"Replace"},"Color":{"R":0,"G":0,"B":0,"A":255},"Scale":{"Color":"One","Alpha":"One"},"UpdateColorBuffer":false,"UpdateAlphaBuffer":false},{"IsColorPassThrough":false,"IsAlphaPassThrough":true,"Source":{"Color":["Texture0","PreviousBuffer","Previous"],"Alpha":["Previous","FragmentPrimaryColor","Constant"]},"Operand":{"Color":["Color","Color","Color"],"Alpha":["Alpha","Alpha","Alpha"]},"Combiner":{"Color":"MultAdd","Alpha":"Replace"},"Color":{"R":0,"G":0,"B":0,"A":255},"Scale":{"Color":"One","Alpha":"One"},"UpdateColorBuffer":false,"UpdateAlphaBuffer":false},{"IsColorPassThrough":true,"IsAlphaPassThrough":true,"Source":{"Color":["Previous","FragmentPrimaryColor","Constant"],"Alpha":["Previous","FragmentPrimaryColor","Constant"]},"Operand":{"Color":["Color","Color","Color"],"Alpha":["Alpha","Alpha","Alpha"]},"Combiner":{"Color":"Replace","Alpha":"Replace"},"Color":{"R":0,"G":0,"B":0,"A":255},"Scale":{"Color":"One","Alpha":"One"},"UpdateColorBuffer":false,"UpdateAlphaBuffer":false},{"IsColorPassThrough":true,"IsAlphaPassThrough":true,"Source":{"Color":["Previous","FragmentPrimaryColor","Constant"],"Alpha":["Previous","FragmentPrimaryColor","Constant"]},"Operand":{"Color":["Color","Color","Color"],"Alpha":["Alpha","Alpha","Alpha"]},"Combiner":{"Color":"Replace","Alpha":"Replace"},"Color":{"R":0,"G":0,"B":0,"A":255},"Scale":{"Color":"One","Alpha":"One"},"UpdateColorBuffer":false,"UpdateAlphaBuffer":false}],"TexEnvBufferColor":{"R":0,"G":0,"B":0,"A":255},"ColorOperation":{"FragOpMode":"Default","BlendMode":"Blend"},"BlendFunction":{"ColorEquation":"FuncAdd","AlphaEquation":"FuncAdd","ColorSrcFunc":"One","ColorDstFunc":"Zero","AlphaSrcFunc":"One","AlphaDstFunc":"Zero"},"BlendColor":{"R":0,"G":0,"B":0,"A":255},"AlphaTest":{"Enabled":true,"Function":"Greater","Reference":20},"DepthColorMask":{"Enabled":true,"DepthFunc":"Less","RedWrite":true,"GreenWrite":true,"BlueWrite":true,"AlphaWrite":true,"DepthWrite":true},"StencilTest":{"Enabled":false,"Function":"Never","BufferMask":0,"Reference":0,"Mask":255},"StencilOperation":{"FailOp":"Keep","ZFailOp":"Keep","ZPassOp":"Keep"},"FaceCulling":"BackFace","BumpMode":"NotUsed","BumpTexture":0,"ShaderReference":"0@DefaultShader","VtxShaderUniforms":{},"GeoShaderUniforms":{},"LUTDist0TableName":"lu_fg","LUTDist1TableName":"lu_fg","LUTFresnelTableName":null,"LUTReflecRTableName":null,"LUTReflecGTableName":null,"LUTReflecBTableName":null}</pica_material>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_geometries>
+    <geometry id="m32_mesh_0_0" name="Mesh_0_0">
+      <mesh>
+        <source id="m32_mesh_0_0_position_id" name="m32_mesh_0_0_position">
+          <float_array id="m32_mesh_0_0_position_array_id" count="162">4.854424 4.406283 -0.8648448 5.21251 5.070767 1.161744 2.942749 3.977304 3.75604 6.743558 6.668567 -0.3728605 6.652773 3.532687 -1.221947 4.381784 5.837613 -3.165984 1.987847 6.174279 -5.332802 6.695499 1.723994 -1.892719 1.04627 0.01322414 4.628376 6.736207 0.9189315 -2.257236 1.389043 3.180844 5.422906 -2.595321 4.062402 -9.19276 6.652773 3.532687 -1.221947 -2.443589 5.464502 -8.841072 0.732024 1.523274 5.6147 0.6262227 0.5455077 5.369447 -2.649196 3.254881 -9.63584 -2.210919 7.305108 -8.619935 -7.99636 5.516793 -1.955698 0.8378311 2.50104 5.859946 2.942749 3.977304 3.75604 -8.339134 2.349165 -2.750231 1.987847 6.174279 -5.332802 -8.653379 3.859217 -1.763906 -8.75918 2.881456 -2.009157 -8.547573 4.83698 -1.51866 2.942749 3.977304 3.75604 4.381784 5.837613 -3.165984 1.987847 6.174279 -5.332802 5.21251 5.070767 1.161744 -7.99636 5.516793 -1.955698 1.389043 3.180844 5.422906 6.743558 6.668567 -0.3728605 -2.210919 7.305108 -8.619935 -8.547573 4.83698 -1.51866 0.8378311 2.50104 5.859946 -8.653379 3.859217 -1.763906 0.732024 1.523274 5.6147 -8.75918 2.881456 -2.009157 0.6262227 0.5455077 5.369447 -8.339134 2.349165 -2.750231 1.04627 0.01322414 4.628376 -2.649196 3.254881 -9.63584 6.736207 0.9189315 -2.257236 -7.660181 4.867636 -6.328633 -6.852677 3.997608 -1.962196 -4.983436 4.266212 -4.224236 -9.529422 4.599031 -4.066592 -7.660181 4.867636 -6.328633 -9.961248 4.110542 -6.693624 -9.529422 4.599031 -4.066592 -7.660181 4.867636 -6.328633 -7.650031 3.910925 -8.615092 -9.961248 4.110542 -6.693624</float_array>
+          <technique_common>
+            <accessor source="#m32_mesh_0_0_position_array_id" count="54" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="m32_mesh_0_0_normal_id" name="m32_mesh_0_0_normal">
+          <float_array id="m32_mesh_0_0_normal_array_id" count="162">0.95692426 -0.27452746 -0.12549827 0.5804295 0.30590203 0.7529896 0.32943293 0.81573874 0.4706185 0.9177061 -0.3764948 -0.14118555 0.93339336 0.35296386 0.007843642 0.16471647 0.96476793 -0.20393468 0.42355666 0.8941751 -0.1490292 0.9961425 0.031374566 -0.07843642 0.48630577 -0.7373023 0.46277484 0.82358235 -0.54121125 -0.18040375 0.6039604 0.1490292 0.7765205 -0.07843642 0.40002573 -0.9098624 0.93339336 0.35296386 0.007843642 -0.086280055 0.19609104 -0.97261155 0.2823711 -0.25884017 0.9255497 -0.15687284 -0.5647422 0.80789506 -0.13334191 -0.5961168 -0.7922078 -0.070592776 0.69024044 -0.721615 -0.6039604 0.78436416 -0.15687284 -0.10196734 0.16471647 0.9804552 0.32943293 0.81573874 0.4706185 -0.831426 -0.17256011 -0.52552396 0.42355666 0.8941751 -0.1490292 -0.98829883 0.12549827 -0.07843642 -0.9098624 -0.34512022 0.24315289 -0.83926964 0.38433844 0.39218208 0.32943293 0.81573874 0.4706185 0.16471647 0.96476793 -0.20393468 0.42355666 0.8941751 -0.1490292 0.5804295 0.30590203 0.7529896 -0.6039604 0.78436416 -0.15687284 0.6039604 0.1490292 0.7765205 0.9177061 -0.3764948 -0.14118555 -0.070592776 0.69024044 -0.721615 -0.83926964 0.38433844 0.39218208 -0.10196734 0.16471647 0.9804552 -0.98829883 0.12549827 -0.07843642 0.2823711 -0.25884017 0.9255497 -0.9098624 -0.34512022 0.24315289 -0.15687284 -0.5647422 0.80789506 -0.831426 -0.17256011 -0.52552396 0.48630577 -0.7373023 0.46277484 -0.13334191 -0.5961168 -0.7922078 0.82358235 -0.54121125 -0.18040375 0.07843642 0.9804552 0.18040375 0.07843642 0.9804552 0.18040375 0.07843642 0.9804552 0.18040375 0.07843642 0.9804552 0.18040375 -0.29021475 0.94908065 -0.12549827 -0.29021475 0.94908065 -0.12549827 -0.29021475 0.94908065 -0.12549827 -0.23530924 0.8941751 -0.3764948 -0.23530924 0.8941751 -0.3764948 -0.23530924 0.8941751 -0.3764948</float_array>
+          <technique_common>
+            <accessor source="#m32_mesh_0_0_normal_array_id" count="54" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="m32_mesh_0_0_uv0_id" name="m32_mesh_0_0_uv0">
+          <float_array id="m32_mesh_0_0_uv0_array_id" count="108">0.901754 0.0781971 0.843686 0.0563377 0.843686 0.00318483 0.843686 0.139267 0.994482 0.00318483 0.931453 0.139267 0.994482 0.139267 0.281669 0.0508569 0.0561742 0.0138024 0.281669 0.0138024 0.0561742 0.132125 0.562929 0.0508569 0.281669 0.13135 0.562929 0.0911343 0.017285 0.0740676 0.0233153 0.0373644 0.562929 0.0138024 0.562929 0.138989 0.779373 0.131718 0.0257301 0.116573 0.156411 0.14111 0.779373 0.0138024 0.405921 0.138829 0.818521 0.0858269 0.814128 0.0380604 0.807593 0.121619 0.719705 0.185284 0.98442 0.387922 0.98442 0.526075 0.915845 0.185284 0.620399 0.784081 0.620399 0.185284 0.98442 0.185284 0.98442 0.784081 0.537385 0.784081 0.537385 0.185284 0.503624 0.784081 0.503624 0.185284 0.466968 0.784081 0.466968 0.185284 0.40022 0.784081 0.40022 0.185284 0.0281466 0.784081 0.0281466 0.185284 0.619349 0.825413 0.0774827 0.979233 0.0774827 0.825413 0.619349 0.979233 0.619349 0.825413 0.925457 0.979233 0.619349 0.979233 0.619349 0.825413 0.925457 0.825413 0.925457 0.979233</float_array>
+          <technique_common>
+            <accessor source="#m32_mesh_0_0_uv0_array_id" count="54" stride="2">
+              <param name="S" type="float" />
+              <param name="T" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="m32_mesh_0_0_mapped_uv0_id" name="m32_mesh_0_0_mapped_uv0">
+          <float_array id="m32_mesh_0_0_mapped_uv0_array_id" count="108">0.901754 0.0781971 0.843686 0.0563377 0.843686 0.00318483 0.843686 0.139267 0.994482 0.00318483 0.931453 0.139267 0.994482 0.139267 0.281669 0.0508569 0.0561742 0.0138024 0.281669 0.0138024 0.0561742 0.132125 0.562929 0.0508569 0.281669 0.13135 0.562929 0.0911343 0.017285 0.0740676 0.0233153 0.0373644 0.562929 0.0138024 0.562929 0.138989 0.779373 0.131718 0.0257301 0.116573 0.156411 0.14111 0.779373 0.0138024 0.405921 0.138829 0.818521 0.0858269 0.814128 0.0380604 0.807593 0.121619 0.719705 0.185284 0.98442 0.387922 0.98442 0.526075 0.915845 0.185284 0.620399 0.784081 0.620399 0.185284 0.98442 0.185284 0.98442 0.784081 0.537385 0.784081 0.537385 0.185284 0.503624 0.784081 0.503624 0.185284 0.466968 0.784081 0.466968 0.185284 0.40022 0.784081 0.40022 0.185284 0.0281466 0.784081 0.0281466 0.185284 0.619349 0.825413 0.0774827 0.979233 0.0774827 0.825413 0.619349 0.979233 0.619349 0.825413 0.925457 0.979233 0.619349 0.979233 0.619349 0.825413 0.925457 0.825413 0.925457 0.979233</float_array>
+          <technique_common>
+            <accessor source="#m32_mesh_0_0_mapped_uv0_array_id" count="54" stride="2">
+              <param name="S" type="float" />
+              <param name="T" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="m32_mesh_0_0_vertices">
+          <input semantic="POSITION" source="#m32_mesh_0_0_position_id" />
+        </vertices>
+        <triangles material="material_0" count="46">
+          <input semantic="VERTEX" source="#m32_mesh_0_0_vertices" offset="0" />
+          <input semantic="NORMAL" source="#m32_mesh_0_0_normal_id" offset="0" />
+          <input semantic="TEXCOORD" source="#m32_mesh_0_0_uv0_id" offset="0" set="0" />
+          <input semantic="TEXCOORD" source="#m32_mesh_0_0_mapped_uv0_id" offset="0" set="3" />
+          <p>0 1 2 0 3 1 0 2 4 0 5 3 0 4 6 0 6 5 7 8 9 7 10 8 7 9 11 7 12 10 7 11 13 7 13 12 8 10 14 8 14 15 9 16 11 13 17 12 13 11 18 13 18 17 10 19 14 10 12 20 16 21 11 11 21 18 17 22 12 21 23 18 21 24 23 18 23 25 26 27 28 26 29 27 26 28 30 26 30 31 29 32 27 28 33 30 31 30 34 31 34 35 34 36 35 36 37 35 36 38 37 38 39 37 38 40 39 40 41 39 40 42 41 42 43 41 44 45 46 44 47 45 48 49 50 51 52 53</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="m32_scene" name="fg_book">
+      <node id="m32_model" name="fg_book" type="NODE">
+        <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <node id="m32_mesh_0_0_node" name="Mesh_0_0" type="NODE">
+          <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+          <instance_geometry url="#m32_mesh_0_0">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="material_0" target="#m32_material_0">
+                  <bind_vertex_input semantic="UV0" input_semantic="TEXCOORD" input_set="3" />
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+          <extra>
+            <technique profile="SPICA">
+              <mesh encoding="json" xmlns="urn:spica:collada:1">{"Type":"Normal","Layer":0,"Priority":0,"NodeIndex":65535,"Skinning":"None","visible":true}</mesh>
+            </technique>
+          </extra>
+        </node>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#m32_scene" />
+  </scene>
+  <extra>
+    <technique profile="SPICA">
+      <export_report encoding="json" xmlns="urn:spica:collada:1">{"version":1,"model":"fg_book","FramesPerSecond":30,"SamplesPerFrame":4,"warnings":["Material \u0027m_fg_book\u0027 uses a standard shading fallback. Original PICA material state is stored in SPICA extras; generic importers do not reproduce the game shader."]}</export_report>
+    </technique>
+  </extra>
+</COLLADA>

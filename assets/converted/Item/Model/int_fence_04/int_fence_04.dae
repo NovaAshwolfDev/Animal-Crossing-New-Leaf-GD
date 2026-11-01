@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="1.4.1" xmlns="http://www.collada.org/2005/11/COLLADASchema">
+  <asset>
+    <created>2026-11-01T23:38:47.3218614+00:00</created>
+    <modified>2026-11-01T23:38:47.3218618+00:00</modified>
+    <up_axis>Y_UP</up_axis>
+  </asset>
+  <library_images>
+    <image id="m0_image_0">
+      <init_from>int_fence_04.png</init_from>
+    </image>
+    <image id="m0_image_1">
+      <init_from>int_fence_shadowA.png</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="m0_material_0" name="m_int_fence">
+      <instance_effect url="#m0_effect_0" />
+    </material>
+    <material id="m0_material_1" name="m_int_fence_shadow">
+      <instance_effect url="#m0_effect_1" />
+    </material>
+  </library_materials>
+  <library_effects>
+    <effect id="m0_effect_0" name="m_int_fence">
+      <profile_COMMON>
+        <newparam sid="surface_0">
+          <surface type="2D">
+            <init_from>m0_image_0</init_from>
+            <format>PNG</format>
+          </surface>
+        </newparam>
+        <newparam sid="sampler_0">
+          <sampler2D>
+            <source>surface_0</source>
+            <wrap_s>CLAMP</wrap_s>
+            <wrap_t>CLAMP</wrap_t>
+            <minfilter>LINEAR_MIPMAP_NEAREST</minfilter>
+            <magfilter>LINEAR</magfilter>
+            <mipfilter>LINEAR</mipfilter>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color>0 0 0 0</color>
+            </emission>
+            <ambient>
+              <color>1 1 1 0</color>
+            </ambient>
+            <diffuse>
+              <texture texture="sampler_0" texcoord="UV0" />
+            </diffuse>
+            <specular>
+              <color>0.6784314 0.69803923 0.6901961 0</color>
+            </specular>
+          </phong>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="SPICA">
+          <pica_material encoding="json" xmlns="urn:spica:collada:1">{"Name":"m_int_fence","textureNames":["int_fence_04",null,null],"EnabledTextures":[true,false,false,false],"TextureMappers":[{"WrapU":"ClampToEdge","WrapV":"ClampToEdge","SamplerType":0,"MagFilter":"Linear","MinFilter":"LinearMipmapNearest","MinLOD":0,"LODBias":0,"BorderColor":{"R":0,"G":0,"B":0,"A":255}},{"WrapU":"ClampToEdge","WrapV":"ClampToEdge","SamplerType":0,"MagFilter":"Nearest","MinFilter":"Nearest","MinLOD":0,"LODBias":0,"BorderColor":{"R":0,"G":0,"B":0,"A":0}},{"WrapU":"ClampToEdge","WrapV":"ClampToEdge","SamplerType":0,"MagFilter":"Nearest","MinFilter":"Nearest","MinLOD":0,"LODBias":0,"BorderColor":{"R":0,"G":0,"B":0,"A":0}}],"TextureCoords":[{"Flags":0,"TransformType":"DccMaya","MappingType":"UvCoordinateMap","ReferenceCameraIndex":0,"Scale":{"X":1,"Y":1},"Rotation":0,"Translation":{"X":0,"Y":0}},{"Flags":0,"TransformType":"DccMaya","MappingType":"UvCoordinateMap","ReferenceCameraIndex":0,"Scale":{"X":0,"Y":0},"Rotation":0,"Translation":{"X":0,"Y":0}},{"Flags":0,"TransformType":"DccMaya","MappingType":"UvCoordinateMap","ReferenceCameraIndex":0,"Scale":{"X":0,"Y":0},"Rotation":0,"Translation":{"X":0,"Y":0}}],"TextureSources":[0,0,0,0],"TexCoordConfig":"Config0120","EmissionColor":{"R":0,"G":0,"B":0,"A":0},"AmbientColor":{"R":255,"G":255,"B":255,"A":0},"DiffuseColor":{"R":255,"G":255,"B":255,"A":255},"Specular0Color":{"R":173,"G":178,"B":176,"A":0},"Specular1Color":{"R":171,"G":186,"B":166,"A":0},"Constant0Color":{"R":0,"G":0,"B":0,"A":255},"Constant1Color":{"R":0,"G":0,"B":0,"A":255},"Constant2Color":{"R":0,"G":0,"B":0,"A":255},"Constant3Color":{"R":0,"G":0,"B":0,"A":255},"Constant4Color":{"R":0,"G":0,"B":0,"A":255},"Constant5Color":{"R":0,"G":0,"B":0,"A":255},"ColorScale":1,"TexEnvStages":[{"IsColorPassThrough":false,"IsAlphaPassThrough":false,"Source":{"Color":["FragmentPrimaryColor","PrimaryColor","PrimaryColor"],"Alpha":["PrimaryColor","Texture0","Constant"]},"Operand":{"Color":["Color","Color","Alpha"],"Alpha":["Alpha","Alpha","Alpha"]},"Combiner":{"Color":"AddMult","Alpha":"Modulate"},"Color":{"R":0,"G":0,"B":0,"A":255},"Scale":{"Color":"One","Alpha":"One"},"UpdateColorBuffer":false,"UpdateAlphaBuffer":false},{"IsColorPassThrough":false,"IsAlphaPassThrough":true,"Source":{"Color":["FragmentSecondaryColor","Texture0","Constant"],"Alpha":["Previous","FragmentPrimaryColor","Constant"]},"Operand":{"Color":["Color","Alpha","Color"],"Alpha":["Alpha","Alpha","Alpha"]},"Combiner":{"Color":"Modulate","Alpha":"Replace"},"Color":{"R":0,"G":0,"B":0,"A":255},"Scale":{"Color":"One","Alpha":"One"},"UpdateColorBuffer":true,"UpdateAlphaBuffer":false},{"IsColorPassThrough":false,"IsAlphaPassThrough":true,"Source":{"Color":["Previous","PreviousBuffer","Previous"],"Alpha":["Previous","FragmentPrimaryColor","Constant"]},"Operand":{"Color":["Color","Color","Color"],"Alpha":["Alpha","Alpha","Alpha"]},"Combiner":{"Color":"MultAdd","Alpha":"Replace"},"Color":{"R":0,"G":0,"B":0,"A":255},"Scale":{"Color":"One","Alpha":"One"},"UpdateColorBuffer":false,"UpdateAlphaBuffer":false},{"IsColorPassThrough":false,"IsAlphaPassThrough":true,"Source":{"Color":["Texture0","PreviousBuffer","Previous"],"Alpha":["Previous","FragmentPrimaryColor","Constant"]},"Operand":{"Color":["Color","Color","Color"],"Alpha":["Alpha","Alpha","Alpha"]},"Combiner":{"Color":"MultAdd","Alpha":"Replace"},"Color":{"R":0,"G":0,"B":0,"A":255},"Scale":{"Color":"One","Alpha":"One"},"UpdateColorBuffer":false,"UpdateAlphaBuffer":false},{"IsColorPassThrough":true,"IsAlphaPassThrough":true,"Source":{"Color":["Previous","FragmentPrimaryColor","Constant"],"Alpha":["Previous","FragmentPrimaryColor","Constant"]},"Operand":{"Color":["Color","Color","Color"],"Alpha":["Alpha","Alpha","Alpha"]},"Combiner":{"Color":"Replace","Alpha":"Replace"},"Color":{"R":0,"G":0,"B":0,"A":255},"Scale":{"Color":"One","Alpha":"One"},"UpdateColorBuffer":false,"UpdateAlphaBuffer":false},{"IsColorPassThrough":true,"IsAlphaPassThrough":true,"Source":{"Color":["Previous","FragmentPrimaryColor","Constant"],"Alpha":["Previous","FragmentPrimaryColor","Constant"]},"Operand":{"Color":["Color","Color","Color"],"Alpha":["Alpha","Alpha","Alpha"]},"Combiner":{"Color":"Replace","Alpha":"Replace"},"Color":{"R":0,"G":0,"B":0,"A":255},"Scale":{"Color":"One","Alpha":"One"},"UpdateColorBuffer":false,"UpdateAlphaBuffer":false}],"TexEnvBufferColor":{"R":0,"G":0,"B":0,"A":255},"ColorOperation":{"FragOpMode":"Default","BlendMode":"Blend"},"BlendFunction":{"ColorEquation":"FuncAdd","AlphaEquation":"FuncAdd","ColorSrcFunc":"One","ColorDstFunc":"Zero","AlphaSrcFunc":"One","AlphaDstFunc":"Zero"},"BlendColor":{"R":0,"G":0,"B":0,"A":255},"AlphaTest":{"Enabled":false,"Function":"Greater","Reference":48},"DepthColorMask":{"Enabled":true,"DepthFunc":"Less","RedWrite":true,"GreenWrite":true,"BlueWrite":true,"AlphaWrite":true,"DepthWrite":true},"StencilTest":{"Enabled":false,"Function":"Never","BufferMask":0,"Reference":0,"Mask":255},"StencilOperation":{"FailOp":"Keep","ZFailOp":"Keep","ZPassOp":"Keep"},"FaceCulling":"BackFace","BumpMode":"NotUsed","BumpTexture":0,"ShaderReference":"0@DefaultShader","VtxShaderUniforms":{},"GeoShaderUniforms":{},"LUTDist0TableName":"lu_int_mtl1","LUTDist1TableName":"lu_int_spc1","LUTFresnelTableName":null,"LUTReflecRTableName":null,"LUTReflecGTableName":null,"LUTReflecBTableName":null}</pica_material>
+        </technique>
+      </extra>
+    </effect>
+    <effect id="m0_effect_1" name="m_int_fence_shadow">
+      <profile_COMMON>
+        <newparam sid="surface_0">
+          <surface type="2D">
+            <init_from>m0_image_1</init_from>
+            <format>PNG</format>
+          </surface>
+        </newparam>
+        <newparam sid="sampler_0">
+          <sampler2D>
+            <source>surface_0</source>
+            <wrap_s>WRAP</wrap_s>
+            <wrap_t>WRAP</wrap_t>
+            <minfilter>LINEAR_MIPMAP_NEAREST</minfilter>
+            <magfilter>LINEAR</magfilter>
+            <mipfilter>LINEAR</mipfilter>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color>0 0 0 0</color>
+            </emission>
+            <ambient>
+              <color>1 1 1 0</color>
+            </ambient>
+            <diffuse>
+              <texture texture="sampler_0" texcoord="UV0" />
+            </diffuse>
+            <specular>
+              <color>1 1 1 0</color>
+            </specular>
+          </phong>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="SPICA">
+          <pica_material encoding="json" xmlns="urn:spica:collada:1">{"Name":"m_int_fence_shadow","textureNames":["int_fence_shadowA",null,null],"EnabledTextures":[true,false,false,false],"TextureMappers":[{"WrapU":"Repeat","WrapV":"Repeat","SamplerType":0,"MagFilter":"Linear","MinFilter":"LinearMipmapNearest","MinLOD":0,"LODBias":0,"BorderColor":{"R":0,"G":0,"B":0,"A":255}},{"WrapU":"ClampToEdge","WrapV":"ClampToEdge","SamplerType":0,"MagFilter":"Nearest","MinFilter":"Nearest","MinLOD":0,"LODBias":0,"BorderColor":{"R":0,"G":0,"B":0,"A":0}},{"WrapU":"ClampToEdge","WrapV":"ClampToEdge","SamplerType":0,"MagFilter":"Nearest","MinFilter":"Nearest","MinLOD":0,"LODBias":0,"BorderColor":{"R":0,"G":0,"B":0,"A":0}}],"TextureCoords":[{"Flags":0,"TransformType":"DccMaya","MappingType":"UvCoordinateMap","ReferenceCameraIndex":0,"Scale":{"X":1,"Y":1},"Rotation":0,"Translation":{"X":0,"Y":0}},{"Flags":0,"TransformType":"DccMaya","MappingType":"UvCoordinateMap","ReferenceCameraIndex":0,"Scale":{"X":0,"Y":0},"Rotation":0,"Translation":{"X":0,"Y":0}},{"Flags":0,"TransformType":"DccMaya","MappingType":"UvCoordinateMap","ReferenceCameraIndex":0,"Scale":{"X":0,"Y":0},"Rotation":0,"Translation":{"X":0,"Y":0}}],"TextureSources":[0,0,0,0],"TexCoordConfig":"Config0120","EmissionColor":{"R":0,"G":0,"B":0,"A":0},"AmbientColor":{"R":255,"G":255,"B":255,"A":0},"DiffuseColor":{"R":255,"G":255,"B":255,"A":255},"Specular0Color":{"R":255,"G":255,"B":255,"A":0},"Specular1Color":{"R":0,"G":0,"B":0,"A":0},"Constant0Color":{"R":102,"G":102,"B":102,"A":32},"Constant1Color":{"R":0,"G":0,"B":0,"A":255},"Constant2Color":{"R":0,"G":0,"B":0,"A":255},"Constant3Color":{"R":0,"G":0,"B":0,"A":255},"Constant4Color":{"R":0,"G":0,"B":0,"A":255},"Constant5Color":{"R":0,"G":0,"B":0,"A":255},"ColorScale":1,"TexEnvStages":[{"IsColorPassThrough":false,"IsAlphaPassThrough":false,"Source":{"Color":["Texture0","Constant","Constant"],"Alpha":["Texture0","Texture0","Constant"]},"Operand":{"Color":["OneMinusRed","Alpha","Color"],"Alpha":["Alpha","Alpha","Alpha"]},"Combiner":{"Color":"Modulate","Alpha":"Replace"},"Color":{"R":0,"G":0,"B":0,"A":255},"Scale":{"Color":"One","Alpha":"One"},"UpdateColorBuffer":false,"UpdateAlphaBuffer":false},{"IsColorPassThrough":false,"IsAlphaPassThrough":true,"Source":{"Color":["Previous","Constant","Texture0"],"Alpha":["Previous","Texture0","Texture0"]},"Operand":{"Color":["OneMinusRed","Color","Color"],"Alpha":["Alpha","Alpha","Alpha"]},"Combiner":{"Color":"MultAdd","Alpha":"Replace"},"Color":{"R":0,"G":0,"B":0,"A":255},"Scale":{"Color":"One","Alpha":"One"},"UpdateColorBuffer":false,"UpdateAlphaBuffer":false},{"IsColorPassThrough":true,"IsAlphaPassThrough":true,"Source":{"Color":["Previous","FragmentPrimaryColor","Constant"],"Alpha":["Previous","FragmentPrimaryColor","Constant"]},"Operand":{"Color":["Color","Color","Color"],"Alpha":["Alpha","Alpha","Alpha"]},"Combiner":{"Color":"Replace","Alpha":"Replace"},"Color":{"R":0,"G":0,"B":0,"A":255},"Scale":{"Color":"One","Alpha":"One"},"UpdateColorBuffer":false,"UpdateAlphaBuffer":false},{"IsColorPassThrough":true,"IsAlphaPassThrough":true,"Source":{"Color":["Previous","FragmentPrimaryColor","Constant"],"Alpha":["Previous","FragmentPrimaryColor","Constant"]},"Operand":{"Color":["Color","Color","Color"],"Alpha":["Alpha","Alpha","Alpha"]},"Combiner":{"Color":"Replace","Alpha":"Replace"},"Color":{"R":0,"G":0,"B":0,"A":255},"Scale":{"Color":"One","Alpha":"One"},"UpdateColorBuffer":false,"UpdateAlphaBuffer":false},{"IsColorPassThrough":true,"IsAlphaPassThrough":true,"Source":{"Color":["Previous","FragmentPrimaryColor","Constant"],"Alpha":["Previous","FragmentPrimaryColor","Constant"]},"Operand":{"Color":["Color","Color","Color"],"Alpha":["Alpha","Alpha","Alpha"]},"Combiner":{"Color":"Replace","Alpha":"Replace"},"Color":{"R":0,"G":0,"B":0,"A":255},"Scale":{"Color":"One","Alpha":"One"},"UpdateColorBuffer":false,"UpdateAlphaBuffer":false},{"IsColorPassThrough":true,"IsAlphaPassThrough":true,"Source":{"Color":["Previous","FragmentPrimaryColor","Constant"],"Alpha":["Previous","FragmentPrimaryColor","Constant"]},"Operand":{"Color":["Color","Color","Color"],"Alpha":["Alpha","Alpha","Alpha"]},"Combiner":{"Color":"Replace","Alpha":"Replace"},"Color":{"R":0,"G":0,"B":0,"A":255},"Scale":{"Color":"One","Alpha":"One"},"UpdateColorBuffer":false,"UpdateAlphaBuffer":false}],"TexEnvBufferColor":{"R":0,"G":0,"B":0,"A":255},"ColorOperation":{"FragOpMode":"Default","BlendMode":"Blend"},"BlendFunction":{"ColorEquation":"FuncAdd","AlphaEquation":"FuncAdd","ColorSrcFunc":"DestinationColor","ColorDstFunc":"Zero","AlphaSrcFunc":"One","AlphaDstFunc":"Zero"},"BlendColor":{"R":0,"G":0,"B":0,"A":255},"AlphaTest":{"Enabled":false,"Function":"Always","Reference":0},"DepthColorMask":{"Enabled":true,"DepthFunc":"Less","RedWrite":true,"GreenWrite":true,"BlueWrite":true,"AlphaWrite":true,"DepthWrite":true},"StencilTest":{"Enabled":false,"Function":"Never","BufferMask":0,"Reference":0,"Mask":255},"StencilOperation":{"FailOp":"Keep","ZFailOp":"Keep","ZPassOp":"Keep"},"FaceCulling":"BackFace","BumpMode":"NotUsed","BumpTexture":0,"ShaderReference":"0@DefaultShader","VtxShaderUniforms":{},"GeoShaderUniforms":{},"LUTDist0TableName":null,"LUTDist1TableName":null,"LUTFresnelTableName":null,"LUTReflecRTableName":null,"LUTReflecGTableName":null,"LUTReflecBTableName":null}</pica_material>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_geometries>
+    <geometry id="m0_mesh_0_0" name="Mesh_0_0">
+      <mesh>
+        <source id="m0_mesh_0_0_position_id" name="m0_mesh_0_0_position">
+          <float_array id="m0_mesh_0_0_position_array_id" count="369">5.6771984 17.304932 25.407722 6.0977316 18.566532 24.566654 4.836132 19.617865 24.566654 7.7798643 18.987064 24.566654 4.6258655 18.145998 24.566654 7.1490645 17.304932 24.566654 3.153999 17.304932 24.566654 7.7798643 16.043333 24.566654 4.836132 16.463865 24.566654 6.307998 16.043333 24.566654 5.0463986 14.991999 24.566654 -2.3129327 17.094666 25.407722 -0.4205332 18.145998 24.566654 -0.8410664 20.669197 24.566654 1.6821328 16.8844 24.566654 -2.5231993 18.987064 24.566654 -0.63079983 15.833066 24.566654 -5.0463986 19.617865 24.566654 -1.2615997 13.520133 24.566654 -3.9950655 17.094666 24.566654 -2.733466 15.202266 24.566654 -5.466932 15.202266 24.566654 8.2003975 10.996933 25.197453 8.620931 14.361199 24.77692 6.307998 13.0996 24.77692 10.933864 13.520133 24.77692 4.836132 10.996933 24.77692 10.723597 9.735334 24.77692 5.466932 8.684001 24.77692 10.723597 8.053202 25.197453 9.041464 8.473734 24.77692 11.77493 8.894268 24.77692 9.88253 7.212135 24.77692 -9.251731 13.309866 25.197453 -7.5695977 15.412533 24.77692 -9.672264 15.412533 24.77692 -6.518265 13.940666 24.77692 -11.564663 14.5714655 24.77692 -7.990131 11.417467 24.77692 -12.195463 12.679067 24.77692 -8.620931 10.155867 25.197453 -9.672264 10.996933 24.77692 -7.5695977 10.366134 24.77692 -9.672264 9.9456005 24.77692 -14.087863 3.0068026 6.9042597 -14.087863 16.8844 -10.547869 -14.087863 3.0068026 -27.999996 -14.087863 21.720531 1.6475947 -14.087863 21.930798 6.9042597 -14.087863 19.19733 12.160925 -14.087863 3.0068026 17.417591 -14.087863 21.510263 -17.9072 -14.087863 21.930798 -27.999996 -14.087863 15.833066 17.417591 -14.087863 26.76693 -22.743332 -14.087863 27.397728 -27.999996 -3.5745323 3.0068026 24.566654 1.8923994 21.720531 24.566654 -3.5745323 21.089731 24.566654 6.307998 20.248665 24.566654 -14.087863 3.0068026 24.566654 9.88253 17.935732 24.566654 14.087863 3.0068026 24.566654 -6.938798 18.987064 24.566654 14.087863 16.8844 24.566654 14.087863 16.8844 17.417591 14.087863 16.8844 24.566654 14.087863 3.0068026 17.417591 -14.087863 15.833066 24.566654 -6.938798 21.510263 -17.9072 -6.938798 26.76693 -22.743332 -14.087863 26.76693 -22.743332 -14.087863 21.510263 -17.9072 -14.087863 16.8844 -10.547869 -6.938798 16.8844 -10.547869 -14.087863 27.397728 -27.999996 -6.938798 27.397728 -27.999996 -14.087863 21.720531 1.6475947 -6.938798 21.720531 1.6475947 -14.087863 21.930798 6.9042597 -6.938798 21.930798 6.9042597 -6.938798 19.82813 12.160925 -14.087863 19.19733 12.160925 -6.938798 3.0068026 6.9042597 -6.938798 21.930798 6.9042597 -6.938798 3.0068026 17.417591 -6.938798 21.720531 1.6475947 -6.938798 16.8844 -10.547869 -6.938798 3.0068026 -10.547869 -6.938798 19.82813 12.160925 -6.938798 18.987064 17.417591 -6.938798 3.0068026 -27.999996 -6.938798 21.510263 -17.9072 -6.938798 21.930798 -27.999996 -6.938798 26.76693 -22.743332 -6.938798 27.397728 -27.999996 6.307998 20.248665 24.566654 9.88253 17.935732 24.566654 9.88253 17.935732 17.417591 6.307998 20.248665 17.417591 1.8923994 21.720531 24.566654 1.8923994 21.720531 17.417591 -3.5745323 21.089731 24.566654 -3.5745323 21.089731 17.417591 -14.087863 15.833066 24.566654 -14.087863 3.0068026 17.417591 -14.087863 3.0068026 24.566654 -14.087863 15.833066 17.417591 14.087863 16.8844 17.417591 9.88253 17.935732 24.566654 14.087863 16.8844 24.566654 9.88253 17.935732 17.417591 -3.5745323 21.089731 17.417591 -6.938798 18.987064 24.566654 -3.5745323 21.089731 24.566654 -6.938798 18.987064 17.417591 -6.938798 19.82813 12.160925 -14.087863 15.833066 17.417591 -14.087863 19.19733 12.160925 -14.087863 15.833066 24.566654 -6.938798 18.987064 17.417591 -14.087863 15.833066 17.417591 -6.938798 18.987064 24.566654</float_array>
+          <technique_common>
+            <accessor source="#m0_mesh_0_0_position_array_id" count="123" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="m0_mesh_0_0_normal_id" name="m0_mesh_0_0_normal">
+          <float_array id="m0_mesh_0_0_normal_array_id" count="369">-0.03937008 -0.023622047 1 0.11023622 0.47244096 0.87401575 -0.17322835 0.2519685 0.9527559 0.22047244 0.18897638 0.96062994 -0.47244096 0.27559054 0.8346457 0.48818898 0.007874016 0.87401575 -0.31496063 -0.05511811 0.9448819 0.22047244 -0.22047244 0.9527559 -0.4566929 -0.36220473 0.8110236 0.16535433 -0.51968503 0.8346457 -0.14173228 -0.2992126 0.9448819 -0.03937008 0.007874016 1 0.31496063 0.22047244 0.9212598 0.023622047 0.23622048 0.96850395 0.22047244 -0.007874016 0.97637796 -0.13385826 0.41732284 0.8976378 0.2913386 -0.2519685 0.9212598 -0.2047244 0.13385826 0.96850395 0 -0.24409449 0.96850395 -0.47244096 0.03937008 0.88188976 -0.18897638 -0.39370078 0.8976378 -0.23622048 -0.09448819 0.96850395 -0.015748031 0.015748031 1 -0.007874016 0.12598425 0.992126 -0.1023622 0.11023622 0.992126 0.11023622 0.05511811 0.992126 -0.12598425 0.031496063 0.992126 0.2519685 0.16535433 0.9527559 -0.07086614 -0.1023622 0.992126 0 -0.015748031 1 -0.19685039 -0.24409449 0.9527559 0.2992126 0.2519685 0.9212598 -0.2913386 -0.2992126 0.9055118 -0.007874016 0.023622047 1 0.05511811 0.11811024 0.992126 -0.031496063 0.1496063 0.992126 0.11811024 -0.007874016 0.992126 -0.09448819 0.08661418 0.992126 0.2992126 0.015748031 0.9527559 -0.11023622 -0.05511811 0.992126 0 -0.015748031 1 -0.2913386 -0.11023622 0.9527559 0.38582677 0.07086614 0.9212598 -0.4015748 -0.11811024 0.9055118 -1 0 0 -0.8582677 0.511811 0.047244094 -1 0 0 -0.4488189 0.87401575 -0.18897638 -0.48031497 0.86614174 0.16535433 -0.8503937 0.4566929 0.26771653 -1 0 0 -0.70866144 0.54330707 0.44094488 -1 0 0 -0.72440946 0.6692913 0.17322835 -0.46456692 0.77952754 0.4094488 -0.70866144 0.7007874 0.11023622 0 0 1 0.07086614 0.8897638 0.4566929 -0.22834645 0.6614173 0.71653545 0.37007874 0.8110236 0.4488189 -0.70866144 0 0.70866144 0.35433072 0.8188976 0.4488189 0.70866144 0 0.70866144 -0.4094488 0.79527557 0.4488189 0.6692913 0.51968503 0.53543305 0.78740156 0.61417323 0 0.6692913 0.51968503 0.53543305 1 0 0 -0.71653545 0.46456692 0.511811 0.70866144 0.54330707 0.44094488 0.46456692 0.77952754 0.4094488 -0.46456692 0.77952754 0.4094488 -0.70866144 0.54330707 0.44094488 -0.8582677 0.511811 0.047244094 0.8582677 0.511811 0.047244094 -0.70866144 0.7007874 0.11023622 0.70866144 0.7007874 0.11023622 -0.4488189 0.87401575 -0.18897638 0.32283464 0.93700784 -0.15748031 -0.48031497 0.86614174 0.16535433 0.70866144 0.7007874 0.11023622 0.1023622 0.9133858 0.4015748 -0.8503937 0.4566929 0.26771653 1 0 0 0.70866144 0.7007874 0.11023622 1 0 0 0.32283464 0.93700784 -0.15748031 0.8582677 0.511811 0.047244094 1 0 0 0.1023622 0.9133858 0.4015748 -0.11811024 0.992126 0.062992126 1 0 0 0.70866144 0.54330707 0.44094488 1 0 0 0.46456692 0.77952754 0.4094488 0.70866144 0.7007874 0.11023622 0.37007874 0.8110236 0.4488189 0.35433072 0.8188976 0.4488189 0.4015748 0.9133858 0 0.41732284 0.9133858 0 0.07086614 0.8897638 0.4566929 0.07874016 1 0 -0.22834645 0.6614173 0.71653545 -0.32283464 0.9448819 0 -0.71653545 0.46456692 0.511811 -1 0 0 -0.70866144 0 0.70866144 -0.72440946 0.6692913 0.17322835 0.78740156 0.61417323 0 0.35433072 0.8188976 0.4488189 0.6692913 0.51968503 0.53543305 0.4015748 0.9133858 0 -0.32283464 0.9448819 0 -0.4094488 0.79527557 0.4488189 -0.22834645 0.6614173 0.71653545 -0.11811024 0.992126 0.062992126 0.1023622 0.9133858 0.4015748 -0.72440946 0.6692913 0.17322835 -0.8503937 0.4566929 0.26771653 -0.71653545 0.46456692 0.511811 -0.11811024 0.992126 0.062992126 -0.72440946 0.6692913 0.17322835 -0.4094488 0.79527557 0.4488189</float_array>
+          <technique_common>
+            <accessor source="#m0_mesh_0_0_normal_array_id" count="123" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="m0_mesh_0_0_uv0_id" name="m0_mesh_0_0_uv0">
+          <float_array id="m0_mesh_0_0_uv0_array_id" count="246">0.669131 0.999915 0.635515 0.952949 0.583512 0.999915 0.640075 0.852049 0.635515 0.952949 0.678511 0.925992 0.640075 0.852049 0.732449 0.907859 0.678511 0.925992 0.705331 0.999915 0.732976 0.907926 0.406215 0.999915 0.3726 0.953261 0.320596 0.999915 0.377159 0.852361 0.3726 0.953261 0.415596 0.926304 0.377159 0.852361 0.469533 0.908171 0.415596 0.926304 0.442415 0.999915 0.47006 0.907614 0.480822 0.80628 0.421391 0.673416 0.394564 0.80628 0.480822 0.619424 0.421391 0.673416 0.540252 0.745652 0.480822 0.619424 0.591163 0.80628 0.540252 0.745652 0.591163 0.745595 0.591163 0.745595 0.480822 0.80628 0.421391 0.673416 0.394564 0.80628 0.480822 0.619424 0.421391 0.673416 0.540252 0.745652 0.480822 0.619424 0.591163 0.80628 0.540252 0.745652 0.591163 0.745595 0.591163 0.745595 0.710721 0 0.438071 0.500839 0.152917 0 0.628053 0.68714 0.710721 0.655633 0.759757 0.529301 0.811821 0 0.316403 0.754616 0.152917 0.754616 0.768981 0.467652 0.246567 0.902559 0.152917 0.942502 0.710721 0 0.628053 0.656488 0.710721 0.655633 0.557682 0.543713 0.874311 0 0.501387 0.452394 0.437408 0 0.765251 0.545525 0.438071 0.445212 0.501792 0.445212 0.437408 0.445212 0.501792 0 0.874311 0.460498 0.920558 0.754616 0.920558 0.933225 1 0.933225 1 0.754616 1 0.457045 0.920558 0.457045 1 0.939236 0.920558 0.939236 1.00008 0.68714 0.920558 0.68714 1.00008 0.655633 0.920558 0.655633 0.920558 0.530386 1.00008 0.517247 0.71188 0 0.71188 0.655633 0.814139 0 0.628053 0.68714 0.438071 0.500839 0.437408 0 0.762076 0.58423 0.814139 0.521183 0.152917 0 0.316403 0.754616 0.152917 0.754616 0.246567 0.902559 0.152917 0.942502 1.00008 0.543713 1 0.452394 0.920558 0.452394 0.920558 0.543713 1.00008 0.656488 0.920558 0.656488 1.00008 0.655633 0.920558 0.655633 0.858061 0.467652 0.832568 0 0.858061 0 0.832568 0.467652 0.920537 0.368483 0.99998 0.45069 0.99998 0.368483 0.920537 0.45069 0.920659 0.510567 1.00008 0.489701 1.00008 0.510567 0.920659 0.489701 0.920659 0.510567 1.00008 0.489701 1.00008 0.510567 0.789461 0.595967 0.870322 0.735738 0.870322 0.595967 0.789461 0.735738</float_array>
+          <technique_common>
+            <accessor source="#m0_mesh_0_0_uv0_array_id" count="123" stride="2">
+              <param name="S" type="float" />
+              <param name="T" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="m0_mesh_0_0_mapped_uv0_id" name="m0_mesh_0_0_mapped_uv0">
+          <float_array id="m0_mesh_0_0_mapped_uv0_array_id" count="246">0.669131 0.999915 0.635515 0.952949 0.583512 0.999915 0.640075 0.852049 0.635515 0.952949 0.678511 0.925992 0.640075 0.852049 0.732449 0.907859 0.678511 0.925992 0.705331 0.999915 0.732976 0.907926 0.406215 0.999915 0.3726 0.953261 0.320596 0.999915 0.377159 0.852361 0.3726 0.953261 0.415596 0.926304 0.377159 0.852361 0.469533 0.908171 0.415596 0.926304 0.442415 0.999915 0.47006 0.907614 0.480822 0.80628 0.421391 0.673416 0.394564 0.80628 0.480822 0.619424 0.421391 0.673416 0.540252 0.745652 0.480822 0.619424 0.591163 0.80628 0.540252 0.745652 0.591163 0.745595 0.591163 0.745595 0.480822 0.80628 0.421391 0.673416 0.394564 0.80628 0.480822 0.619424 0.421391 0.673416 0.540252 0.745652 0.480822 0.619424 0.591163 0.80628 0.540252 0.745652 0.591163 0.745595 0.591163 0.745595 0.710721 0 0.438071 0.500839 0.152917 0 0.628053 0.68714 0.710721 0.655633 0.759757 0.529301 0.811821 0 0.316403 0.754616 0.152917 0.754616 0.768981 0.467652 0.246567 0.902559 0.152917 0.942502 0.710721 0 0.628053 0.656488 0.710721 0.655633 0.557682 0.543713 0.874311 0 0.501387 0.452394 0.437408 0 0.765251 0.545525 0.438071 0.445212 0.501792 0.445212 0.437408 0.445212 0.501792 0 0.874311 0.460498 0.920558 0.754616 0.920558 0.933225 1 0.933225 1 0.754616 1 0.457045 0.920558 0.457045 1 0.939236 0.920558 0.939236 1.00008 0.68714 0.920558 0.68714 1.00008 0.655633 0.920558 0.655633 0.920558 0.530386 1.00008 0.517247 0.71188 0 0.71188 0.655633 0.814139 0 0.628053 0.68714 0.438071 0.500839 0.437408 0 0.762076 0.58423 0.814139 0.521183 0.152917 0 0.316403 0.754616 0.152917 0.754616 0.246567 0.902559 0.152917 0.942502 1.00008 0.543713 1 0.452394 0.920558 0.452394 0.920558 0.543713 1.00008 0.656488 0.920558 0.656488 1.00008 0.655633 0.920558 0.655633 0.858061 0.467652 0.832568 0 0.858061 0 0.832568 0.467652 0.920537 0.368483 0.99998 0.45069 0.99998 0.368483 0.920537 0.45069 0.920659 0.510567 1.00008 0.489701 1.00008 0.510567 0.920659 0.489701 0.920659 0.510567 1.00008 0.489701 1.00008 0.510567 0.789461 0.595967 0.870322 0.735738 0.870322 0.595967 0.789461 0.735738</float_array>
+          <technique_common>
+            <accessor source="#m0_mesh_0_0_mapped_uv0_array_id" count="123" stride="2">
+              <param name="S" type="float" />
+              <param name="T" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="m0_mesh_0_0_vertices">
+          <input semantic="POSITION" source="#m0_mesh_0_0_position_id" />
+        </vertices>
+        <triangles material="material_0" count="99">
+          <input semantic="VERTEX" source="#m0_mesh_0_0_vertices" offset="0" />
+          <input semantic="NORMAL" source="#m0_mesh_0_0_normal_id" offset="0" />
+          <input semantic="TEXCOORD" source="#m0_mesh_0_0_uv0_id" offset="0" set="0" />
+          <input semantic="TEXCOORD" source="#m0_mesh_0_0_mapped_uv0_id" offset="0" set="3" />
+          <p>0 1 2 0 3 1 0 2 4 0 5 3 0 4 6 0 7 5 0 6 8 0 9 7 0 8 10 0 10 9 11 12 13 11 14 12 11 13 15 11 16 14 11 15 17 11 18 16 11 17 19 11 20 18 11 19 21 11 21 20 22 23 24 22 25 23 22 24 26 22 27 25 22 26 28 22 29 27 22 28 30 22 30 29 27 29 31 30 32 29 33 34 35 33 36 34 33 35 37 33 38 36 33 37 39 33 40 38 33 39 41 33 41 40 38 40 42 41 43 40 44 45 46 44 47 45 44 48 47 44 49 48 44 50 49 46 45 51 46 51 52 50 53 49 51 54 52 54 55 52 56 57 58 56 59 57 56 58 60 56 61 59 56 62 61 58 63 60 62 64 61 62 65 66 62 67 65 63 68 60 69 70 71 69 71 72 69 72 73 69 73 74 70 75 71 70 76 75 73 77 74 77 78 74 77 79 78 79 80 78 79 81 80 79 82 81 83 84 85 83 86 84 83 87 86 83 88 87 85 84 89 85 89 90 88 91 87 91 92 87 91 93 92 93 94 92 93 95 94 96 97 98 96 98 99 96 99 100 99 101 100 101 102 100 101 103 102 104 105 106 104 107 105 108 109 110 108 111 109 112 113 114 112 115 113 115 116 117 116 118 117 119 120 121 119 122 120</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="m0_mesh_1_0" name="Mesh_1_0">
+      <mesh>
+        <source id="m0_mesh_1_0_position_id" name="m0_mesh_1_0_position">
+          <float_array id="m0_mesh_1_0_position_array_id" count="36">2.8897305 8 7.8897963 -24.952795 8 -23.96848 -24.952795 8 7.8897963 2.8897305 8 -23.96848 -24.952795 8 36.00004 2.8897305 8 36.00004 10.921228 8 36.00004 10.921228 8 7.8897963 -24.952795 8 -31.999977 2.8897305 8 -31.999977 18.952726 8 36.00004 18.952726 8 7.8897963</float_array>
+          <technique_common>
+            <accessor source="#m0_mesh_1_0_position_array_id" count="12" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="m0_mesh_1_0_uv0_id" name="m0_mesh_1_0_uv0">
+          <float_array id="m0_mesh_1_0_uv0_array_id" count="24">0.375 0.1875 0 0.875 0 0.1875 0.375 0.875 0 0 0.375 0 0.6875 0 0.6875 0.1875 0 1 0.375 1 1 0 1 0.1875</float_array>
+          <technique_common>
+            <accessor source="#m0_mesh_1_0_uv0_array_id" count="12" stride="2">
+              <param name="S" type="float" />
+              <param name="T" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="m0_mesh_1_0_mapped_uv0_id" name="m0_mesh_1_0_mapped_uv0">
+          <float_array id="m0_mesh_1_0_mapped_uv0_array_id" count="24">0.375 0.1875 0 0.875 0 0.1875 0.375 0.875 0 0 0.375 0 0.6875 0 0.6875 0.1875 0 1 0.375 1 1 0 1 0.1875</float_array>
+          <technique_common>
+            <accessor source="#m0_mesh_1_0_mapped_uv0_array_id" count="12" stride="2">
+              <param name="S" type="float" />
+              <param name="T" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="m0_mesh_1_0_vertices">
+          <input semantic="POSITION" source="#m0_mesh_1_0_position_id" />
+        </vertices>
+        <triangles material="material_1" count="10">
+          <input semantic="VERTEX" source="#m0_mesh_1_0_vertices" offset="0" />
+          <input semantic="TEXCOORD" source="#m0_mesh_1_0_uv0_id" offset="0" set="0" />
+          <input semantic="TEXCOORD" source="#m0_mesh_1_0_mapped_uv0_id" offset="0" set="3" />
+          <p>0 1 2 0 3 1 0 2 4 0 4 5 0 5 6 0 6 7 3 8 1 3 9 8 6 10 7 10 11 7</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="m0_scene" name="int_fence_04">
+      <node id="m0_model" name="int_fence_04" type="NODE">
+        <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <node id="m0_mesh_0_0_node" name="Mesh_0_0" type="NODE">
+          <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+          <instance_geometry url="#m0_mesh_0_0">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="material_0" target="#m0_material_0">
+                  <bind_vertex_input semantic="UV0" input_semantic="TEXCOORD" input_set="3" />
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+          <extra>
+            <technique profile="SPICA">
+              <mesh encoding="json" xmlns="urn:spica:collada:1">{"Type":"Normal","Layer":0,"Priority":0,"NodeIndex":65535,"Skinning":"None","visible":true}</mesh>
+            </technique>
+          </extra>
+        </node>
+        <node id="m0_mesh_1_0_node" name="Mesh_1_0" type="NODE">
+          <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+          <instance_geometry url="#m0_mesh_1_0">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="material_1" target="#m0_material_1">
+                  <bind_vertex_input semantic="UV0" input_semantic="TEXCOORD" input_set="3" />
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+          <extra>
+            <technique profile="SPICA">
+              <mesh encoding="json" xmlns="urn:spica:collada:1">{"Type":"Normal","Layer":1,"Priority":0,"NodeIndex":65535,"Skinning":"None","visible":true}</mesh>
+            </technique>
+          </extra>
+        </node>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#m0_scene" />
+  </scene>
+  <extra>
+    <technique profile="SPICA">
+      <export_report encoding="json" xmlns="urn:spica:collada:1">{"version":1,"model":"int_fence_04","FramesPerSecond":30,"SamplesPerFrame":4,"warnings":["Material \u0027m_int_fence\u0027 uses a standard shading fallback. Original PICA material state is stored in SPICA extras; generic importers do not reproduce the game shader.","Material \u0027m_int_fence_shadow\u0027 uses a standard shading fallback. Original PICA material state is stored in SPICA extras; generic importers do not reproduce the game shader."]}</export_report>
+    </technique>
+  </extra>
+</COLLADA>

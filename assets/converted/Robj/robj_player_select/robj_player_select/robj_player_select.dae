@@ -1,0 +1,1136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="1.4.1" xmlns="http://www.collada.org/2005/11/COLLADASchema">
+  <asset>
+    <created>2026-11-01T23:39:39.9522792+00:00</created>
+    <modified>2026-11-01T23:39:39.9522797+00:00</modified>
+    <up_axis>Y_UP</up_axis>
+  </asset>
+  <library_images>
+    <image id="m0_image_0">
+      <init_from>mask.png</init_from>
+    </image>
+    <image id="m0_image_1">
+      <init_from>noise_light.png</init_from>
+    </image>
+    <image id="m0_image_2">
+      <init_from>tex_floor.png</init_from>
+    </image>
+    <image id="m0_image_3">
+      <init_from>tex_light.png</init_from>
+    </image>
+    <image id="m0_image_4">
+      <init_from>tex_light_mask.png</init_from>
+    </image>
+    <image id="m0_image_5">
+      <init_from>tex_mol_door.png</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="m0_material_0" name="m_door">
+      <instance_effect url="#m0_effect_0" />
+    </material>
+    <material id="m0_material_1" name="m_floor">
+      <instance_effect url="#m0_effect_1" />
+    </material>
+    <material id="m0_material_2" name="m_light">
+      <instance_effect url="#m0_effect_2" />
+    </material>
+  </library_materials>
+  <library_effects>
+    <effect id="m0_effect_0" name="m_door">
+      <profile_COMMON>
+        <newparam sid="surface_0">
+          <surface type="2D">
+            <init_from>m0_image_5</init_from>
+            <format>PNG</format>
+          </surface>
+        </newparam>
+        <newparam sid="sampler_0">
+          <sampler2D>
+            <source>surface_0</source>
+            <wrap_s>MIRROR</wrap_s>
+            <wrap_t>MIRROR</wrap_t>
+            <minfilter>LINEAR_MIPMAP_NEAREST</minfilter>
+            <magfilter>LINEAR</magfilter>
+            <mipfilter>LINEAR</mipfilter>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color>0 0 0 0</color>
+            </emission>
+            <ambient>
+              <color>1 1 1 0</color>
+            </ambient>
+            <diffuse>
+              <texture texture="sampler_0" texcoord="UV0" />
+            </diffuse>
+            <specular>
+              <color>0.8 0.8 0.8 0</color>
+            </specular>
+          </phong>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="SPICA">
+          <pica_material encoding="json" xmlns="urn:spica:collada:1">{"Name":"m_door","textureNames":["tex_mol_door",null,null],"EnabledTextures":[true,false,false,false],"TextureMappers":[{"WrapU":"Mirror","WrapV":"Mirror","SamplerType":0,"MagFilter":"Linear","MinFilter":"LinearMipmapNearest","MinLOD":0,"LODBias":0,"BorderColor":{"R":0,"G":0,"B":0,"A":255}},{"WrapU":"ClampToEdge","WrapV":"ClampToEdge","SamplerType":0,"MagFilter":"Nearest","MinFilter":"Nearest","MinLOD":0,"LODBias":0,"BorderColor":{"R":0,"G":0,"B":0,"A":0}},{"WrapU":"ClampToEdge","WrapV":"ClampToEdge","SamplerType":0,"MagFilter":"Nearest","MinFilter":"Nearest","MinLOD":0,"LODBias":0,"BorderColor":{"R":0,"G":0,"B":0,"A":0}}],"TextureCoords":[{"Flags":0,"TransformType":"DccMaya","MappingType":"UvCoordinateMap","ReferenceCameraIndex":0,"Scale":{"X":1,"Y":1},"Rotation":0,"Translation":{"X":0,"Y":0}},{"Flags":0,"TransformType":"DccMaya","MappingType":"UvCoordinateMap","ReferenceCameraIndex":0,"Scale":{"X":0,"Y":0},"Rotation":0,"Translation":{"X":0,"Y":0}},{"Flags":0,"TransformType":"DccMaya","MappingType":"UvCoordinateMap","ReferenceCameraIndex":0,"Scale":{"X":0,"Y":0},"Rotation":0,"Translation":{"X":0,"Y":0}}],"TextureSources":[0,0,0,0],"TexCoordConfig":"Config0120","EmissionColor":{"R":0,"G":0,"B":0,"A":0},"AmbientColor":{"R":255,"G":255,"B":255,"A":0},"DiffuseColor":{"R":255,"G":255,"B":255,"A":255},"Specular0Color":{"R":204,"G":204,"B":204,"A":0},"Specular1Color":{"R":204,"G":204,"B":204,"A":0},"Constant0Color":{"R":0,"G":0,"B":0,"A":255},"Constant1Color":{"R":0,"G":0,"B":0,"A":255},"Constant2Color":{"R":0,"G":0,"B":0,"A":255},"Constant3Color":{"R":0,"G":0,"B":0,"A":255},"Constant4Color":{"R":0,"G":0,"B":0,"A":255},"Constant5Color":{"R":0,"G":0,"B":0,"A":255},"ColorScale":1,"TexEnvStages":[{"IsColorPassThrough":false,"IsAlphaPassThrough":false,"Source":{"Color":["FragmentPrimaryColor","PrimaryColor","Constant"],"Alpha":["PrimaryColor","Texture0","Constant"]},"Operand":{"Color":["Color","Color","Color"],"Alpha":["Alpha","Alpha","Alpha"]},"Combiner":{"Color":"Add","Alpha":"Modulate"},"Color":{"R":0,"G":0,"B":0,"A":255},"Scale":{"Color":"One","Alpha":"One"},"UpdateColorBuffer":false,"UpdateAlphaBuffer":false},{"IsColorPassThrough":false,"IsAlphaPassThrough":true,"Source":{"Color":["Texture0","FragmentSecondaryColor","Constant"],"Alpha":["Previous","FragmentPrimaryColor","Constant"]},"Operand":{"Color":["Alpha","Color","Color"],"Alpha":["Alpha","Alpha","Alpha"]},"Combiner":{"Color":"Modulate","Alpha":"Replace"},"Color":{"R":0,"G":0,"B":0,"A":255},"Scale":{"Color":"One","Alpha":"One"},"UpdateColorBuffer":true,"UpdateAlphaBuffer":false},{"IsColorPassThrough":false,"IsAlphaPassThrough":true,"Source":{"Color":["Previous","PreviousBuffer","Constant"],"Alpha":["Previous","FragmentPrimaryColor","Constant"]},"Operand":{"Color":["Color","Color","Color"],"Alpha":["Alpha","Alpha","Alpha"]},"Combiner":{"Color":"Modulate","Alpha":"Replace"},"Color":{"R":0,"G":0,"B":0,"A":255},"Scale":{"Color":"One","Alpha":"One"},"UpdateColorBuffer":false,"UpdateAlphaBuffer":false},{"IsColorPassThrough":false,"IsAlphaPassThrough":true,"Source":{"Color":["Texture0","PreviousBuffer","Previous"],"Alpha":["Previous","FragmentPrimaryColor","Constant"]},"Operand":{"Color":["Color","Color","Color"],"Alpha":["Alpha","Alpha","Alpha"]},"Combiner":{"Color":"MultAdd","Alpha":"Replace"},"Color":{"R":0,"G":0,"B":0,"A":255},"Scale":{"Color":"One","Alpha":"One"},"UpdateColorBuffer":false,"UpdateAlphaBuffer":false},{"IsColorPassThrough":false,"IsAlphaPassThrough":true,"Source":{"Color":["Previous","Constant","Texture0"],"Alpha":["Previous","Texture0","Texture0"]},"Operand":{"Color":["Color","Alpha","Color"],"Alpha":["Alpha","Alpha","Alpha"]},"Combiner":{"Color":"Modulate","Alpha":"Replace"},"Color":{"R":0,"G":0,"B":0,"A":255},"Scale":{"Color":"One","Alpha":"One"},"UpdateColorBuffer":false,"UpdateAlphaBuffer":false},{"IsColorPassThrough":true,"IsAlphaPassThrough":true,"Source":{"Color":["Previous","FragmentPrimaryColor","Constant"],"Alpha":["Previous","FragmentPrimaryColor","Constant"]},"Operand":{"Color":["Color","Color","Color"],"Alpha":["Alpha","Alpha","Alpha"]},"Combiner":{"Color":"Replace","Alpha":"Replace"},"Color":{"R":0,"G":0,"B":0,"A":255},"Scale":{"Color":"One","Alpha":"One"},"UpdateColorBuffer":false,"UpdateAlphaBuffer":false}],"TexEnvBufferColor":{"R":0,"G":0,"B":0,"A":255},"ColorOperation":{"FragOpMode":"Default","BlendMode":"Blend"},"BlendFunction":{"ColorEquation":"FuncAdd","AlphaEquation":"FuncAdd","ColorSrcFunc":"One","ColorDstFunc":"Zero","AlphaSrcFunc":"One","AlphaDstFunc":"Zero"},"BlendColor":{"R":0,"G":0,"B":0,"A":255},"AlphaTest":{"Enabled":false,"Function":"Greater","Reference":128},"DepthColorMask":{"Enabled":true,"DepthFunc":"Less","RedWrite":true,"GreenWrite":true,"BlueWrite":true,"AlphaWrite":true,"DepthWrite":true},"StencilTest":{"Enabled":false,"Function":"Never","BufferMask":0,"Reference":0,"Mask":255},"StencilOperation":{"FailOp":"Keep","ZFailOp":"Keep","ZPassOp":"Keep"},"FaceCulling":"BackFace","BumpMode":"NotUsed","BumpTexture":0,"ShaderReference":"0@DefaultShader","VtxShaderUniforms":{},"GeoShaderUniforms":{},"LUTDist0TableName":"lu_robj_rim1","LUTDist1TableName":"lu_robj_spc1","LUTFresnelTableName":null,"LUTReflecRTableName":null,"LUTReflecGTableName":null,"LUTReflecBTableName":null}</pica_material>
+        </technique>
+      </extra>
+    </effect>
+    <effect id="m0_effect_1" name="m_floor">
+      <profile_COMMON>
+        <newparam sid="surface_0">
+          <surface type="2D">
+            <init_from>m0_image_1</init_from>
+            <format>PNG</format>
+          </surface>
+        </newparam>
+        <newparam sid="sampler_0">
+          <sampler2D>
+            <source>surface_0</source>
+            <wrap_s>MIRROR</wrap_s>
+            <wrap_t>MIRROR</wrap_t>
+            <minfilter>LINEAR_MIPMAP_NEAREST</minfilter>
+            <magfilter>LINEAR</magfilter>
+            <mipfilter>LINEAR</mipfilter>
+          </sampler2D>
+        </newparam>
+        <newparam sid="surface_1">
+          <surface type="2D">
+            <init_from>m0_image_0</init_from>
+            <format>PNG</format>
+          </surface>
+        </newparam>
+        <newparam sid="sampler_1">
+          <sampler2D>
+            <source>surface_1</source>
+            <wrap_s>CLAMP</wrap_s>
+            <wrap_t>CLAMP</wrap_t>
+            <minfilter>LINEAR_MIPMAP_NEAREST</minfilter>
+            <magfilter>LINEAR</magfilter>
+            <mipfilter>LINEAR</mipfilter>
+          </sampler2D>
+        </newparam>
+        <newparam sid="surface_2">
+          <surface type="2D">
+            <init_from>m0_image_2</init_from>
+            <format>PNG</format>
+          </surface>
+        </newparam>
+        <newparam sid="sampler_2">
+          <sampler2D>
+            <source>surface_2</source>
+            <wrap_s>MIRROR</wrap_s>
+            <wrap_t>MIRROR</wrap_t>
+            <minfilter>LINEAR_MIPMAP_NEAREST</minfilter>
+            <magfilter>LINEAR</magfilter>
+            <mipfilter>LINEAR</mipfilter>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color>0 0 0 0</color>
+            </emission>
+            <ambient>
+              <color>1 1 1 0</color>
+            </ambient>
+            <diffuse>
+              <texture texture="sampler_0" texcoord="UV0" />
+            </diffuse>
+            <specular>
+              <color>0 0 0 0</color>
+            </specular>
+          </phong>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="SPICA">
+          <pica_material encoding="json" xmlns="urn:spica:collada:1">{"Name":"m_floor","textureNames":["noise_light","mask","tex_floor"],"EnabledTextures":[true,true,true,false],"TextureMappers":[{"WrapU":"Mirror","WrapV":"Mirror","SamplerType":0,"MagFilter":"Linear","MinFilter":"LinearMipmapNearest","MinLOD":0,"LODBias":0,"BorderColor":{"R":0,"G":0,"B":0,"A":255}},{"WrapU":"ClampToEdge","WrapV":"ClampToEdge","SamplerType":0,"MagFilter":"Linear","MinFilter":"LinearMipmapNearest","MinLOD":0,"LODBias":0,"BorderColor":{"R":0,"G":0,"B":0,"A":255}},{"WrapU":"Mirror","WrapV":"Mirror","SamplerType":0,"MagFilter":"Linear","MinFilter":"LinearMipmapNearest","MinLOD":0,"LODBias":0,"BorderColor":{"R":0,"G":0,"B":0,"A":255}}],"TextureCoords":[{"Flags":0,"TransformType":"DccMaya","MappingType":"UvCoordinateMap","ReferenceCameraIndex":0,"Scale":{"X":2,"Y":2},"Rotation":0,"Translation":{"X":0,"Y":0.5}},{"Flags":0,"TransformType":"Dcc3dsMax","MappingType":"UvCoordinateMap","ReferenceCameraIndex":0,"Scale":{"X":1.25,"Y":1.25},"Rotation":0,"Translation":{"X":0,"Y":0}},{"Flags":0,"TransformType":"DccMaya","MappingType":"UvCoordinateMap","ReferenceCameraIndex":0,"Scale":{"X":1,"Y":1},"Rotation":0,"Translation":{"X":0,"Y":0}}],"TextureSources":[0,0,0,0],"TexCoordConfig":"Config0112","EmissionColor":{"R":0,"G":0,"B":0,"A":0},"AmbientColor":{"R":255,"G":255,"B":255,"A":0},"DiffuseColor":{"R":255,"G":255,"B":255,"A":255},"Specular0Color":{"R":0,"G":0,"B":0,"A":0},"Specular1Color":{"R":0,"G":0,"B":0,"A":0},"Constant0Color":{"R":51,"G":31,"B":0,"A":199},"Constant1Color":{"R":0,"G":0,"B":0,"A":255},"Constant2Color":{"R":0,"G":0,"B":0,"A":0},"Constant3Color":{"R":0,"G":0,"B":0,"A":0},"Constant4Color":{"R":0,"G":0,"B":0,"A":0},"Constant5Color":{"R":0,"G":0,"B":0,"A":0},"ColorScale":0.13,"TexEnvStages":[{"IsColorPassThrough":false,"IsAlphaPassThrough":false,"Source":{"Color":["Texture2","Texture0","Texture0"],"Alpha":["Texture0","Texture0","Constant"]},"Operand":{"Color":["Color","Green","Color"],"Alpha":["Alpha","Alpha","Alpha"]},"Combiner":{"Color":"Modulate","Alpha":"Replace"},"Color":{"R":0,"G":0,"B":0,"A":255},"Scale":{"Color":"One","Alpha":"One"},"UpdateColorBuffer":false,"UpdateAlphaBuffer":false},{"IsColorPassThrough":false,"IsAlphaPassThrough":false,"Source":{"Color":["FragmentPrimaryColor","PrimaryColor","Previous"],"Alpha":["Texture2","Texture0","Constant"]},"Operand":{"Color":["Color","Color","Color"],"Alpha":["Alpha","Blue","Alpha"]},"Combiner":{"Color":"AddMult","Alpha":"Modulate"},"Color":{"R":0,"G":0,"B":0,"A":255},"Scale":{"Color":"One","Alpha":"One"},"UpdateColorBuffer":false,"UpdateAlphaBuffer":false},{"IsColorPassThrough":false,"IsAlphaPassThrough":false,"Source":{"Color":["Previous","PrimaryColor","Constant"],"Alpha":["Texture1","Constant","Constant"]},"Operand":{"Color":["Alpha","Color","Color"],"Alpha":["Red","Alpha","Alpha"]},"Combiner":{"Color":"Modulate","Alpha":"Modulate"},"Color":{"R":0,"G":0,"B":0,"A":255},"Scale":{"Color":"One","Alpha":"One"},"UpdateColorBuffer":true,"UpdateAlphaBuffer":false},{"IsColorPassThrough":false,"IsAlphaPassThrough":true,"Source":{"Color":["Previous","Constant","PreviousBuffer"],"Alpha":["Previous","FragmentPrimaryColor","Constant"]},"Operand":{"Color":["Color","Alpha","Color"],"Alpha":["Alpha","Alpha","Alpha"]},"Combiner":{"Color":"MultAdd","Alpha":"Replace"},"Color":{"R":0,"G":0,"B":0,"A":255},"Scale":{"Color":"One","Alpha":"One"},"UpdateColorBuffer":false,"UpdateAlphaBuffer":false},{"IsColorPassThrough":false,"IsAlphaPassThrough":true,"Source":{"Color":["Previous","Constant","Previous"],"Alpha":["Previous","FragmentPrimaryColor","Constant"]},"Operand":{"Color":["Alpha","Color","Color"],"Alpha":["Alpha","Alpha","Alpha"]},"Combiner":{"Color":"MultAdd","Alpha":"Replace"},"Color":{"R":0,"G":0,"B":0,"A":255},"Scale":{"Color":"One","Alpha":"One"},"UpdateColorBuffer":false,"UpdateAlphaBuffer":false},{"IsColorPassThrough":false,"IsAlphaPassThrough":true,"Source":{"Color":["Previous","Previous","Texture0"],"Alpha":["Previous","Texture0","Texture0"]},"Operand":{"Color":["Color","Alpha","Color"],"Alpha":["Alpha","Alpha","Alpha"]},"Combiner":{"Color":"Modulate","Alpha":"Replace"},"Color":{"R":0,"G":0,"B":0,"A":255},"Scale":{"Color":"One","Alpha":"One"},"UpdateColorBuffer":false,"UpdateAlphaBuffer":false}],"TexEnvBufferColor":{"R":0,"G":0,"B":0,"A":255},"ColorOperation":{"FragOpMode":"Default","BlendMode":"Blend"},"BlendFunction":{"ColorEquation":"FuncAdd","AlphaEquation":"FuncAdd","ColorSrcFunc":"One","ColorDstFunc":"Zero","AlphaSrcFunc":"One","AlphaDstFunc":"Zero"},"BlendColor":{"R":0,"G":0,"B":0,"A":255},"AlphaTest":{"Enabled":false,"Function":"Always","Reference":0},"DepthColorMask":{"Enabled":true,"DepthFunc":"Less","RedWrite":true,"GreenWrite":true,"BlueWrite":true,"AlphaWrite":true,"DepthWrite":true},"StencilTest":{"Enabled":false,"Function":"Never","BufferMask":0,"Reference":0,"Mask":0},"StencilOperation":{"FailOp":"Keep","ZFailOp":"Keep","ZPassOp":"Keep"},"FaceCulling":"BackFace","BumpMode":"NotUsed","BumpTexture":0,"ShaderReference":"0@DefaultShader","VtxShaderUniforms":{},"GeoShaderUniforms":{},"LUTDist0TableName":null,"LUTDist1TableName":null,"LUTFresnelTableName":null,"LUTReflecRTableName":null,"LUTReflecGTableName":null,"LUTReflecBTableName":null}</pica_material>
+        </technique>
+      </extra>
+    </effect>
+    <effect id="m0_effect_2" name="m_light">
+      <profile_COMMON>
+        <newparam sid="surface_0">
+          <surface type="2D">
+            <init_from>m0_image_3</init_from>
+            <format>PNG</format>
+          </surface>
+        </newparam>
+        <newparam sid="sampler_0">
+          <sampler2D>
+            <source>surface_0</source>
+            <wrap_s>WRAP</wrap_s>
+            <wrap_t>WRAP</wrap_t>
+            <minfilter>LINEAR_MIPMAP_NEAREST</minfilter>
+            <magfilter>LINEAR</magfilter>
+            <mipfilter>LINEAR</mipfilter>
+          </sampler2D>
+        </newparam>
+        <newparam sid="surface_1">
+          <surface type="2D">
+            <init_from>m0_image_4</init_from>
+            <format>PNG</format>
+          </surface>
+        </newparam>
+        <newparam sid="sampler_1">
+          <sampler2D>
+            <source>surface_1</source>
+            <wrap_s>MIRROR</wrap_s>
+            <wrap_t>CLAMP</wrap_t>
+            <minfilter>LINEAR_MIPMAP_NEAREST</minfilter>
+            <magfilter>LINEAR</magfilter>
+            <mipfilter>LINEAR</mipfilter>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color>0 0 0 0</color>
+            </emission>
+            <ambient>
+              <color>1 1 1 0</color>
+            </ambient>
+            <diffuse>
+              <texture texture="sampler_0" texcoord="UV0" />
+            </diffuse>
+            <specular>
+              <color>1 1 1 0</color>
+            </specular>
+          </phong>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="SPICA">
+          <pica_material encoding="json" xmlns="urn:spica:collada:1">{"Name":"m_light","textureNames":["tex_light","tex_light_mask",null],"EnabledTextures":[true,true,false,false],"TextureMappers":[{"WrapU":"Repeat","WrapV":"Repeat","SamplerType":0,"MagFilter":"Linear","MinFilter":"LinearMipmapNearest","MinLOD":0,"LODBias":0,"BorderColor":{"R":0,"G":0,"B":0,"A":255}},{"WrapU":"Mirror","WrapV":"ClampToEdge","SamplerType":0,"MagFilter":"Linear","MinFilter":"LinearMipmapNearest","MinLOD":0,"LODBias":0,"BorderColor":{"R":0,"G":0,"B":0,"A":255}},{"WrapU":"ClampToEdge","WrapV":"ClampToEdge","SamplerType":0,"MagFilter":"Nearest","MinFilter":"Nearest","MinLOD":0,"LODBias":0,"BorderColor":{"R":0,"G":0,"B":0,"A":0}}],"TextureCoords":[{"Flags":0,"TransformType":"DccMaya","MappingType":"UvCoordinateMap","ReferenceCameraIndex":0,"Scale":{"X":2,"Y":2},"Rotation":0,"Translation":{"X":0,"Y":0}},{"Flags":0,"TransformType":"DccMaya","MappingType":"UvCoordinateMap","ReferenceCameraIndex":0,"Scale":{"X":1,"Y":1},"Rotation":0,"Translation":{"X":0,"Y":0}},{"Flags":0,"TransformType":"DccMaya","MappingType":"UvCoordinateMap","ReferenceCameraIndex":0,"Scale":{"X":0,"Y":0},"Rotation":0,"Translation":{"X":0,"Y":0}}],"TextureSources":[0,0,0,0],"TexCoordConfig":"Config0120","EmissionColor":{"R":0,"G":0,"B":0,"A":0},"AmbientColor":{"R":255,"G":255,"B":255,"A":0},"DiffuseColor":{"R":255,"G":255,"B":255,"A":255},"Specular0Color":{"R":255,"G":255,"B":255,"A":0},"Specular1Color":{"R":0,"G":0,"B":0,"A":0},"Constant0Color":{"R":187,"G":255,"B":199,"A":255},"Constant1Color":{"R":0,"G":0,"B":0,"A":255},"Constant2Color":{"R":0,"G":0,"B":0,"A":255},"Constant3Color":{"R":0,"G":0,"B":0,"A":255},"Constant4Color":{"R":0,"G":0,"B":0,"A":255},"Constant5Color":{"R":0,"G":0,"B":0,"A":255},"ColorScale":1,"TexEnvStages":[{"IsColorPassThrough":false,"IsAlphaPassThrough":false,"Source":{"Color":["Texture0","Constant","Constant"],"Alpha":["Texture0","PrimaryColor","Constant"]},"Operand":{"Color":["Color","Color","Color"],"Alpha":["Red","Alpha","Alpha"]},"Combiner":{"Color":"Modulate","Alpha":"Modulate"},"Color":{"R":0,"G":0,"B":0,"A":255},"Scale":{"Color":"One","Alpha":"One"},"UpdateColorBuffer":false,"UpdateAlphaBuffer":false},{"IsColorPassThrough":false,"IsAlphaPassThrough":true,"Source":{"Color":["Previous","Texture1","Texture0"],"Alpha":["Previous","Texture0","Texture0"]},"Operand":{"Color":["Color","Color","Color"],"Alpha":["Alpha","Alpha","Alpha"]},"Combiner":{"Color":"Modulate","Alpha":"Replace"},"Color":{"R":0,"G":0,"B":0,"A":255},"Scale":{"Color":"One","Alpha":"One"},"UpdateColorBuffer":false,"UpdateAlphaBuffer":false},{"IsColorPassThrough":false,"IsAlphaPassThrough":false,"Source":{"Color":["Previous","PrimaryColor","Texture0"],"Alpha":["Previous","Constant","Texture0"]},"Operand":{"Color":["Color","Color","Color"],"Alpha":["Alpha","Alpha","Alpha"]},"Combiner":{"Color":"Modulate","Alpha":"Modulate"},"Color":{"R":0,"G":0,"B":0,"A":255},"Scale":{"Color":"One","Alpha":"One"},"UpdateColorBuffer":false,"UpdateAlphaBuffer":false},{"IsColorPassThrough":true,"IsAlphaPassThrough":true,"Source":{"Color":["Previous","FragmentPrimaryColor","Constant"],"Alpha":["Previous","FragmentPrimaryColor","Constant"]},"Operand":{"Color":["Color","Color","Color"],"Alpha":["Alpha","Alpha","Alpha"]},"Combiner":{"Color":"Replace","Alpha":"Replace"},"Color":{"R":0,"G":0,"B":0,"A":255},"Scale":{"Color":"One","Alpha":"One"},"UpdateColorBuffer":false,"UpdateAlphaBuffer":false},{"IsColorPassThrough":true,"IsAlphaPassThrough":true,"Source":{"Color":["Previous","FragmentPrimaryColor","Constant"],"Alpha":["Previous","FragmentPrimaryColor","Constant"]},"Operand":{"Color":["Color","Color","Color"],"Alpha":["Alpha","Alpha","Alpha"]},"Combiner":{"Color":"Replace","Alpha":"Replace"},"Color":{"R":0,"G":0,"B":0,"A":255},"Scale":{"Color":"One","Alpha":"One"},"UpdateColorBuffer":false,"UpdateAlphaBuffer":false},{"IsColorPassThrough":true,"IsAlphaPassThrough":true,"Source":{"Color":["Previous","FragmentPrimaryColor","Constant"],"Alpha":["Previous","FragmentPrimaryColor","Constant"]},"Operand":{"Color":["Color","Color","Color"],"Alpha":["Alpha","Alpha","Alpha"]},"Combiner":{"Color":"Replace","Alpha":"Replace"},"Color":{"R":0,"G":0,"B":0,"A":255},"Scale":{"Color":"One","Alpha":"One"},"UpdateColorBuffer":false,"UpdateAlphaBuffer":false}],"TexEnvBufferColor":{"R":0,"G":0,"B":0,"A":255},"ColorOperation":{"FragOpMode":"Default","BlendMode":"Blend"},"BlendFunction":{"ColorEquation":"FuncAdd","AlphaEquation":"FuncAdd","ColorSrcFunc":"SourceAlpha","ColorDstFunc":"One","AlphaSrcFunc":"One","AlphaDstFunc":"Zero"},"BlendColor":{"R":0,"G":0,"B":0,"A":255},"AlphaTest":{"Enabled":false,"Function":"Always","Reference":0},"DepthColorMask":{"Enabled":true,"DepthFunc":"Less","RedWrite":true,"GreenWrite":true,"BlueWrite":true,"AlphaWrite":true,"DepthWrite":true},"StencilTest":{"Enabled":false,"Function":"Never","BufferMask":0,"Reference":0,"Mask":255},"StencilOperation":{"FailOp":"Keep","ZFailOp":"Keep","ZPassOp":"Keep"},"FaceCulling":"BackFace","BumpMode":"NotUsed","BumpTexture":0,"ShaderReference":"0@DefaultShader","VtxShaderUniforms":{},"GeoShaderUniforms":{},"LUTDist0TableName":null,"LUTDist1TableName":null,"LUTFresnelTableName":null,"LUTReflecRTableName":null,"LUTReflecGTableName":null,"LUTReflecBTableName":null}</pica_material>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_geometries>
+    <geometry id="m0_mesh_0_0" name="Mesh_0_0">
+      <mesh>
+        <source id="m0_mesh_0_0_position_id" name="m0_mesh_0_0_position">
+          <float_array id="m0_mesh_0_0_position_array_id" count="57">384 0 472.0001 360 -4 472.0001 384 -4 472.0001 360 0 472.0001 360 0 424.0001 384 0 424.0001 384 -4 424.0001 360 -4 424.0001 360 -4 424.0001 360 0 472.0001 360 -4 472.0001 384 -4 472.0001 360 -4 424.0001 384 -4 424.0001 360 -4 472.0001 384 0 424.0001 384 -4 472.0001 384 -4 424.0001 384 0 472.0001</float_array>
+          <technique_common>
+            <accessor source="#m0_mesh_0_0_position_array_id" count="19" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="m0_mesh_0_0_normal_id" name="m0_mesh_0_0_normal">
+          <float_array id="m0_mesh_0_0_normal_array_id" count="57">0.7071068 0 0.7071068 -0.62469506 -0.46852124 0.62469506 0.62469506 -0.46852124 0.62469506 -0.7071068 0 0.7071068 -0.7071068 0 -0.7071068 0.7071068 0 -0.7071068 0.62469506 -0.46852124 -0.62469506 -0.62469506 -0.46852124 -0.62469506 -0.62469506 -0.46852124 -0.62469506 -0.7071068 0 0.7071068 -0.62469506 -0.46852124 0.62469506 0.62469506 -0.46852124 0.62469506 -0.62469506 -0.46852124 -0.62469506 0.62469506 -0.46852124 -0.62469506 -0.62469506 -0.46852124 0.62469506 0.7071068 0 -0.7071068 0.62469506 -0.46852124 0.62469506 0.62469506 -0.46852124 -0.62469506 0.7071068 0 0.7071068</float_array>
+          <technique_common>
+            <accessor source="#m0_mesh_0_0_normal_array_id" count="19" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="m0_mesh_0_0_uv0_id" name="m0_mesh_0_0_uv0">
+          <float_array id="m0_mesh_0_0_uv0_array_id" count="38">0.75 0.125 0.5625 0 0.75 0 0.5625 0.125 0.75 0.875 0.5625 0.875 0.5625 1 0.75 1 0.8125 0.875 0.75 0.125 0.8125 0.125 0.8125 0.125 1 0.875 0.8125 0.875 1 0.125 0.25 0.125 0.1875 0.875 0.1875 0.125 0.25 0.875</float_array>
+          <technique_common>
+            <accessor source="#m0_mesh_0_0_uv0_array_id" count="19" stride="2">
+              <param name="S" type="float" />
+              <param name="T" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="m0_mesh_0_0_mapped_uv0_id" name="m0_mesh_0_0_mapped_uv0">
+          <float_array id="m0_mesh_0_0_mapped_uv0_array_id" count="38">0.75 0.125 0.5625 0 0.75 0 0.5625 0.125 0.75 0.875 0.5625 0.875 0.5625 1 0.75 1 0.8125 0.875 0.75 0.125 0.8125 0.125 0.8125 0.125 1 0.875 0.8125 0.875 1 0.125 0.25 0.125 0.1875 0.875 0.1875 0.125 0.25 0.875</float_array>
+          <technique_common>
+            <accessor source="#m0_mesh_0_0_mapped_uv0_array_id" count="19" stride="2">
+              <param name="S" type="float" />
+              <param name="T" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="m0_mesh_0_0_vertices">
+          <input semantic="POSITION" source="#m0_mesh_0_0_position_id" />
+        </vertices>
+        <triangles material="material_0" count="10">
+          <input semantic="VERTEX" source="#m0_mesh_0_0_vertices" offset="0" />
+          <input semantic="NORMAL" source="#m0_mesh_0_0_normal_id" offset="0" />
+          <input semantic="TEXCOORD" source="#m0_mesh_0_0_uv0_id" offset="0" set="0" />
+          <input semantic="TEXCOORD" source="#m0_mesh_0_0_mapped_uv0_id" offset="0" set="3" />
+          <p>0 1 2 0 3 1 4 5 6 4 6 7 4 8 9 8 10 9 11 12 13 11 14 12 15 16 17 15 18 16</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="m0_mesh_1_0" name="Mesh_1_0">
+      <mesh>
+        <source id="m0_mesh_1_0_position_id" name="m0_mesh_1_0_position">
+          <float_array id="m0_mesh_1_0_position_array_id" count="39">374.32 0 457.68 384 0 448 370.5 0 448 384 0 461.5 360 0 448 384 0 472 366.24 0 465.76 374.32 0 438.32 384 0 434.5 360 0 472 384 0 424 366.24 0 430.24 360 0 424</float_array>
+          <technique_common>
+            <accessor source="#m0_mesh_1_0_position_array_id" count="13" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="m0_mesh_1_0_normal_id" name="m0_mesh_1_0_normal">
+          <float_array id="m0_mesh_1_0_normal_array_id" count="39">0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0</float_array>
+          <technique_common>
+            <accessor source="#m0_mesh_1_0_normal_array_id" count="13" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="m0_mesh_1_0_uv0_id" name="m0_mesh_1_0_uv0">
+          <float_array id="m0_mesh_1_0_uv0_array_id" count="26">0.424377 0.424377 0.5 0.5 0.394531 0.5 0.5 0.394531 0.3125 0.5 0.499998 0.3125 0.361251 0.361251 0.424377 0.575623 0.5 0.605469 0.3125 0.3125 0.5 0.6875 0.361251 0.638749 0.3125 0.6875</float_array>
+          <technique_common>
+            <accessor source="#m0_mesh_1_0_uv0_array_id" count="13" stride="2">
+              <param name="S" type="float" />
+              <param name="T" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="m0_mesh_1_0_mapped_uv0_id" name="m0_mesh_1_0_mapped_uv0">
+          <float_array id="m0_mesh_1_0_mapped_uv0_array_id" count="26">0.848754 -0.15124601 1 0 0.789062 0 1 -0.21093798 0.625 0 0.999996 -0.375 0.722502 -0.277498 0.848754 0.15124595 1 0.21093798 0.625 -0.375 1 0.375 0.722502 0.277498 0.625 0.375</float_array>
+          <technique_common>
+            <accessor source="#m0_mesh_1_0_mapped_uv0_array_id" count="13" stride="2">
+              <param name="S" type="float" />
+              <param name="T" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="m0_mesh_1_0_mapped_uv1_id" name="m0_mesh_1_0_mapped_uv1">
+          <float_array id="m0_mesh_1_0_mapped_uv1_array_id" count="26">0.40547127 0.40547127 0.5 0.5 0.36816376 0.5 0.5 0.36816376 0.265625 0.5 0.4999975 0.265625 0.32656375 0.32656375 0.40547127 0.59452873 0.5 0.63183624 0.265625 0.265625 0.5 0.734375 0.32656375 0.6734363 0.265625 0.734375</float_array>
+          <technique_common>
+            <accessor source="#m0_mesh_1_0_mapped_uv1_array_id" count="13" stride="2">
+              <param name="S" type="float" />
+              <param name="T" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="m0_mesh_1_0_mapped_uv2_id" name="m0_mesh_1_0_mapped_uv2">
+          <float_array id="m0_mesh_1_0_mapped_uv2_array_id" count="26">0.40547127 0.40547127 0.5 0.5 0.36816376 0.5 0.5 0.36816376 0.265625 0.5 0.4999975 0.265625 0.32656375 0.32656375 0.40547127 0.59452873 0.5 0.63183624 0.265625 0.265625 0.5 0.734375 0.32656375 0.6734363 0.265625 0.734375</float_array>
+          <technique_common>
+            <accessor source="#m0_mesh_1_0_mapped_uv2_array_id" count="13" stride="2">
+              <param name="S" type="float" />
+              <param name="T" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="m0_mesh_1_0_vertices">
+          <input semantic="POSITION" source="#m0_mesh_1_0_position_id" />
+        </vertices>
+        <triangles material="material_1" count="16">
+          <input semantic="VERTEX" source="#m0_mesh_1_0_vertices" offset="0" />
+          <input semantic="NORMAL" source="#m0_mesh_1_0_normal_id" offset="0" />
+          <input semantic="TEXCOORD" source="#m0_mesh_1_0_uv0_id" offset="0" set="0" />
+          <input semantic="TEXCOORD" source="#m0_mesh_1_0_mapped_uv0_id" offset="0" set="3" />
+          <input semantic="TEXCOORD" source="#m0_mesh_1_0_mapped_uv1_id" offset="0" set="4" />
+          <input semantic="TEXCOORD" source="#m0_mesh_1_0_mapped_uv2_id" offset="0" set="5" />
+          <p>0 1 2 0 3 1 0 2 4 0 5 3 0 4 6 0 6 5 1 7 2 1 8 7 2 7 4 6 9 5 6 4 9 8 10 7 4 7 11 4 11 12 11 7 10 11 10 12</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="m0_mesh_1_1" name="Mesh_1_1">
+      <mesh>
+        <source id="m0_mesh_1_1_position_id" name="m0_mesh_1_1_position">
+          <float_array id="m0_mesh_1_1_position_array_id" count="39">393.68 0 457.68 401.76 0 465.76 408 0 448 384 0 472 397.5 0 448 384 0 461.5 384 0 448 408 0 472 393.68 0 438.32 384 0 434.5 401.76 0 430.24 408 0 424 384 0 424</float_array>
+          <technique_common>
+            <accessor source="#m0_mesh_1_1_position_array_id" count="13" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="m0_mesh_1_1_normal_id" name="m0_mesh_1_1_normal">
+          <float_array id="m0_mesh_1_1_normal_array_id" count="39">0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0</float_array>
+          <technique_common>
+            <accessor source="#m0_mesh_1_1_normal_array_id" count="13" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="m0_mesh_1_1_uv0_id" name="m0_mesh_1_1_uv0">
+          <float_array id="m0_mesh_1_1_uv0_array_id" count="26">0.575623 0.424377 0.638749 0.361251 0.6875 0.5 0.5 0.3125 0.605469 0.5 0.5 0.394531 0.5 0.5 0.6875 0.3125 0.575623 0.575623 0.5 0.605469 0.638749 0.638749 0.6875 0.6875 0.5 0.6875</float_array>
+          <technique_common>
+            <accessor source="#m0_mesh_1_1_uv0_array_id" count="13" stride="2">
+              <param name="S" type="float" />
+              <param name="T" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="m0_mesh_1_1_mapped_uv0_id" name="m0_mesh_1_1_mapped_uv0">
+          <float_array id="m0_mesh_1_1_mapped_uv0_array_id" count="26">1.151246 -0.15124601 1.277498 -0.277498 1.375 0 1 -0.375 1.210938 0 1 -0.21093798 1 0 1.375 -0.375 1.151246 0.15124595 1 0.21093798 1.277498 0.277498 1.375 0.375 1 0.375</float_array>
+          <technique_common>
+            <accessor source="#m0_mesh_1_1_mapped_uv0_array_id" count="13" stride="2">
+              <param name="S" type="float" />
+              <param name="T" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="m0_mesh_1_1_mapped_uv1_id" name="m0_mesh_1_1_mapped_uv1">
+          <float_array id="m0_mesh_1_1_mapped_uv1_array_id" count="26">0.59452873 0.40547127 0.6734363 0.32656375 0.734375 0.5 0.5 0.265625 0.63183624 0.5 0.5 0.36816376 0.5 0.5 0.734375 0.265625 0.59452873 0.59452873 0.5 0.63183624 0.6734363 0.6734363 0.734375 0.734375 0.5 0.734375</float_array>
+          <technique_common>
+            <accessor source="#m0_mesh_1_1_mapped_uv1_array_id" count="13" stride="2">
+              <param name="S" type="float" />
+              <param name="T" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="m0_mesh_1_1_mapped_uv2_id" name="m0_mesh_1_1_mapped_uv2">
+          <float_array id="m0_mesh_1_1_mapped_uv2_array_id" count="26">0.59452873 0.40547127 0.6734363 0.32656375 0.734375 0.5 0.5 0.265625 0.63183624 0.5 0.5 0.36816376 0.5 0.5 0.734375 0.265625 0.59452873 0.59452873 0.5 0.63183624 0.6734363 0.6734363 0.734375 0.734375 0.5 0.734375</float_array>
+          <technique_common>
+            <accessor source="#m0_mesh_1_1_mapped_uv2_array_id" count="13" stride="2">
+              <param name="S" type="float" />
+              <param name="T" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="m0_mesh_1_1_vertices">
+          <input semantic="POSITION" source="#m0_mesh_1_1_position_id" />
+        </vertices>
+        <triangles material="material_1" count="16">
+          <input semantic="VERTEX" source="#m0_mesh_1_1_vertices" offset="0" />
+          <input semantic="NORMAL" source="#m0_mesh_1_1_normal_id" offset="0" />
+          <input semantic="TEXCOORD" source="#m0_mesh_1_1_uv0_id" offset="0" set="0" />
+          <input semantic="TEXCOORD" source="#m0_mesh_1_1_mapped_uv0_id" offset="0" set="3" />
+          <input semantic="TEXCOORD" source="#m0_mesh_1_1_mapped_uv1_id" offset="0" set="4" />
+          <input semantic="TEXCOORD" source="#m0_mesh_1_1_mapped_uv2_id" offset="0" set="5" />
+          <p>0 1 2 0 3 1 0 2 4 0 5 3 0 4 6 0 6 5 1 7 2 1 3 7 4 8 6 4 2 8 6 8 9 2 10 8 2 11 10 9 8 12 12 10 11 12 8 10</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="m0_mesh_2_0" name="Mesh_2_0">
+      <mesh>
+        <source id="m0_mesh_2_0_position_id" name="m0_mesh_2_0_position">
+          <float_array id="m0_mesh_2_0_position_array_id" count="57">408 -4.000061 472.0001 384 -2.5465852E-10 472.0001 384 -4 472.0001 408 -6.0844613E-05 472.0001 408 6.0844108E-05 424.0001 384 -3.9998784 424.0001 384 0.00012168847 424.0001 408 -3.9999392 424.0001 408 -6.0844613E-05 472.0001 408 -3.9999392 424.0001 408 -4.000061 472.0001 408 -3.9999392 424.0001 384 -4 472.0001 384 -3.9998784 424.0001 408 -4.000061 472.0001 384 -4 472.0001 384 0.00012168847 424.0001 384 -3.9998784 424.0001 384 -2.5465852E-10 472.0001</float_array>
+          <technique_common>
+            <accessor source="#m0_mesh_2_0_position_array_id" count="19" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="m0_mesh_2_0_normal_id" name="m0_mesh_2_0_normal">
+          <float_array id="m0_mesh_2_0_normal_array_id" count="57">0.6246939 -0.46852443 0.6246939 -0.7071068 0 0.7071068 -0.62469625 -0.46852124 0.6246939 0.7071068 -3.5852886E-06 0.7071068 0.7071068 0 -0.7071068 -0.62469625 -0.46851808 -0.62469625 -0.7071068 3.5852886E-06 -0.7071068 0.6246939 -0.46852124 -0.62469625 0.7071068 -3.5852886E-06 0.7071068 0.6246939 -0.46852124 -0.62469625 0.6246939 -0.46852443 0.6246939 0.6246939 -0.46852124 -0.62469625 -0.62469625 -0.46852124 0.6246939 -0.62469625 -0.46851808 -0.62469625 0.6246939 -0.46852443 0.6246939 -0.62469625 -0.46852124 0.6246939 -0.7071068 3.5852886E-06 -0.7071068 -0.62469625 -0.46851808 -0.62469625 -0.7071068 0 0.7071068</float_array>
+          <technique_common>
+            <accessor source="#m0_mesh_2_0_normal_array_id" count="19" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="m0_mesh_2_0_uv0_id" name="m0_mesh_2_0_uv0">
+          <float_array id="m0_mesh_2_0_uv0_array_id" count="38">0.4375 0 0.25 0.125 0.25 0 0.4375 0.125 0.25 0.875 0.4375 1 0.4375 0.875 0.25 1 0.25 0.125 0.1875 0.875 0.1875 0.125 0 0.875 0.1875 0.125 0.1875 0.875 0 0.125 0.8125 0.875 0.75 0.125 0.8125 0.125 0.75 0.875</float_array>
+          <technique_common>
+            <accessor source="#m0_mesh_2_0_uv0_array_id" count="19" stride="2">
+              <param name="S" type="float" />
+              <param name="T" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="m0_mesh_2_0_mapped_uv0_id" name="m0_mesh_2_0_mapped_uv0">
+          <float_array id="m0_mesh_2_0_mapped_uv0_array_id" count="38">0.4375 0 0.25 0.125 0.25 0 0.4375 0.125 0.25 0.875 0.4375 1 0.4375 0.875 0.25 1 0.25 0.125 0.1875 0.875 0.1875 0.125 0 0.875 0.1875 0.125 0.1875 0.875 0 0.125 0.8125 0.875 0.75 0.125 0.8125 0.125 0.75 0.875</float_array>
+          <technique_common>
+            <accessor source="#m0_mesh_2_0_mapped_uv0_array_id" count="19" stride="2">
+              <param name="S" type="float" />
+              <param name="T" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="m0_mesh_2_0_vertices">
+          <input semantic="POSITION" source="#m0_mesh_2_0_position_id" />
+        </vertices>
+        <triangles material="material_0" count="10">
+          <input semantic="VERTEX" source="#m0_mesh_2_0_vertices" offset="0" />
+          <input semantic="NORMAL" source="#m0_mesh_2_0_normal_id" offset="0" />
+          <input semantic="TEXCOORD" source="#m0_mesh_2_0_uv0_id" offset="0" set="0" />
+          <input semantic="TEXCOORD" source="#m0_mesh_2_0_mapped_uv0_id" offset="0" set="3" />
+          <p>0 1 2 0 3 1 4 5 6 4 7 5 4 8 9 8 10 9 11 12 13 11 14 12 15 16 17 15 18 16</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="m0_mesh_3_0" name="Mesh_3_0">
+      <mesh>
+        <source id="m0_mesh_3_0_position_id" name="m0_mesh_3_0_position">
+          <float_array id="m0_mesh_3_0_position_array_id" count="60">24 0 24 48 0 64 48 0 -64 -48 0 64 24 0 -24 -24 0 24 -48 0 -64 -24 0 -24 -24 0 -24 -24 -4 24 -24 -4 -24 -24 0 24 -24 -4 -24 24 0 -24 24 -4 24 -24 -4 24 24 0 24 24 -4 -24 24 -4 -24 24 -4 24</float_array>
+          <technique_common>
+            <accessor source="#m0_mesh_3_0_position_array_id" count="20" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="m0_mesh_3_0_normal_id" name="m0_mesh_3_0_normal">
+          <float_array id="m0_mesh_3_0_normal_array_id" count="60">0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 1 0 0 1 0 0 0 1 0 0 0 1 0 1 0 0 0 -1 0 0 -1 0 1 0 0 0 1 -1 0 0 -1 0 0</float_array>
+          <technique_common>
+            <accessor source="#m0_mesh_3_0_normal_array_id" count="20" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="m0_mesh_3_0_uv0_id" name="m0_mesh_3_0_uv0">
+          <float_array id="m0_mesh_3_0_uv0_array_id" count="40">0.6875 0.3125 0.875 0 0.875 1 0.125 0 0.6875 0.6875 0.3125 0.3125 0.125 1 0.3125 0.6875 0.6875 0.6875 0.75 0.3125 0.749999 0.6875 0.6875 0.3125 0.6875 0.75 0.3125 0.6875 0.312501 0.250001 0.6875 0.25 0.3125 0.3125 0.3125 0.75 0.250001 0.6875 0.25 0.3125</float_array>
+          <technique_common>
+            <accessor source="#m0_mesh_3_0_uv0_array_id" count="20" stride="2">
+              <param name="S" type="float" />
+              <param name="T" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="m0_mesh_3_0_mapped_uv0_id" name="m0_mesh_3_0_mapped_uv0">
+          <float_array id="m0_mesh_3_0_mapped_uv0_array_id" count="40">1.375 -0.375 1.75 -1 1.75 1 0.25 -1 1.375 0.375 0.625 -0.375 0.25 1 0.625 0.375 1.375 0.375 1.5 -0.375 1.499998 0.375 1.375 -0.375 1.375 0.5 0.625 0.375 0.625002 -0.49999797 1.375 -0.5 0.625 -0.375 0.625 0.5 0.500002 0.375 0.5 -0.375</float_array>
+          <technique_common>
+            <accessor source="#m0_mesh_3_0_mapped_uv0_array_id" count="20" stride="2">
+              <param name="S" type="float" />
+              <param name="T" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="m0_mesh_3_0_mapped_uv1_id" name="m0_mesh_3_0_mapped_uv1">
+          <float_array id="m0_mesh_3_0_mapped_uv1_array_id" count="40">0.734375 0.265625 0.96875 -0.125 0.96875 1.125 0.03125 -0.125 0.734375 0.734375 0.265625 0.265625 0.03125 1.125 0.265625 0.734375 0.734375 0.734375 0.8125 0.265625 0.81249875 0.734375 0.734375 0.265625 0.734375 0.8125 0.265625 0.734375 0.26562625 0.18750125 0.734375 0.1875 0.265625 0.265625 0.265625 0.8125 0.18750125 0.734375 0.1875 0.265625</float_array>
+          <technique_common>
+            <accessor source="#m0_mesh_3_0_mapped_uv1_array_id" count="20" stride="2">
+              <param name="S" type="float" />
+              <param name="T" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="m0_mesh_3_0_mapped_uv2_id" name="m0_mesh_3_0_mapped_uv2">
+          <float_array id="m0_mesh_3_0_mapped_uv2_array_id" count="40">0.734375 0.265625 0.96875 -0.125 0.96875 1.125 0.03125 -0.125 0.734375 0.734375 0.265625 0.265625 0.03125 1.125 0.265625 0.734375 0.734375 0.734375 0.8125 0.265625 0.81249875 0.734375 0.734375 0.265625 0.734375 0.8125 0.265625 0.734375 0.26562625 0.18750125 0.734375 0.1875 0.265625 0.265625 0.265625 0.8125 0.18750125 0.734375 0.1875 0.265625</float_array>
+          <technique_common>
+            <accessor source="#m0_mesh_3_0_mapped_uv2_array_id" count="20" stride="2">
+              <param name="S" type="float" />
+              <param name="T" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="m0_mesh_3_0_vertices">
+          <input semantic="POSITION" source="#m0_mesh_3_0_position_id" />
+        </vertices>
+        <triangles material="material_1" count="16">
+          <input semantic="VERTEX" source="#m0_mesh_3_0_vertices" offset="0" />
+          <input semantic="NORMAL" source="#m0_mesh_3_0_normal_id" offset="0" />
+          <input semantic="TEXCOORD" source="#m0_mesh_3_0_uv0_id" offset="0" set="0" />
+          <input semantic="TEXCOORD" source="#m0_mesh_3_0_mapped_uv0_id" offset="0" set="3" />
+          <input semantic="TEXCOORD" source="#m0_mesh_3_0_mapped_uv1_id" offset="0" set="4" />
+          <input semantic="TEXCOORD" source="#m0_mesh_3_0_mapped_uv2_id" offset="0" set="5" />
+          <p>0 1 2 0 3 1 0 2 4 0 5 3 2 6 4 5 7 3 7 4 6 7 6 3 8 9 10 8 11 9 8 12 13 11 14 15 11 16 14 12 17 13 16 13 18 16 18 19</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="m0_mesh_4_0" name="Mesh_4_0">
+      <mesh>
+        <source id="m0_mesh_4_0_position_id" name="m0_mesh_4_0_position">
+          <float_array id="m0_mesh_4_0_position_array_id" count="153">0 54 20.8 0 108 0 -9.75 57.375 16.8875 9.75 57.375 16.8875 -20.8 0 36.0266 20.8 0 36.0266 0 0 41.6 -13.51 67.5 7.79999 13.51 67.5 7.79999 -10.4 81 0 10.4 81 0 -36.0267 0 20.8 36.0266 0 20.8 -41.6 0 0 41.6 0 0 65.1684 38.9008 -11.2119 35.694 8.501198 3.69083 64.9922 25.749199 16.3477 37.5074 23.699402 -26.6885 73.2978 59.6662 9.92957 63.2968 61.1522 -32.1653 69.2128 74.576096 -4.08261 0 2.1880035 -0.941925 74.7532 49.3103 33.6374 64 88 -7.99997 0 18.135399 -32.3534 37.235 51.3252 -52.7232 55.4256 88.00001 -40 -37.5074 23.699402 -26.6885 -35.694 8.501198 3.69083 32 88.00002 -63.4256 -37.235 51.3252 -52.7232 0 47.7283 -60.2479 -65.1684 38.9008 -11.2119 -64.9922 25.749199 16.3477 -32 88 -63.4256 -63.2969 61.1522 -32.1653 -55.4256 88 -40 0 88 -72 -73.2978 59.6662 9.92957 -74.7532 49.3103 33.6374 -64 88 -7.99997 -69.2128 74.576096 -4.08261 0 108 0 36.0266 0 -20.8 41.6 0 0 20.8 0 -36.0266 0 0 -41.6 -20.8 0 -36.0266 -36.0267 0 -20.8 -41.6 0 0</float_array>
+          <technique_common>
+            <accessor source="#m0_mesh_4_0_position_array_id" count="51" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="m0_mesh_4_0_color_id" name="m0_mesh_4_0_color">
+          <float_array id="m0_mesh_4_0_color_array_id" count="204">0.8745099 0.8745099 0.8745099 1 1 1 1 1 0.8745099 0.8745099 0.8745099 1 0.8745099 0.8745099 0.8745099 1 0.37647063 0.37647063 0.37647063 0.37647063 0.37647063 0.37647063 0.37647063 0.37647063 0.37647063 0.37647063 0.37647063 0.37647063 0.8745099 0.8745099 0.8745099 1 0.8745099 0.8745099 0.8745099 1 0.7803922 0.7803922 0.7803922 1 0.7803922 0.7803922 0.7803922 1 0.2509804 0.2509804 0.2509804 0.2509804 0.2509804 0.2509804 0.2509804 0.2509804 0.1254902 0.1254902 0.1254902 0.1254902 0.1254902 0.1254902 0.1254902 0.1254902 0.37647063 0.37647063 0.37647063 0.37647063 0.5019608 0.5019608 0.5019608 0.8745099 0.37647063 0.37647063 0.37647063 0.37647063 0.5019608 0.5019608 0.5019608 0.8745099 0 0 0 0 0.37647063 0.37647063 0.37647063 0.37647063 0 0 0 0 0.62352943 0.62352943 0.62352943 0.62352943 0 0 0 0 0 0 0 0 0.7490196 0.7490196 0.7490196 0.7490196 0.5019608 0.5019608 0.5019608 0.8745099 0.37647063 0.37647063 0.37647063 0.37647063 0.5019608 0.5019608 0.5019608 0.8745099 0.5019608 0.5019608 0.5019608 0.8745099 0.5019608 0.5019608 0.5019608 0.8745099 0.5019608 0.5019608 0.5019608 0.8745099 0.7490196 0.7490196 0.7490196 0.7490196 0.37647063 0.37647063 0.37647063 0.37647063 0.37647063 0.37647063 0.37647063 0.37647063 0.5019608 0.5019608 0.5019608 0.8745099 0.37647063 0.37647063 0.37647063 0.37647063 0.37647063 0.37647063 0.37647063 0.37647063 0.62352943 0.62352943 0.62352943 0.62352943 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0.5019608 0.62352943 0.62352943 0.62352943 0.37647063 0.5019608 0.5019608 0.5019608 0.2509804 0.7490196 0.7490196 0.7490196 0.5019608 0.7490196 0.7490196 0.7490196 0.5019608 0.7490196 0.7490196 0.7490196 0.5019608 0.62352943 0.62352943 0.62352943 0.37647063 0.5019608 0.5019608 0.5019608 0.2509804</float_array>
+          <technique_common>
+            <accessor source="#m0_mesh_4_0_color_array_id" count="51" stride="4">
+              <param name="R" type="float" />
+              <param name="G" type="float" />
+              <param name="B" type="float" />
+              <param name="A" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="m0_mesh_4_0_uv0_id" name="m0_mesh_4_0_uv0">
+          <float_array id="m0_mesh_4_0_uv0_array_id" count="102">0 0.5 0 1 -0.15625 0.53125 0.15625 0.53125 -0.333333 0 0.333333 0 0 0 -0.25 0.625 0.25 0.625 -0.25 0.75 0.25 0.75 -0.666667 0 0.666667 0 -1 0 1 0 0.359805 0.32851 0.333 0 0.667 0 0.165634 0.329698 0.503481 0.349266 0.16675 0.666667 0.25 0.666667 0 0 1 0 0.125 1 0 0.33342 0.08325 0.666667 0.083375 1 -0.165634 0.329698 -0.333 0 0.041625 1 -0.08325 0.666667 0 0.666667 -0.359805 0.32851 -0.667 0 -0.041625 1 -0.16675 0.666667 -0.083375 1 0 1 -0.503481 0.349266 -1 0 -0.125 1 -0.25 0.666667 0 1 -0.666667 0 -1 0 -0.333333 0 0 0 0.333333 0 0.666667 0 1 0</float_array>
+          <technique_common>
+            <accessor source="#m0_mesh_4_0_uv0_array_id" count="51" stride="2">
+              <param name="S" type="float" />
+              <param name="T" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="m0_mesh_4_0_mapped_uv0_id" name="m0_mesh_4_0_mapped_uv0">
+          <float_array id="m0_mesh_4_0_mapped_uv0_array_id" count="102">0 1 0 2 -0.3125 1.0625 0.3125 1.0625 -0.666666 0 0.666666 0 0 0 -0.5 1.25 0.5 1.25 -0.5 1.5 0.5 1.5 -1.333334 0 1.333334 0 -2 0 2 0 0.71961 0.65702 0.666 0 1.334 0 0.331268 0.659396 1.006962 0.698532 0.3335 1.333334 0.5 1.333334 0 0 2 0 0.25 2 0 0.66684 0.1665 1.333334 0.16675 2 -0.331268 0.659396 -0.666 0 0.08325 2 -0.1665 1.333334 0 1.333334 -0.71961 0.65702 -1.334 0 -0.08325 2 -0.3335 1.333334 -0.16675 2 0 2 -1.006962 0.698532 -2 0 -0.25 2 -0.5 1.333334 0 2 -1.333334 0 -2 0 -0.666666 0 0 0 0.666666 0 1.333334 0 2 0</float_array>
+          <technique_common>
+            <accessor source="#m0_mesh_4_0_mapped_uv0_array_id" count="51" stride="2">
+              <param name="S" type="float" />
+              <param name="T" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="m0_mesh_4_0_mapped_uv1_id" name="m0_mesh_4_0_mapped_uv1">
+          <float_array id="m0_mesh_4_0_mapped_uv1_array_id" count="102">0 0.5 0 1 -0.15625 0.53125 0.15625 0.53125 -0.333333 0 0.333333 0 0 0 -0.25 0.625 0.25 0.625 -0.25 0.75 0.25 0.75 -0.666667 0 0.666667 0 -1 0 1 0 0.359805 0.32851 0.333 0 0.667 0 0.165634 0.329698 0.503481 0.349266 0.16675 0.666667 0.25 0.666667 0 0 1 0 0.125 1 0 0.33342 0.08325 0.666667 0.083375 1 -0.165634 0.329698 -0.333 0 0.041625 1 -0.08325 0.666667 0 0.666667 -0.359805 0.32851 -0.667 0 -0.041625 1 -0.16675 0.666667 -0.083375 1 0 1 -0.503481 0.349266 -1 0 -0.125 1 -0.25 0.666667 0 1 -0.666667 0 -1 0 -0.333333 0 0 0 0.333333 0 0.666667 0 1 0</float_array>
+          <technique_common>
+            <accessor source="#m0_mesh_4_0_mapped_uv1_array_id" count="51" stride="2">
+              <param name="S" type="float" />
+              <param name="T" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="m0_mesh_4_0_vertices">
+          <input semantic="POSITION" source="#m0_mesh_4_0_position_id" />
+        </vertices>
+        <triangles material="material_2" count="60">
+          <input semantic="VERTEX" source="#m0_mesh_4_0_vertices" offset="0" />
+          <input semantic="COLOR" source="#m0_mesh_4_0_color_id" offset="0" />
+          <input semantic="TEXCOORD" source="#m0_mesh_4_0_uv0_id" offset="0" set="0" />
+          <input semantic="TEXCOORD" source="#m0_mesh_4_0_mapped_uv0_id" offset="0" set="3" />
+          <input semantic="TEXCOORD" source="#m0_mesh_4_0_mapped_uv1_id" offset="0" set="4" />
+          <p>0 1 2 0 3 1 0 2 4 0 5 3 0 4 6 0 6 5 1 7 2 1 3 8 1 9 7 1 8 10 4 2 11 2 7 11 5 12 3 3 12 8 9 13 7 7 13 11 10 8 14 14 8 12 15 16 17 15 18 16 15 17 19 15 20 18 15 19 21 15 21 20 16 18 22 17 23 19 21 24 20 18 25 22 18 20 26 18 26 25 24 27 20 20 27 26 22 25 28 22 28 29 27 30 26 25 31 28 25 26 32 25 32 31 26 30 32 29 28 33 29 33 34 31 32 35 31 36 28 31 35 37 31 37 36 28 36 33 30 38 32 32 38 35 34 33 39 34 39 40 37 41 36 33 42 39 33 36 42 42 36 41 43 44 45 43 46 44 43 47 46 43 48 47 43 49 48 43 50 49</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="m0_mesh_5_0" name="Mesh_5_0">
+      <mesh>
+        <source id="m0_mesh_5_0_position_id" name="m0_mesh_5_0_position">
+          <float_array id="m0_mesh_5_0_position_array_id" count="12">24 -4 24 -24 -4 -24 -24 -4 24 24 -4 -24</float_array>
+          <technique_common>
+            <accessor source="#m0_mesh_5_0_position_array_id" count="4" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="m0_mesh_5_0_normal_id" name="m0_mesh_5_0_normal">
+          <float_array id="m0_mesh_5_0_normal_array_id" count="12">0 1 0 0 1 0 0 1 0 0 1 0</float_array>
+          <technique_common>
+            <accessor source="#m0_mesh_5_0_normal_array_id" count="4" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="m0_mesh_5_0_uv0_id" name="m0_mesh_5_0_uv0">
+          <float_array id="m0_mesh_5_0_uv0_array_id" count="8">0.585938 0.328125 0.414063 0.671875 0.414063 0.328125 0.585938 0.671875</float_array>
+          <technique_common>
+            <accessor source="#m0_mesh_5_0_uv0_array_id" count="4" stride="2">
+              <param name="S" type="float" />
+              <param name="T" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="m0_mesh_5_0_mapped_uv0_id" name="m0_mesh_5_0_mapped_uv0">
+          <float_array id="m0_mesh_5_0_mapped_uv0_array_id" count="8">0.585938 0.328125 0.414063 0.671875 0.414063 0.328125 0.585938 0.671875</float_array>
+          <technique_common>
+            <accessor source="#m0_mesh_5_0_mapped_uv0_array_id" count="4" stride="2">
+              <param name="S" type="float" />
+              <param name="T" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="m0_mesh_5_0_vertices">
+          <input semantic="POSITION" source="#m0_mesh_5_0_position_id" />
+        </vertices>
+        <triangles material="material_0" count="2">
+          <input semantic="VERTEX" source="#m0_mesh_5_0_vertices" offset="0" />
+          <input semantic="NORMAL" source="#m0_mesh_5_0_normal_id" offset="0" />
+          <input semantic="TEXCOORD" source="#m0_mesh_5_0_uv0_id" offset="0" set="0" />
+          <input semantic="TEXCOORD" source="#m0_mesh_5_0_mapped_uv0_id" offset="0" set="3" />
+          <p>0 1 2 0 3 1</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_controllers>
+    <controller id="m0_mesh_0_0_skin" name="m0_mesh_0_0_skin">
+      <skin source="#m0_mesh_0_0">
+        <bind_shape_matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</bind_shape_matrix>
+        <source id="m0_mesh_0_0_joints_id" name="m0_mesh_0_0_joints">
+          <Name_array id="m0_mesh_0_0_joints_array_id" count="8">joint_0 joint_1 joint_2 joint_3 joint_4 joint_5 joint_6 joint_7</Name_array>
+          <technique_common>
+            <accessor source="#m0_mesh_0_0_joints_array_id" count="8" stride="1">
+              <param name="JOINT" type="Name" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="m0_mesh_0_0_binds_id" name="m0_mesh_0_0_binds">
+          <float_array id="m0_mesh_0_0_binds_array_id" count="128">1 -0 0 0 -0 1 -0 0 0 -0 1 0 0 0 0 1 1 -0 0 352 -0 1 -0 -0 0 -0 1 448 0 0 0 1 1 -0 0 0 -0 1 -0 -96 0 -0 1 0 0 0 0 1 1 -0 0 0 -0 1 -0 0 0 -0 1 0 0 0 0 1 1 -0 0 -360 -0 1 -0 0 0 -0 1 -448 0 0 0 1 -3.6199901E-06 1 0 0.0013900762 -1 -3.6199901E-06 0 384 0 -0 1 -448 0 0 0 1 -1 2.5351817E-06 7.4936825E-20 408 2.5351817E-06 1 2.5351817E-06 -0.0021701155 6.427146E-12 2.5351817E-06 -1 448 0 0 0 1 6.155172E-06 1 2.5351817E-06 -0.0035601917 1 -6.155172E-06 -9.1773325E-12 -384 6.4271466E-12 2.5351817E-06 -1 448 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#m0_mesh_0_0_binds_array_id" count="8" stride="16">
+              <param name="TRANSFORM" type="float4x4" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="m0_mesh_0_0_weights_id" name="m0_mesh_0_0_weights">
+          <float_array id="m0_mesh_0_0_weights_array_id" count="19">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#m0_mesh_0_0_weights_array_id" count="19" stride="1">
+              <param name="WEIGHT" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <joints>
+          <input semantic="JOINT" source="#m0_mesh_0_0_joints_id" />
+          <input semantic="INV_BIND_MATRIX" source="#m0_mesh_0_0_binds_id" />
+        </joints>
+        <vertex_weights count="19">
+          <input semantic="JOINT" source="#m0_mesh_0_0_joints_id" offset="0" />
+          <input semantic="WEIGHT" source="#m0_mesh_0_0_weights_id" offset="1" />
+          <vcount>1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</vcount>
+          <v>4 0 4 1 4 2 4 3 4 4 4 5 4 6 4 7 4 8 4 9 4 10 4 11 4 12 4 13 4 14 4 15 4 16 4 17 4 18</v>
+        </vertex_weights>
+      </skin>
+    </controller>
+    <controller id="m0_mesh_1_0_skin" name="m0_mesh_1_0_skin">
+      <skin source="#m0_mesh_1_0">
+        <bind_shape_matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</bind_shape_matrix>
+        <source id="m0_mesh_1_0_joints_id" name="m0_mesh_1_0_joints">
+          <Name_array id="m0_mesh_1_0_joints_array_id" count="8">joint_0 joint_1 joint_2 joint_3 joint_4 joint_5 joint_6 joint_7</Name_array>
+          <technique_common>
+            <accessor source="#m0_mesh_1_0_joints_array_id" count="8" stride="1">
+              <param name="JOINT" type="Name" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="m0_mesh_1_0_binds_id" name="m0_mesh_1_0_binds">
+          <float_array id="m0_mesh_1_0_binds_array_id" count="128">1 -0 0 0 -0 1 -0 0 0 -0 1 0 0 0 0 1 1 -0 0 352 -0 1 -0 -0 0 -0 1 448 0 0 0 1 1 -0 0 0 -0 1 -0 -96 0 -0 1 0 0 0 0 1 1 -0 0 0 -0 1 -0 0 0 -0 1 0 0 0 0 1 1 -0 0 -360 -0 1 -0 0 0 -0 1 -448 0 0 0 1 -3.6199901E-06 1 0 0.0013900762 -1 -3.6199901E-06 0 384 0 -0 1 -448 0 0 0 1 -1 2.5351817E-06 7.4936825E-20 408 2.5351817E-06 1 2.5351817E-06 -0.0021701155 6.427146E-12 2.5351817E-06 -1 448 0 0 0 1 6.155172E-06 1 2.5351817E-06 -0.0035601917 1 -6.155172E-06 -9.1773325E-12 -384 6.4271466E-12 2.5351817E-06 -1 448 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#m0_mesh_1_0_binds_array_id" count="8" stride="16">
+              <param name="TRANSFORM" type="float4x4" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="m0_mesh_1_0_weights_id" name="m0_mesh_1_0_weights">
+          <float_array id="m0_mesh_1_0_weights_array_id" count="18">0.25 0.75 1 0.25 0.75 0.25 0.75 1 1 1 0.25 0.75 0.25 0.75 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#m0_mesh_1_0_weights_array_id" count="18" stride="1">
+              <param name="WEIGHT" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <joints>
+          <input semantic="JOINT" source="#m0_mesh_1_0_joints_id" />
+          <input semantic="INV_BIND_MATRIX" source="#m0_mesh_1_0_binds_id" />
+        </joints>
+        <vertex_weights count="13">
+          <input semantic="JOINT" source="#m0_mesh_1_0_joints_id" offset="0" />
+          <input semantic="WEIGHT" source="#m0_mesh_1_0_weights_id" offset="1" />
+          <vcount>2 1 2 2 1 1 1 2 2 1 1 1 1</vcount>
+          <v>4 0 5 1 5 2 4 3 5 4 4 5 5 6 4 7 4 8 4 9 4 10 5 11 4 12 5 13 4 14 4 15 4 16 4 17</v>
+        </vertex_weights>
+      </skin>
+    </controller>
+    <controller id="m0_mesh_1_1_skin" name="m0_mesh_1_1_skin">
+      <skin source="#m0_mesh_1_1">
+        <bind_shape_matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</bind_shape_matrix>
+        <source id="m0_mesh_1_1_joints_id" name="m0_mesh_1_1_joints">
+          <Name_array id="m0_mesh_1_1_joints_array_id" count="8">joint_0 joint_1 joint_2 joint_3 joint_4 joint_5 joint_6 joint_7</Name_array>
+          <technique_common>
+            <accessor source="#m0_mesh_1_1_joints_array_id" count="8" stride="1">
+              <param name="JOINT" type="Name" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="m0_mesh_1_1_binds_id" name="m0_mesh_1_1_binds">
+          <float_array id="m0_mesh_1_1_binds_array_id" count="128">1 -0 0 0 -0 1 -0 0 0 -0 1 0 0 0 0 1 1 -0 0 352 -0 1 -0 -0 0 -0 1 448 0 0 0 1 1 -0 0 0 -0 1 -0 -96 0 -0 1 0 0 0 0 1 1 -0 0 0 -0 1 -0 0 0 -0 1 0 0 0 0 1 1 -0 0 -360 -0 1 -0 0 0 -0 1 -448 0 0 0 1 -3.6199901E-06 1 0 0.0013900762 -1 -3.6199901E-06 0 384 0 -0 1 -448 0 0 0 1 -1 2.5351817E-06 7.4936825E-20 408 2.5351817E-06 1 2.5351817E-06 -0.0021701155 6.427146E-12 2.5351817E-06 -1 448 0 0 0 1 6.155172E-06 1 2.5351817E-06 -0.0035601917 1 -6.155172E-06 -9.1773325E-12 -384 6.4271466E-12 2.5351817E-06 -1 448 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#m0_mesh_1_1_binds_array_id" count="8" stride="16">
+              <param name="TRANSFORM" type="float4x4" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="m0_mesh_1_1_weights_id" name="m0_mesh_1_1_weights">
+          <float_array id="m0_mesh_1_1_weights_array_id" count="18">0.25 0.75 1 1 1 0.25 0.75 0.25 0.75 1 1 0.25 0.75 0.25 0.75 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#m0_mesh_1_1_weights_array_id" count="18" stride="1">
+              <param name="WEIGHT" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <joints>
+          <input semantic="JOINT" source="#m0_mesh_1_1_joints_id" />
+          <input semantic="INV_BIND_MATRIX" source="#m0_mesh_1_1_binds_id" />
+        </joints>
+        <vertex_weights count="13">
+          <input semantic="JOINT" source="#m0_mesh_1_1_joints_id" offset="0" />
+          <input semantic="WEIGHT" source="#m0_mesh_1_1_weights_id" offset="1" />
+          <vcount>2 1 1 1 2 2 1 1 2 2 1 1 1</vcount>
+          <v>6 0 7 1 6 2 6 3 6 4 6 5 7 6 6 7 7 8 7 9 6 10 6 11 7 12 6 13 7 14 6 15 6 16 6 17</v>
+        </vertex_weights>
+      </skin>
+    </controller>
+    <controller id="m0_mesh_2_0_skin" name="m0_mesh_2_0_skin">
+      <skin source="#m0_mesh_2_0">
+        <bind_shape_matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</bind_shape_matrix>
+        <source id="m0_mesh_2_0_joints_id" name="m0_mesh_2_0_joints">
+          <Name_array id="m0_mesh_2_0_joints_array_id" count="8">joint_0 joint_1 joint_2 joint_3 joint_4 joint_5 joint_6 joint_7</Name_array>
+          <technique_common>
+            <accessor source="#m0_mesh_2_0_joints_array_id" count="8" stride="1">
+              <param name="JOINT" type="Name" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="m0_mesh_2_0_binds_id" name="m0_mesh_2_0_binds">
+          <float_array id="m0_mesh_2_0_binds_array_id" count="128">1 -0 0 0 -0 1 -0 0 0 -0 1 0 0 0 0 1 1 -0 0 352 -0 1 -0 -0 0 -0 1 448 0 0 0 1 1 -0 0 0 -0 1 -0 -96 0 -0 1 0 0 0 0 1 1 -0 0 0 -0 1 -0 0 0 -0 1 0 0 0 0 1 1 -0 0 -360 -0 1 -0 0 0 -0 1 -448 0 0 0 1 -3.6199901E-06 1 0 0.0013900762 -1 -3.6199901E-06 0 384 0 -0 1 -448 0 0 0 1 -1 2.5351817E-06 7.4936825E-20 408 2.5351817E-06 1 2.5351817E-06 -0.0021701155 6.427146E-12 2.5351817E-06 -1 448 0 0 0 1 6.155172E-06 1 2.5351817E-06 -0.0035601917 1 -6.155172E-06 -9.1773325E-12 -384 6.4271466E-12 2.5351817E-06 -1 448 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#m0_mesh_2_0_binds_array_id" count="8" stride="16">
+              <param name="TRANSFORM" type="float4x4" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="m0_mesh_2_0_weights_id" name="m0_mesh_2_0_weights">
+          <float_array id="m0_mesh_2_0_weights_array_id" count="19">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#m0_mesh_2_0_weights_array_id" count="19" stride="1">
+              <param name="WEIGHT" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <joints>
+          <input semantic="JOINT" source="#m0_mesh_2_0_joints_id" />
+          <input semantic="INV_BIND_MATRIX" source="#m0_mesh_2_0_binds_id" />
+        </joints>
+        <vertex_weights count="19">
+          <input semantic="JOINT" source="#m0_mesh_2_0_joints_id" offset="0" />
+          <input semantic="WEIGHT" source="#m0_mesh_2_0_weights_id" offset="1" />
+          <vcount>1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</vcount>
+          <v>6 0 6 1 6 2 6 3 6 4 6 5 6 6 6 7 6 8 6 9 6 10 6 11 6 12 6 13 6 14 6 15 6 16 6 17 6 18</v>
+        </vertex_weights>
+      </skin>
+    </controller>
+    <controller id="m0_mesh_3_0_skin" name="m0_mesh_3_0_skin">
+      <skin source="#m0_mesh_3_0">
+        <bind_shape_matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</bind_shape_matrix>
+        <source id="m0_mesh_3_0_joints_id" name="m0_mesh_3_0_joints">
+          <Name_array id="m0_mesh_3_0_joints_array_id" count="8">joint_0 joint_1 joint_2 joint_3 joint_4 joint_5 joint_6 joint_7</Name_array>
+          <technique_common>
+            <accessor source="#m0_mesh_3_0_joints_array_id" count="8" stride="1">
+              <param name="JOINT" type="Name" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="m0_mesh_3_0_binds_id" name="m0_mesh_3_0_binds">
+          <float_array id="m0_mesh_3_0_binds_array_id" count="128">1 -0 0 0 -0 1 -0 0 0 -0 1 0 0 0 0 1 1 -0 0 352 -0 1 -0 -0 0 -0 1 448 0 0 0 1 1 -0 0 0 -0 1 -0 -96 0 -0 1 0 0 0 0 1 1 -0 0 0 -0 1 -0 0 0 -0 1 0 0 0 0 1 1 -0 0 -360 -0 1 -0 0 0 -0 1 -448 0 0 0 1 -3.6199901E-06 1 0 0.0013900762 -1 -3.6199901E-06 0 384 0 -0 1 -448 0 0 0 1 -1 2.5351817E-06 7.4936825E-20 408 2.5351817E-06 1 2.5351817E-06 -0.0021701155 6.427146E-12 2.5351817E-06 -1 448 0 0 0 1 6.155172E-06 1 2.5351817E-06 -0.0035601917 1 -6.155172E-06 -9.1773325E-12 -384 6.4271466E-12 2.5351817E-06 -1 448 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#m0_mesh_3_0_binds_array_id" count="8" stride="16">
+              <param name="TRANSFORM" type="float4x4" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="m0_mesh_3_0_weights_id" name="m0_mesh_3_0_weights">
+          <float_array id="m0_mesh_3_0_weights_array_id" count="20">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#m0_mesh_3_0_weights_array_id" count="20" stride="1">
+              <param name="WEIGHT" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <joints>
+          <input semantic="JOINT" source="#m0_mesh_3_0_joints_id" />
+          <input semantic="INV_BIND_MATRIX" source="#m0_mesh_3_0_binds_id" />
+        </joints>
+        <vertex_weights count="20">
+          <input semantic="JOINT" source="#m0_mesh_3_0_joints_id" offset="0" />
+          <input semantic="WEIGHT" source="#m0_mesh_3_0_weights_id" offset="1" />
+          <vcount>1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</vcount>
+          <v>1 0 1 1 1 2 1 3 1 4 1 5 1 6 1 7 1 8 1 9 1 10 1 11 1 12 1 13 1 14 1 15 1 16 1 17 1 18 1 19</v>
+        </vertex_weights>
+      </skin>
+    </controller>
+    <controller id="m0_mesh_4_0_skin" name="m0_mesh_4_0_skin">
+      <skin source="#m0_mesh_4_0">
+        <bind_shape_matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</bind_shape_matrix>
+        <source id="m0_mesh_4_0_joints_id" name="m0_mesh_4_0_joints">
+          <Name_array id="m0_mesh_4_0_joints_array_id" count="8">joint_0 joint_1 joint_2 joint_3 joint_4 joint_5 joint_6 joint_7</Name_array>
+          <technique_common>
+            <accessor source="#m0_mesh_4_0_joints_array_id" count="8" stride="1">
+              <param name="JOINT" type="Name" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="m0_mesh_4_0_binds_id" name="m0_mesh_4_0_binds">
+          <float_array id="m0_mesh_4_0_binds_array_id" count="128">1 -0 0 0 -0 1 -0 0 0 -0 1 0 0 0 0 1 1 -0 0 352 -0 1 -0 -0 0 -0 1 448 0 0 0 1 1 -0 0 0 -0 1 -0 -96 0 -0 1 0 0 0 0 1 1 -0 0 0 -0 1 -0 0 0 -0 1 0 0 0 0 1 1 -0 0 -360 -0 1 -0 0 0 -0 1 -448 0 0 0 1 -3.6199901E-06 1 0 0.0013900762 -1 -3.6199901E-06 0 384 0 -0 1 -448 0 0 0 1 -1 2.5351817E-06 7.4936825E-20 408 2.5351817E-06 1 2.5351817E-06 -0.0021701155 6.427146E-12 2.5351817E-06 -1 448 0 0 0 1 6.155172E-06 1 2.5351817E-06 -0.0035601917 1 -6.155172E-06 -9.1773325E-12 -384 6.4271466E-12 2.5351817E-06 -1 448 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#m0_mesh_4_0_binds_array_id" count="8" stride="16">
+              <param name="TRANSFORM" type="float4x4" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="m0_mesh_4_0_weights_id" name="m0_mesh_4_0_weights">
+          <float_array id="m0_mesh_4_0_weights_array_id" count="51">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#m0_mesh_4_0_weights_array_id" count="51" stride="1">
+              <param name="WEIGHT" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <joints>
+          <input semantic="JOINT" source="#m0_mesh_4_0_joints_id" />
+          <input semantic="INV_BIND_MATRIX" source="#m0_mesh_4_0_binds_id" />
+        </joints>
+        <vertex_weights count="51">
+          <input semantic="JOINT" source="#m0_mesh_4_0_joints_id" offset="0" />
+          <input semantic="WEIGHT" source="#m0_mesh_4_0_weights_id" offset="1" />
+          <vcount>1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</vcount>
+          <v>2 0 2 1 2 2 2 3 2 4 2 5 2 6 2 7 2 8 2 9 2 10 2 11 2 12 2 13 2 14 2 15 2 16 2 17 2 18 2 19 2 20 2 21 2 22 2 23 2 24 2 25 2 26 2 27 2 28 2 29 2 30 2 31 2 32 2 33 2 34 2 35 2 36 2 37 2 38 2 39 2 40 2 41 2 42 2 43 2 44 2 45 2 46 2 47 2 48 2 49 2 50</v>
+        </vertex_weights>
+      </skin>
+    </controller>
+    <controller id="m0_mesh_5_0_skin" name="m0_mesh_5_0_skin">
+      <skin source="#m0_mesh_5_0">
+        <bind_shape_matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</bind_shape_matrix>
+        <source id="m0_mesh_5_0_joints_id" name="m0_mesh_5_0_joints">
+          <Name_array id="m0_mesh_5_0_joints_array_id" count="8">joint_0 joint_1 joint_2 joint_3 joint_4 joint_5 joint_6 joint_7</Name_array>
+          <technique_common>
+            <accessor source="#m0_mesh_5_0_joints_array_id" count="8" stride="1">
+              <param name="JOINT" type="Name" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="m0_mesh_5_0_binds_id" name="m0_mesh_5_0_binds">
+          <float_array id="m0_mesh_5_0_binds_array_id" count="128">1 -0 0 0 -0 1 -0 0 0 -0 1 0 0 0 0 1 1 -0 0 352 -0 1 -0 -0 0 -0 1 448 0 0 0 1 1 -0 0 0 -0 1 -0 -96 0 -0 1 0 0 0 0 1 1 -0 0 0 -0 1 -0 0 0 -0 1 0 0 0 0 1 1 -0 0 -360 -0 1 -0 0 0 -0 1 -448 0 0 0 1 -3.6199901E-06 1 0 0.0013900762 -1 -3.6199901E-06 0 384 0 -0 1 -448 0 0 0 1 -1 2.5351817E-06 7.4936825E-20 408 2.5351817E-06 1 2.5351817E-06 -0.0021701155 6.427146E-12 2.5351817E-06 -1 448 0 0 0 1 6.155172E-06 1 2.5351817E-06 -0.0035601917 1 -6.155172E-06 -9.1773325E-12 -384 6.4271466E-12 2.5351817E-06 -1 448 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#m0_mesh_5_0_binds_array_id" count="8" stride="16">
+              <param name="TRANSFORM" type="float4x4" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="m0_mesh_5_0_weights_id" name="m0_mesh_5_0_weights">
+          <float_array id="m0_mesh_5_0_weights_array_id" count="4">1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#m0_mesh_5_0_weights_array_id" count="4" stride="1">
+              <param name="WEIGHT" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <joints>
+          <input semantic="JOINT" source="#m0_mesh_5_0_joints_id" />
+          <input semantic="INV_BIND_MATRIX" source="#m0_mesh_5_0_binds_id" />
+        </joints>
+        <vertex_weights count="4">
+          <input semantic="JOINT" source="#m0_mesh_5_0_joints_id" offset="0" />
+          <input semantic="WEIGHT" source="#m0_mesh_5_0_weights_id" offset="1" />
+          <vcount>1 1 1 1</vcount>
+          <v>3 0 3 1 3 2 3 3</v>
+        </vertex_weights>
+      </skin>
+    </controller>
+  </library_controllers>
+  <library_visual_scenes>
+    <visual_scene id="m0_scene" name="robj_player_select">
+      <node id="m0_model" name="robj_player_select" type="NODE">
+        <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <node id="m0_bone_0" name="robj_player_select" sid="joint_0" type="JOINT">
+          <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+          <node id="m0_bone_1" name="etc_floor" sid="joint_1" type="JOINT">
+            <matrix sid="transform">1 0 0 -352 0 1 0 0 0 0 1 -448 0 0 0 1</matrix>
+            <extra>
+              <technique profile="SPICA">
+                <bone encoding="json" xmlns="urn:spica:collada:1">{"originalName":"etc_floor","Flags":0,"BillboardMode":"Off"}</bone>
+              </technique>
+            </extra>
+          </node>
+          <node id="m0_bone_2" name="light2" sid="joint_2" type="JOINT">
+            <matrix sid="transform">1 0 0 0 0 1 0 96 0 0 1 0 0 0 0 1</matrix>
+            <extra>
+              <technique profile="SPICA">
+                <bone encoding="json" xmlns="urn:spica:collada:1">{"originalName":"light2","Flags":0,"BillboardMode":"Off"}</bone>
+              </technique>
+            </extra>
+          </node>
+          <node id="m0_bone_3" name="main" sid="joint_3" type="JOINT">
+            <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+            <node id="m0_bone_4" name="L" sid="joint_4" type="JOINT">
+              <matrix sid="transform">1 0 0 360 0 1 0 0 0 0 1 448 0 0 0 1</matrix>
+              <node id="m0_bone_5" name="L_floor" sid="joint_5" type="JOINT">
+                <matrix sid="transform">-3.6199901E-06 -1 0 24 1 -3.6199901E-06 0 0 0 0 1 0 0 0 0 1</matrix>
+                <extra>
+                  <technique profile="SPICA">
+                    <bone encoding="json" xmlns="urn:spica:collada:1">{"originalName":"L_floor","Flags":"IsSegmentScaleCompensate","BillboardMode":"Off"}</bone>
+                  </technique>
+                </extra>
+              </node>
+              <extra>
+                <technique profile="SPICA">
+                  <bone encoding="json" xmlns="urn:spica:collada:1">{"originalName":"L","Flags":"IsSegmentScaleCompensate","BillboardMode":"Off"}</bone>
+                </technique>
+              </extra>
+            </node>
+            <node id="m0_bone_6" name="R" sid="joint_6" type="JOINT">
+              <matrix sid="transform">-1 2.5351817E-06 6.427146E-12 408 2.5351817E-06 1 2.5351817E-06 0 0 2.5351817E-06 -1 448 0 0 0 1</matrix>
+              <node id="m0_bone_7" name="R_floor" sid="joint_7" type="JOINT">
+                <matrix sid="transform">-3.6199901E-06 -1 -9.422985E-19 24 1 -3.6199901E-06 0 2.3283064E-10 0 -8.6736174E-19 1 0 0 0 0 1</matrix>
+                <extra>
+                  <technique profile="SPICA">
+                    <bone encoding="json" xmlns="urn:spica:collada:1">{"originalName":"R_floor","Flags":"IsSegmentScaleCompensate","BillboardMode":"Off"}</bone>
+                  </technique>
+                </extra>
+              </node>
+              <extra>
+                <technique profile="SPICA">
+                  <bone encoding="json" xmlns="urn:spica:collada:1">{"originalName":"R","Flags":"IsSegmentScaleCompensate","BillboardMode":"Off"}</bone>
+                </technique>
+              </extra>
+            </node>
+            <extra>
+              <technique profile="SPICA">
+                <bone encoding="json" xmlns="urn:spica:collada:1">{"originalName":"main","Flags":0,"BillboardMode":"Off"}</bone>
+              </technique>
+            </extra>
+          </node>
+          <extra>
+            <technique profile="SPICA">
+              <bone encoding="json" xmlns="urn:spica:collada:1">{"originalName":"robj_player_select","Flags":0,"BillboardMode":"Off"}</bone>
+            </technique>
+          </extra>
+        </node>
+        <node id="m0_mesh_0_0_node" name="Mesh_0_0" type="NODE">
+          <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+          <instance_controller url="#m0_mesh_0_0_skin">
+            <skeleton>#m0_bone_0</skeleton>
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="material_0" target="#m0_material_0">
+                  <bind_vertex_input semantic="UV0" input_semantic="TEXCOORD" input_set="3" />
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_controller>
+          <extra>
+            <technique profile="SPICA">
+              <mesh encoding="json" xmlns="urn:spica:collada:1">{"Type":"Normal","Layer":0,"Priority":0,"NodeIndex":65535,"Skinning":"None","visible":true}</mesh>
+            </technique>
+          </extra>
+        </node>
+        <node id="m0_mesh_1_0_node" name="Mesh_1_0" type="NODE">
+          <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+          <instance_controller url="#m0_mesh_1_0_skin">
+            <skeleton>#m0_bone_0</skeleton>
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="material_1" target="#m0_material_1">
+                  <bind_vertex_input semantic="UV0" input_semantic="TEXCOORD" input_set="3" />
+                  <bind_vertex_input semantic="UV1" input_semantic="TEXCOORD" input_set="4" />
+                  <bind_vertex_input semantic="UV2" input_semantic="TEXCOORD" input_set="5" />
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_controller>
+          <extra>
+            <technique profile="SPICA">
+              <mesh encoding="json" xmlns="urn:spica:collada:1">{"Type":"Normal","Layer":0,"Priority":0,"NodeIndex":65535,"Skinning":"Smooth","visible":true}</mesh>
+            </technique>
+          </extra>
+        </node>
+        <node id="m0_mesh_1_1_node" name="Mesh_1_1" type="NODE">
+          <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+          <instance_controller url="#m0_mesh_1_1_skin">
+            <skeleton>#m0_bone_0</skeleton>
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="material_1" target="#m0_material_1">
+                  <bind_vertex_input semantic="UV0" input_semantic="TEXCOORD" input_set="3" />
+                  <bind_vertex_input semantic="UV1" input_semantic="TEXCOORD" input_set="4" />
+                  <bind_vertex_input semantic="UV2" input_semantic="TEXCOORD" input_set="5" />
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_controller>
+          <extra>
+            <technique profile="SPICA">
+              <mesh encoding="json" xmlns="urn:spica:collada:1">{"Type":"Normal","Layer":0,"Priority":0,"NodeIndex":65535,"Skinning":"Smooth","visible":true}</mesh>
+            </technique>
+          </extra>
+        </node>
+        <node id="m0_mesh_2_0_node" name="Mesh_2_0" type="NODE">
+          <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+          <instance_controller url="#m0_mesh_2_0_skin">
+            <skeleton>#m0_bone_0</skeleton>
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="material_0" target="#m0_material_0">
+                  <bind_vertex_input semantic="UV0" input_semantic="TEXCOORD" input_set="3" />
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_controller>
+          <extra>
+            <technique profile="SPICA">
+              <mesh encoding="json" xmlns="urn:spica:collada:1">{"Type":"Normal","Layer":0,"Priority":0,"NodeIndex":65535,"Skinning":"None","visible":true}</mesh>
+            </technique>
+          </extra>
+        </node>
+        <node id="m0_mesh_3_0_node" name="Mesh_3_0" type="NODE">
+          <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+          <instance_controller url="#m0_mesh_3_0_skin">
+            <skeleton>#m0_bone_0</skeleton>
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="material_1" target="#m0_material_1">
+                  <bind_vertex_input semantic="UV0" input_semantic="TEXCOORD" input_set="3" />
+                  <bind_vertex_input semantic="UV1" input_semantic="TEXCOORD" input_set="4" />
+                  <bind_vertex_input semantic="UV2" input_semantic="TEXCOORD" input_set="5" />
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_controller>
+          <extra>
+            <technique profile="SPICA">
+              <mesh encoding="json" xmlns="urn:spica:collada:1">{"Type":"Normal","Layer":0,"Priority":0,"NodeIndex":65535,"Skinning":"None","visible":true}</mesh>
+            </technique>
+          </extra>
+        </node>
+        <node id="m0_mesh_4_0_node" name="Mesh_4_0" type="NODE">
+          <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+          <instance_controller url="#m0_mesh_4_0_skin">
+            <skeleton>#m0_bone_0</skeleton>
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="material_2" target="#m0_material_2">
+                  <bind_vertex_input semantic="UV0" input_semantic="TEXCOORD" input_set="3" />
+                  <bind_vertex_input semantic="UV1" input_semantic="TEXCOORD" input_set="4" />
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_controller>
+          <extra>
+            <technique profile="SPICA">
+              <mesh encoding="json" xmlns="urn:spica:collada:1">{"Type":"Normal","Layer":1,"Priority":0,"NodeIndex":65535,"Skinning":"None","visible":true}</mesh>
+            </technique>
+          </extra>
+        </node>
+        <node id="m0_mesh_5_0_node" name="Mesh_5_0" type="NODE">
+          <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+          <instance_controller url="#m0_mesh_5_0_skin">
+            <skeleton>#m0_bone_0</skeleton>
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="material_0" target="#m0_material_0">
+                  <bind_vertex_input semantic="UV0" input_semantic="TEXCOORD" input_set="3" />
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_controller>
+          <extra>
+            <technique profile="SPICA">
+              <mesh encoding="json" xmlns="urn:spica:collada:1">{"Type":"Normal","Layer":0,"Priority":0,"NodeIndex":65535,"Skinning":"None","visible":true}</mesh>
+            </technique>
+          </extra>
+        </node>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#m0_scene" />
+  </scene>
+  <extra>
+    <technique profile="SPICA">
+      <export_report encoding="json" xmlns="urn:spica:collada:1">{"version":1,"model":"robj_player_select","FramesPerSecond":30,"SamplesPerFrame":4,"warnings":["Material \u0027m_door\u0027 uses a standard shading fallback. Original PICA material state is stored in SPICA extras; generic importers do not reproduce the game shader.","Material \u0027m_floor\u0027 uses a standard shading fallback. Original PICA material state is stored in SPICA extras; generic importers do not reproduce the game shader.","Material \u0027m_light\u0027 uses a standard shading fallback. Original PICA material state is stored in SPICA extras; generic importers do not reproduce the game shader."]}</export_report>
+    </technique>
+  </extra>
+</COLLADA>
