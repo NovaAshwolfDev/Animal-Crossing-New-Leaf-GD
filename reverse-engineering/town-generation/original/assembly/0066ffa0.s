@@ -1,0 +1,20 @@
+0066ffa0  ldr r1,[0x66fff0]
+0066ffa4  stmdb sp!,{r4,lr}
+0066ffa8  mov r4,#0x0
+0066ffac  stmia r0,{r1,r4}
+0066ffb0  mov r3,#0xa
+0066ffb4  str r4,[r0,#0x8]!
+0066ffb8  ldr r1,[0x66fff4]
+0066ffbc  mov r2,#0x8
+0066ffc0  add r0,r0,#0x4
+0066ffc4  blx 0x00100648
+0066ffc8  mov r1,#0x0
+0066ffcc  str r4,[r0,#0x50]
+0066ffd0  add r2,r0,r1, lsl #0x3
+0066ffd4  add r1,r1,#0x1
+0066ffd8  str r4,[r2,#0x0]
+0066ffdc  cmp r1,#0xa
+0066ffe0  str r4,[r2,#0x4]
+0066ffe4  bcc 0x0066ffd0
+0066ffe8  sub r0,r0,#0xc
+0066ffec  ldmia sp!,{r4,pc}

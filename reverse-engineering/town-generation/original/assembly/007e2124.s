@@ -1,0 +1,14 @@
+007e2124  stmdb sp!,{r4,lr}
+007e2128  sub sp,sp,#0x8
+007e212c  cpy r4,r0
+007e2130  cpy r0,sp
+007e2134  stmia r0,{r1,r2}
+007e2138  cpy r1,r0
+007e213c  add r0,r4,#0x10
+007e2140  bl 0x007dca50
+007e2144  cpy r4,r0
+007e2148  cpy r0,sp
+007e214c  cpy r0,r0
+007e2150  add sp,sp,#0x8
+007e2154  cpy r0,r4
+007e2158  ldmia sp!,{r4,pc}

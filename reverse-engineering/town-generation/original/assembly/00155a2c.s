@@ -1,0 +1,44 @@
+00155a2c  stmdb sp!,{r4,r5,r6,r7,r8,r9,r10,lr}
+00155a30  cpy r4,r1
+00155a34  cpy r5,r0
+00155a38  bl 0x007f2db0
+00155a3c  cpy r6,r0
+00155a40  bl 0x00582e64
+00155a44  movs r8,r0
+00155a48  beq 0x00155b70
+00155a4c  cmp r4,#0x14
+00155a50  mov r9,#0x0
+00155a54  beq 0x00155a64
+00155a58  cmp r4,#0x5
+00155a5c  beq 0x00155acc
+00155a60  b 0x00155ab8
+00155a64  nop
+00155a68  bl 0x0063653c
+00155ab8  cmp r4,#0xf
+00155abc  cmpne r4,#0x11
+00155ac0  strb r4,[r8,#0x24]
+00155ac4  bne 0x00155b38
+00155ac8  b 0x00155b24
+00155acc  nop
+00155ad0  bl 0x0063653c
+00155b24  nop
+00155b28  bl 0x00580678
+00155b2c  cmp r0,r6
+00155b30  mvneq r0,#0x0
+00155b34  bleq 0x005806e4
+00155b38  ldr r0,[r5,#0x0]
+00155b3c  cmp r0,r6
+00155b40  bls 0x00155b68
+00155b44  ldr r0,[r5,#0x4]
+00155b48  mov r1,#0x1
+00155b4c  mov r1,r1, lsl r6
+00155b50  tst r0,r1
+00155b54  beq 0x00155b68
+00155b58  ldr r2,[r5,#0x8]
+00155b5c  bic r0,r0,r1
+00155b60  sub r1,r2,#0x1
+00155b64  strd r0,r1,[r5,#0x4]
+00155b68  cpy r0,r6
+00155b6c  ldmia sp!,{r4,r5,r6,r7,r8,r9,r10,pc}
+00155b70  mvn r0,#0x0
+00155b74  ldmia sp!,{r4,r5,r6,r7,r8,r9,r10,pc}

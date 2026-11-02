@@ -1,0 +1,22 @@
+008072dc  mov r12,#0x0
+008072e0  stmdb sp!,{r4,r5}
+008072e4  cpy r4,r0
+008072e8  cpy r3,r12
+008072ec  ldr r2,[r4,r3,lsl #0x2]
+008072f0  mov r0,r3, lsl #0x5
+008072f4  cmp r2,#0x0
+008072f8  beq 0x0080731c
+008072fc  tst r2,#0x1
+00807300  beq 0x00807310
+00807304  cmp r12,r1
+00807308  addne r12,r12,#0x1
+0080730c  beq 0x0080732c
+00807310  movs r2,r2, lsr #0x1
+00807314  add r0,r0,#0x1
+00807318  bne 0x008072fc
+0080731c  add r3,r3,#0x1
+00807320  cmp r3,#0x8e
+00807324  bcc 0x008072ec
+00807328  mvn r0,#0x0
+0080732c  ldmia sp!,{r4,r5}
+00807330  bx lr

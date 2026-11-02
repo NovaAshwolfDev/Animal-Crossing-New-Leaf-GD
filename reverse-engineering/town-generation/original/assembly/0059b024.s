@@ -1,0 +1,17 @@
+0059b024  ldr r1,[r0,#0x0]
+0059b028  cmp r1,#0x0
+0059b02c  ldrne r2,[r0,#0x4]
+0059b030  cmpne r2,#0x0
+0059b034  beq 0x0059b064
+0059b038  ldr r3,[r0,#0x8]
+0059b03c  ldr r2,[r2,#0x0]
+0059b040  cmp r2,r3
+0059b044  addgt r1,r3,#0x1
+0059b048  strgt r1,[r0,#0x8]
+0059b04c  bgt 0x0059b064
+0059b050  ldr r1,[r1,#0x0]
+0059b054  str r1,[r0,#0x8]
+0059b058  ldr r1,[r0,#0xc]
+0059b05c  add r1,r1,#0x1
+0059b060  str r1,[r0,#0xc]
+0059b064  bx lr

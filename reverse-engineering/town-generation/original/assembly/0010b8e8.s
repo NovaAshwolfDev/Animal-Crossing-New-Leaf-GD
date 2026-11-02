@@ -1,0 +1,13 @@
+0010b8e8  stmdb sp!,{r4,lr}
+0010b8ec  mrc p15,0x0,r4,cr13,cr0,0x3
+0010b8f0  ldr r0,[0x10b91c]
+0010b8f4  str r0,[r4,#0x80]!
+0010b8f8  mov r0,#0x20
+0010b8fc  str r0,[r4,#0x4]
+0010b900  ldr r0,[0x10b920]
+0010b904  ldr r0,[r0,#0x0]
+0010b908  swi 0x32
+0010b90c  and r1,r0,#0x80000000
+0010b910  cmp r1,#0x0
+0010b914  ldrge r0,[r4,#0x4]
+0010b918  ldmia sp!,{r4,pc}

@@ -1,0 +1,12 @@
+001193a8  ldr r2,[r0,#0x4]
+001193ac  mov r1,#0x0
+001193b0  cmp r2,#0x0
+001193b4  beq 0x001193cc
+001193b8  ldr r3,[r2,#0x8]
+001193bc  str r1,[r2,#0x8]
+001193c0  str r1,[r2,#0x4]
+001193c4  movs r2,r3
+001193c8  bne 0x001193b8
+001193cc  str r1,[r0,#0x4]
+001193d0  str r1,[r0,#0x8]
+001193d4  bx lr

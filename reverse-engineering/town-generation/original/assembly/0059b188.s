@@ -1,0 +1,17 @@
+0059b188  ldr r2,[r0,#0x0]
+0059b18c  ldr r3,[r1,#0x0]
+0059b190  add r2,r2,r3
+0059b194  str r2,[r0,#0x0]
+0059b198  ldr r2,[r0,#0x4]
+0059b19c  ldr r3,[r1,#0x4]
+0059b1a0  add r2,r2,r3
+0059b1a4  str r2,[r0,#0x4]
+0059b1a8  ldr r3,[r1,#0x0]
+0059b1ac  ldr r12,[r0,#0x8]
+0059b1b0  add r3,r3,r12
+0059b1b4  str r3,[r0,#0x8]
+0059b1b8  ldr r1,[r1,#0x4]
+0059b1bc  ldr r3,[r0,#0xc]
+0059b1c0  add r1,r1,r3
+0059b1c4  str r1,[r0,#0xc]
+0059b1c8  bx lr

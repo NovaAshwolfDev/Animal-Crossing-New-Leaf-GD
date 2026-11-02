@@ -1,0 +1,11 @@
+006196b8  stmdb sp!,{r4,r5,r6,r7,r8,r9,r10,r11,lr}
+006196bc  cpy r6,r0
+006196c0  sub sp,sp,#0x3c
+006196c4  ldr r0,[0x6199e0]
+006196c8  ldr r4,[r0,#0x234]
+006196cc  bl 0x005cc158
+006196d0  ldrsb r5,[r0,#0x7]
+006196d4  mov r0,#0x4
+006196d8  bl 0x0062f8d0
+006196dc  cpy r7,r0
+006196e0  bl 0x0063653c

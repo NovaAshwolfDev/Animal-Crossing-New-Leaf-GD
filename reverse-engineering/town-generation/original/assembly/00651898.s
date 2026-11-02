@@ -1,0 +1,9 @@
+00651898  stmdb sp!,{r4,lr}
+0065189c  cpy r4,r1
+006518a0  bl 0x0066ffa0
+006518a4  ldr r2,[0x6518bc]
+006518a8  mov r1,#0x0
+006518ac  str r2,[r0,#0x0]
+006518b0  str r4,[r0,#0x60]
+006518b4  strb r1,[r0,#0x64]
+006518b8  ldmia sp!,{r4,pc}

@@ -1,0 +1,10 @@
+007dc900  str r4,[sp,#-0x4]!
+007dc904  ldr r3,[r1,#0x0]
+007dc908  ldmia r2,{r4,r12}
+007dc90c  ldr r1,[r1,#0x4]
+007dc910  sub r2,r3,r4
+007dc914  sub r1,r1,r12
+007dc918  str r1,[r0,#0x4]
+007dc91c  str r2,[r0,#0x0]
+007dc920  ldr r4,[sp],#0x4
+007dc924  bx lr

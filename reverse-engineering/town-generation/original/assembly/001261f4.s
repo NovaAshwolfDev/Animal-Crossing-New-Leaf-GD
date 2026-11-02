@@ -1,0 +1,16 @@
+001261f4  ldr r3,[r0,#0x4]
+001261f8  cmp r3,#0x0
+001261fc  ldreq r0,[0x126234]
+00126200  bxeq lr
+00126204  str lr,[sp,#-0x4]!
+00126208  sub sp,sp,#0xc
+0012620c  mov r2,#0x14
+00126210  mov r1,#0x2
+00126214  stmia sp,{r1,r2}
+00126218  ldr r1,[r0,#0x0]
+0012621c  mov r2,#0x60
+00126220  ldr r12,[r1,#0x30]
+00126224  add r1,r0,#0x19c
+00126228  blx r12
+0012622c  add sp,sp,#0xc
+00126230  ldr pc,[sp],#0x4

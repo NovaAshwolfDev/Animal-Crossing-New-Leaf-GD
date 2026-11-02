@@ -1,0 +1,12 @@
+001b5c24  stmdb sp!,{r4,r5,r6,lr}
+001b5c28  cpy r5,r0
+001b5c2c  ldr r6,[0x1b5c54]
+001b5c30  mov r4,#0x0
+001b5c34  mov r0,#0x18
+001b5c38  bl 0x0011df38
+001b5c3c  ldrb r0,[r6,r0]
+001b5c40  strb r0,[r5,r4]
+001b5c44  add r4,r4,#0x1
+001b5c48  cmp r4,#0x3
+001b5c4c  bcc 0x001b5c34
+001b5c50  ldmia sp!,{r4,r5,r6,pc}

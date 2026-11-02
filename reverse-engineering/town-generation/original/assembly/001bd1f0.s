@@ -1,0 +1,16 @@
+001bd1f0  stmdb sp!,{r4,r5,r6,lr}
+001bd1f4  cpy r5,r0
+001bd1f8  bl 0x0063655c
+001bd1fc  add r4,r0,#0x6c00
+001bd200  add r4,r4,#0x248
+001bd204  cpy r0,r4
+001bd208  bl 0x007af40c
+001bd20c  cmn r0,#0x1
+001bd210  cpy r1,r0
+001bd214  moveq r0,#0x0
+001bd218  beq 0x001bd22c
+001bd21c  cpy r2,r5
+001bd220  cpy r0,r4
+001bd224  bl 0x001f09a4
+001bd228  mov r0,#0x1
+001bd22c  ldmia sp!,{r4,r5,r6,pc}

@@ -1,0 +1,11 @@
+001f1e44  stmdb sp!,{r3,r4,r5,lr}
+001f1e48  cpy r4,r0
+001f1e4c  ldr r1,[0x1f1e70]
+001f1e50  cpy r0,sp
+001f1e54  bl 0x00756d40
+001f1e58  cpy r1,r0
+001f1e5c  add r0,r4,#0x12
+001f1e60  bl 0x00756eb0
+001f1e64  cpy r0,sp
+001f1e68  cpy r0,r0
+001f1e6c  ldmia sp!,{r3,r4,r5,pc}

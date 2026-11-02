@@ -1,0 +1,13 @@
+007f3734  stmdb sp!,{r4,lr}
+007f3738  ldrh r1,[r0,#0x2c]
+007f373c  cmp r1,#0x14c
+007f3740  ldrbls r1,[r0,#0x2e]
+007f3744  cmpls r1,#0x8
+007f3748  bcs 0x007f3760
+007f374c  add r0,r0,#0x16
+007f3750  bl 0x008028d0
+007f3754  cmp r0,#0x0
+007f3758  movne r0,#0x1
+007f375c  bne 0x007f3764
+007f3760  mov r0,#0x0
+007f3764  ldmia sp!,{r4,pc}

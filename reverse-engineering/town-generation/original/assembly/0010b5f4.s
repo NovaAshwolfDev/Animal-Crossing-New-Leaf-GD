@@ -1,0 +1,12 @@
+0010b5f4  cpy r3,r0
+0010b5f8  ldr r0,[0x10b624]
+0010b5fc  stmdb sp!,{r4,r5}
+0010b600  ldr r12,[0x10b628]
+0010b604  mov r4,#0x0
+0010b608  strb r4,[r0,#0x1]
+0010b60c  strb r1,[r0,#0x0]
+0010b610  strh r12,[r0,#0x2]
+0010b614  str r2,[r0,#0x8]
+0010b618  str r3,[r0,#0x4]
+0010b61c  ldmia sp!,{r4,r5}
+0010b620  b 0x0010b62c

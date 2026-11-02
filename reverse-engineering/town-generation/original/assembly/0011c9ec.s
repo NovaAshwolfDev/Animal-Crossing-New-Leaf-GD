@@ -1,0 +1,11 @@
+0011c9ec  stmdb sp!,{r3,lr}
+0011c9f0  ldr r0,[r0,#0x0]
+0011c9f4  ldr r1,[r0,#0xc4]!
+0011c9f8  cmp r1,#0x0
+0011c9fc  addne r0,r0,r1
+0011ca00  moveq r0,#0x0
+0011ca04  cmp r0,#0x0
+0011ca08  str r0,[sp,#0x0]
+0011ca0c  cpyne r0,sp
+0011ca10  blne 0x00124508
+0011ca14  ldmia sp!,{r3,pc}

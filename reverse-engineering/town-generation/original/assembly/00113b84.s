@@ -1,0 +1,9 @@
+00113b84  stmdb sp!,{r4,lr}
+00113b88  bl 0x001139a0
+00113b8c  ldr r2,[0x113ba8]
+00113b90  mov r1,#0x0
+00113b94  str r1,[r0,#0x10]
+00113b98  str r2,[r0,#0x0]
+00113b9c  str r1,[r0,#0x34]
+00113ba0  str r1,[r0,#0x38]
+00113ba4  ldmia sp!,{r4,pc}

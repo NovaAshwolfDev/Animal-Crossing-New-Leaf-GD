@@ -1,0 +1,17 @@
+00100730  push {r3,r4,r5,r6,r7,lr}
+00100732  movs r5,r0
+00100734  movs r6,r1
+00100736  movs r7,r2
+00100738  cmp r3,#0x0
+0010073a  beq 0x0010074c
+0010073c  movs r0,r7
+0010073e  muls r0,r3
+00100740  adds r4,r0,r5
+00100742  subs r4,r4,r7
+00100744  movs r0,r4
+00100746  blx r6
+00100748  cmp r5,r4
+0010074a  bne 0x00100742
+0010074c  movs r0,r5
+0010074e  subs r0,#0x8
+00100750  pop {r3,r4,r5,r6,r7,pc}

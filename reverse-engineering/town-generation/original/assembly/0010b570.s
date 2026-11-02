@@ -1,0 +1,14 @@
+0010b570  stmdb sp!,{r4,r5,r6,lr}
+0010b574  cpy r5,r0
+0010b578  mrc p15,0x0,r4,cr13,cr0,0x3
+0010b57c  mov r0,#0x20000
+0010b580  str r0,[r4,#0x80]!
+0010b584  ldr r0,[0x10b5a8]
+0010b588  ldr r0,[r0,#0x0]
+0010b58c  swi 0x32
+0010b590  ands r1,r0,#0x80000000
+0010b594  bmi 0x0010b5a4
+0010b598  ldrb r0,[r4,#0x8]
+0010b59c  strb r0,[r5,#0x0]
+0010b5a0  ldr r0,[r4,#0x4]
+0010b5a4  ldmia sp!,{r4,r5,r6,pc}

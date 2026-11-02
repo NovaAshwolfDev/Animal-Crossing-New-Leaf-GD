@@ -1,0 +1,11 @@
+00113b48  stmdb sp!,{r4,lr}
+00113b4c  cpy r4,r0
+00113b50  ldr r0,[r0,#0x4]
+00113b54  cmp r0,#0x0
+00113b58  beq 0x00113b70
+00113b5c  ldr r1,[r0,#0x0]
+00113b60  ldr r1,[r1,#0x10]
+00113b64  blx r1
+00113b68  mov r0,#0x0
+00113b6c  str r0,[r4,#0x4]
+00113b70  ldmia sp!,{r4,pc}

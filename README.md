@@ -74,3 +74,10 @@ header signature fails verification; no claim of an authentic signed game image
 is made. Detailed output is in `assets/native/container-verification.txt`.
 
 For repeatable commands, see [the exporter instructions](tools/asset-exporter/README.md).
+
+## Town-generation research
+
+See [the reverse-engineering report](reverse-engineering/town-generation/README.md)
+for original-code listings, an address map, extracted generation tables, and
+ARM-tested RNG/terrain reconstructions. Full new-town behavior is not yet
+reconstructed or validated.

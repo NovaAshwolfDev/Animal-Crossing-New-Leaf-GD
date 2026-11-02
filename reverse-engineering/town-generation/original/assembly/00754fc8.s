@@ -1,0 +1,22 @@
+00754fc8  stmdb sp!,{r4,r5,r6,lr}
+00754fcc  cpy r5,r1
+00754fd0  cpy r4,r0
+00754fd4  bl 0x005a20f8
+00754fd8  cmp r0,#0x0
+00754fdc  beq 0x0075501c
+00754fe0  bl 0x007dcdac
+00754fe4  cmp r0,#0x0
+00754fe8  beq 0x0075501c
+00754fec  cpy r0,r4
+00754ff0  bl 0x005a20f8
+00754ff4  cmp r0,#0x0
+00754ff8  blne 0x007dcdac
+00754ffc  ldrh r0,[r4,#0x2]
+00755000  cmp r5,#0x4
+00755004  bic r0,r0,#0xc000
+00755008  strh r0,[r4,#0x2]
+0075500c  bcs 0x0075501c
+00755010  bic r0,r0,#0xc000
+00755014  orr r0,r0,r5, lsl #0xe
+00755018  strh r0,[r4,#0x2]
+0075501c  ldmia sp!,{r4,r5,r6,pc}

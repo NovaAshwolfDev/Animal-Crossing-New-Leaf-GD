@@ -1,0 +1,16 @@
+006386f8  stmdb sp!,{r4,r5,r6,lr}
+006386fc  cpy r4,r0
+00638700  cpy r5,r1
+00638704  cpy r0,r1
+00638708  bl 0x007fe108
+0063870c  cmp r0,#0x2a
+00638710  bne 0x00638720
+00638714  ldrb r0,[r4,#0x270]
+00638718  orr r0,r0,#0x20
+0063871c  strb r0,[r4,#0x270]
+00638720  cpy r0,r5
+00638724  bl 0x007fede8
+00638728  cmp r0,#0xff
+0063872c  movhi r0,#0x0
+00638730  strb r0,[r4,#0x26f]
+00638734  ldmia sp!,{r4,r5,r6,pc}

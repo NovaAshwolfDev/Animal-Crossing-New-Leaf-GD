@@ -1,0 +1,16 @@
+001249fc  stmdb sp!,{r4,r5,r6,lr}
+00124a00  cpy r4,r0
+00124a04  ldr r0,[0x124a3c]
+00124a08  ldr r5,[0x124a40]
+00124a0c  str r0,[r4,#0x0]
+00124a10  ldr r0,[r4,#0x4]
+00124a14  ldr r1,[r5,#0x0]
+00124a18  cmp r0,r1
+00124a1c  beq 0x00124a34
+00124a20  cmp r0,#0x0
+00124a24  cpyne r1,r4
+00124a28  blne 0x00127c30
+00124a2c  ldr r0,[r5,#0x0]
+00124a30  str r0,[r4,#0x4]
+00124a34  cpy r0,r4
+00124a38  ldmia sp!,{r4,r5,r6,pc}

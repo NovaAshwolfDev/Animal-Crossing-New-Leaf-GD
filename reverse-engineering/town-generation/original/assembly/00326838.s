@@ -1,0 +1,16 @@
+00326838  ldr r1,[0x32686c]
+0032683c  stmdb sp!,{r4,lr}
+00326840  str r1,[r0],#0xbc
+00326844  ldr r1,[0x326870]
+00326848  str r1,[r0],#0xc
+0032684c  cpy r0,r0
+00326850  sub r0,r0,#0xc
+00326854  cpy r0,r0
+00326858  sub r0,r0,#0xc
+0032685c  cpy r0,r0
+00326860  ldmia sp!,{r4,lr}
+00326864  sub r0,r0,#0xb0
+00326868  b 0x0064ced8
+0064ced8  ldr r1,[0x64cee4]
+0064cedc  str r1,[r0,#0x0]
+0064cee0  b 0x006642ac

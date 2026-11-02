@@ -1,0 +1,15 @@
+008027cc  stmdb sp!,{r4,lr}
+008027d0  cpy r4,r0
+008027d4  bl 0x005a20f8
+008027d8  cmp r0,#0x0
+008027dc  beq 0x00802800
+008027e0  bl 0x007dcdac
+008027e4  cmp r0,#0x0
+008027e8  beq 0x00802800
+008027ec  cpy r0,r4
+008027f0  bl 0x005a20f8
+008027f4  ldrb r0,[r0,#0x16]
+008027f8  cmp r0,#0x22
+008027fc  bcc 0x00802804
+00802800  mov r0,#0x0
+00802804  ldmia sp!,{r4,pc}

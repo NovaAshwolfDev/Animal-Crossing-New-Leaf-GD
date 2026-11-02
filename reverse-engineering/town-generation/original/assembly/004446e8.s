@@ -1,0 +1,39 @@
+004446e8  stmdb sp!,{r4,lr}
+004446ec  sub sp,sp,#0x8
+004446f0  add r1,r0,#0x10
+004446f4  mov r3,#0x1
+004446f8  ldrex r12,[r1]
+004446fc  mov r4,r12, lsl #0x8
+00444700  movs r4,r4, asr #0x18
+00444704  beq 0x00444778
+00444708  mov r12,r12, lsl #0x10
+0044470c  bic r2,r2,#0xff
+00444710  mov r12,r12, asr #0x18
+00444714  orr r2,r2,r3
+00444718  mov r12,r12, lsl #0x8
+0044471c  and r4,r12,#0xff00
+00444720  bic r2,r2,#0xff00
+00444724  mov r12,r3, lsl #0x10
+00444728  orr r2,r2,r4
+0044472c  and r12,r12,#0xff0000
+00444730  bic r2,r2,#0xff0000
+00444734  orr r2,r2,r12
+00444738  strex r4,r2,[r1]
+0044473c  cmp r4,#0x0
+00444740  bne 0x004446f8
+00444744  mov r2,#0x0
+00444748  cpy r1,r2
+0044474c  cpy r12,r2
+00444750  stmia sp,{r1,r12}
+00444754  ldr r0,[r0,#0x18]
+00444758  cpy r3,r2
+0044475c  bl 0x00136d48
+00444760  movs r1,r0, lsr #0x1f
+00444764  nop
+00444768  beq 0x0044477c
+0044476c  add sp,sp,#0x8
+00444770  ldmia sp!,{r4,lr}
+00444774  b 0x00123b70
+00444778  clrex
+0044477c  add sp,sp,#0x8
+00444780  ldmia sp!,{r4,pc}

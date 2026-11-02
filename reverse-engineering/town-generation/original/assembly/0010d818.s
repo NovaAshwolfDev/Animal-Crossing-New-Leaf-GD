@@ -1,0 +1,11 @@
+0010d818  ldr r0,[0x10d844]
+0010d81c  ldrb r0,[r0,#0x0]
+0010d820  cmp r0,#0x0
+0010d824  cmpne r0,#0x1
+0010d828  beq 0x0010d840
+0010d82c  cmp r0,#0x2
+0010d830  beq 0x0010d840
+0010d834  cmp r0,#0x5
+0010d838  moveq r0,#0x3
+0010d83c  movne r0,#0x0
+0010d840  bx lr

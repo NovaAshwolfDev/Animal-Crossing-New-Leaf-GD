@@ -1,0 +1,26 @@
+00123b70  ldr r2,[0x123bd8]
+00123b74  ldr r3,[0x123bdc]
+00123b78  stmdb sp!,{r4,lr}
+00123b7c  tst r0,#0x80000000
+00123b80  ldrb r2,[r2,#0x14]
+00123b84  ldrsb r3,[r3,#0x0]
+00123b88  mov r1,r0, lsr #0x1b
+00123b8c  subne r1,r1,#0x20
+00123b90  and r2,r2,#0x1
+00123b94  orrs r2,r2,r3
+00123b98  beq 0x00123bb8
+00123b9c  cmn r1,#0x7
+00123ba0  cmpne r1,#0x1
+00123ba4  beq 0x00123bd4
+00123ba8  ldr r2,[sp,#0x4]
+00123bac  ldmia sp!,{r4,lr}
+00123bb0  mov r1,#0x0
+00123bb4  b 0x0010b5f4
+00123bb8  cmn r1,#0x1
+00123bbc  bne 0x00123bcc
+00123bc0  ldr r2,[sp,#0x4]
+00123bc4  mov r1,#0x0
+00123bc8  bl 0x0010b5f4
+00123bcc  ldmia sp!,{r4,lr}
+00123bd0  b 0x0011afc4
+00123bd4  ldmia sp!,{r4,pc}

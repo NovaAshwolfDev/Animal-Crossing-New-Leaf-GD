@@ -1,0 +1,10 @@
+007f3a98  add r1,r0,#0x10000
+007f3a9c  add r1,r1,#0x3100
+007f3aa0  ldrb r2,[r1,#0x6c]
+007f3aa4  cmp r2,#0x0
+007f3aa8  ldrbne r1,[r1,#0x6e]
+007f3aac  cmpne r1,#0x0
+007f3ab0  addne r0,r0,#0x13000
+007f3ab4  moveq r0,#0x0
+007f3ab8  ldrbne r0,[r0,#0x128]
+007f3abc  bx lr

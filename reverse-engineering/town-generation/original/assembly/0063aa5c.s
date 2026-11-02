@@ -1,0 +1,32 @@
+0063aa5c  stmdb sp!,{r4,r5,r6,lr}
+0063aa60  mov r6,#0x0
+0063aa64  strb r6,[r0,#0x4]
+0063aa68  cpy r5,r0
+0063aa6c  cpy r4,r6
+0063aa70  strb r6,[r0,#0x5]
+0063aa74  add r0,r5,r4, lsl #0x2
+0063aa78  add r0,r0,#0x8
+0063aa7c  bl 0x0029435c
+0063aa80  add r4,r4,#0x1
+0063aa84  cmp r4,#0x38
+0063aa88  bcc 0x0063aa74
+0063aa8c  mov r4,#0x0
+0063aa90  add r0,r5,r4, lsl #0x2
+0063aa94  add r0,r0,#0xe8
+0063aa98  bl 0x0029435c
+0063aa9c  add r4,r4,#0x1
+0063aaa0  cmp r4,#0x2
+0063aaa4  bcc 0x0063aa90
+0063aaa8  add r0,r5,#0xf0
+0063aaac  strb r6,[r5,#0x6]
+0063aab0  bl 0x002d5348
+0063aab4  add r0,r5,#0x4000
+0063aab8  add r1,r5,#0x4400
+0063aabc  add r0,r0,#0x4b0
+0063aac0  add r1,r1,#0xb4
+0063aac4  add r5,r5,#0x4400
+0063aac8  add r5,r5,#0xb8
+0063aacc  str r6,[r0,#0x0]
+0063aad0  str r6,[r1,#0x0]
+0063aad4  str r6,[r5,#0x0]
+0063aad8  ldmia sp!,{r4,r5,r6,pc}

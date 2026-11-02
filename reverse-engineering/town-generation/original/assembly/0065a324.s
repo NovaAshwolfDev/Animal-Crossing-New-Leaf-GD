@@ -1,0 +1,10 @@
+0065a324  stmdb sp!,{r4,r5,r6,lr}
+0065a328  cpy r4,r0
+0065a32c  ldr r0,[r0,#0x24]
+0065a330  mov r5,#0x0
+0065a334  cmp r0,#0x0
+0065a338  beq 0x0065a344
+0065a33c  bl 0x0066eb6c
+0065a340  str r5,[r4,#0x24]
+0065a344  str r5,[r4,#0x834]
+0065a348  ldmia sp!,{r4,r5,r6,pc}

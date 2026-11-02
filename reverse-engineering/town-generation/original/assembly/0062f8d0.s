@@ -1,0 +1,16 @@
+0062f8d0  cmp r0,#0x4
+0062f8d4  andcc r0,r0,#0x3
+0062f8d8  stmdb sp!,{r4,lr}
+0062f8dc  blcs 0x006a9af0
+0062f8e0  ldr r1,[0x62f910]
+0062f8e4  and r0,r0,#0x3
+0062f8e8  add r0,r0,r1
+0062f8ec  add r0,r0,#0x24000
+0062f8f0  add r0,r0,#0x3c40
+0062f8f4  ldrb r4,[r0,#0x0]
+0062f8f8  cpy r0,r4
+0062f8fc  bl 0x002d5e84
+0062f900  cmp r0,#0x0
+0062f904  cpyne r0,r4
+0062f908  moveq r0,#0x8
+0062f90c  ldmia sp!,{r4,pc}

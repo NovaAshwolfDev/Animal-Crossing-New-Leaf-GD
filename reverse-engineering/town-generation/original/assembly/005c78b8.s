@@ -1,0 +1,9 @@
+005c78b8  cpy r3,r0
+005c78bc  ldr r0,[0x5c78dc]
+005c78c0  ldr r0,[r0,#0x0]
+005c78c4  cmp r0,#0x0
+005c78c8  beq 0x005c78d8
+005c78cc  cpy r2,r1
+005c78d0  cpy r1,r3
+005c78d4  b 0x005c6c7c
+005c78d8  bx lr

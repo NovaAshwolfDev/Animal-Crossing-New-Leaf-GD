@@ -1,0 +1,13 @@
+00756ef4  ldr r2,[r1,#0x0]
+00756ef8  str r2,[r0,#0x0]
+00756efc  ldr r2,[r1,#0x4]
+00756f00  str r2,[r0,#0x4]
+00756f04  ldr r2,[r1,#0x8]
+00756f08  str r2,[r0,#0x8]
+00756f0c  ldr r2,[r1,#0xc]
+00756f10  str r2,[r0,#0xc]
+00756f14  ldr r2,[r1,#0x10]
+00756f18  str r2,[r0,#0x10]
+00756f1c  ldrh r1,[r1,#0x14]
+00756f20  strh r1,[r0,#0x14]
+00756f24  bx lr

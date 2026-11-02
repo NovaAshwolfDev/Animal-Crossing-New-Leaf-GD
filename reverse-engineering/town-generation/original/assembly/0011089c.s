@@ -1,0 +1,14 @@
+0011089c  stmdb sp!,{r4,r5,r6,lr}
+001108a0  cpy r5,r0
+001108a4  mrc p15,0x0,r4,cr13,cr0,0x3
+001108a8  mov r0,#0x10800
+001108ac  str r0,[r4,#0x80]!
+001108b0  add r0,r4,#0x4
+001108b4  mov r2,#0x80
+001108b8  bl 0x0011b214
+001108bc  ldr r0,[r5,#0x0]
+001108c0  swi 0x32
+001108c4  and r1,r0,#0x80000000
+001108c8  cmp r1,#0x0
+001108cc  ldrge r0,[r4,#0x4]
+001108d0  ldmia sp!,{r4,r5,r6,pc}

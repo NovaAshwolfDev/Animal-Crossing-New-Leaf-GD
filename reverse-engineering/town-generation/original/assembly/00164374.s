@@ -1,0 +1,11 @@
+00164374  cmp r1,#0x0
+00164378  ldrge r3,[r0,#0x0]
+0016437c  mov r2,#0x0
+00164380  cmpge r3,r1
+00164384  ble 0x00164398
+00164388  rsb r2,r1,r1, lsl #0x3
+0016438c  add r1,r2,r1, lsl #0x4
+00164390  add r0,r0,r1, lsl #0x2
+00164394  add r2,r0,#0x4
+00164398  cpy r0,r2
+0016439c  bx lr

@@ -1,0 +1,23 @@
+0013b8cc  cmp r0,#0x0
+0013b8d0  beq 0x0013b90c
+0013b8d4  ldrh r2,[r0,#0x0]
+0013b8d8  cpy r1,r0
+0013b8dc  cmp r2,#0x0
+0013b8e0  bne 0x0013b90c
+0013b8e4  ldrh r2,[r1,#0x2]
+0013b8e8  cmp r2,#0x0
+0013b8ec  ldrheq r2,[r1,#0x4]
+0013b8f0  cmpeq r2,#0x0
+0013b8f4  bne 0x0013b90c
+0013b8f8  ldrh r2,[r1,#0x6]
+0013b8fc  cmp r2,#0x0
+0013b900  ldrheq r1,[r0,#0x8]
+0013b904  cmpeq r1,#0x0
+0013b908  beq 0x0013b920
+0013b90c  ldrb r0,[r0,#0x0]
+0013b910  and r0,r0,#0x20
+0013b914  movs r0,r0, lsr #0x5
+0013b918  moveq r0,#0x1
+0013b91c  beq 0x0013b924
+0013b920  mov r0,#0x0
+0013b924  bx lr

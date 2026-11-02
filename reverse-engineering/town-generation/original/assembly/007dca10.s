@@ -1,0 +1,10 @@
+007dca10  mov r12,#0x0
+007dca14  str r12,[r0,#0x8]
+007dca18  add r3,r1,#0x8
+007dca1c  str r12,[r0,#0xc]
+007dca20  stmia r0,{r1,r3}
+007dca24  ldr r2,[r1,#0x0]
+007dca28  str r2,[r0,#0x8]
+007dca2c  ldr r1,[r1,#0x4]
+007dca30  str r1,[r0,#0xc]
+007dca34  bx lr

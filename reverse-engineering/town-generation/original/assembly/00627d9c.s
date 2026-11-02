@@ -1,0 +1,11 @@
+00627d9c  ldrb r1,[r0,#0xa9]
+00627da0  add r1,r1,#0x1
+00627da4  and r1,r1,#0xff
+00627da8  cmp r1,#0x3
+00627dac  strb r1,[r0,#0xa9]
+00627db0  bcc 0x00627dc4
+00627db4  mov r2,#0x1
+00627db8  mov r1,#0x3
+00627dbc  strb r2,[r0,#0xa7]
+00627dc0  strb r1,[r0,#0xa9]
+00627dc4  bx lr

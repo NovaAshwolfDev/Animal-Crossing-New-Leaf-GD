@@ -1,0 +1,50 @@
+00288484  ldr r0,[0x28854c]
+00288488  stmdb sp!,{r4,r5,lr}
+0028848c  sub sp,sp,#0x3c
+00288490  ldr r4,[r0,#0x0]
+00288494  add r0,sp,#0x18
+00288498  cpy r1,r4
+0028849c  bl 0x007acd50
+002884a0  cpy r1,r4
+002884a4  cpy r0,sp
+002884a8  bl 0x007acdd0
+002884ac  add r1,sp,#0x18
+002884b0  cpy r0,sp
+002884b4  bl 0x007acd1c
+002884b8  cmp r0,#0x0
+002884bc  beq 0x00288530
+002884c0  cpy r0,sp
+002884c4  add r0,r0,#0x8
+002884c8  ldrb r4,[r0,#0x8]
+002884cc  cpy r0,sp
+002884d0  add r0,r0,#0x8
+002884d4  ldr r5,[r0,#0x4]
+002884d8  cpy r0,sp
+002884dc  add r0,r0,#0x8
+002884e0  ldr r1,[r0,#0x0]
+002884e4  cpy r2,r5
+002884e8  add r0,sp,#0x30
+002884ec  stmia r0,{r1,r2}
+002884f0  mov r3,#0x0
+002884f4  mov r2,#0x1e
+002884f8  cpy r1,r4
+002884fc  bl 0x00592534
+00288500  add r0,sp,#0x30
+00288504  nop
+00288508  cpy r0,r0
+0028850c  cpy r0,sp
+00288510  nop
+00288514  bl 0x001cbd60
+00288518  add r1,sp,#0x18
+0028851c  cpy r0,sp
+00288520  bl 0x007acd1c
+00288524  cmp r0,#0x0
+00288528  nop
+0028852c  bne 0x002884c0
+00288530  cpy r0,sp
+00288534  cpy r0,r0
+00288538  add r0,sp,#0x18
+0028853c  nop
+00288540  cpy r0,r0
+00288544  add sp,sp,#0x3c
+00288548  ldmia sp!,{r4,r5,pc}

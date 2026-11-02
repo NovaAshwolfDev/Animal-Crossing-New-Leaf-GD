@@ -1,0 +1,16 @@
+00600500  cmp r1,#0x0
+00600504  cmpge r2,#0x0
+00600508  blt 0x0060053c
+0060050c  cmp r1,#0x70
+00600510  cmpcc r2,#0x60
+00600514  bcs 0x0060053c
+00600518  rsb r2,r2,r2, lsl #0x3
+0060051c  mov r3,#0x1
+00600520  add r1,r1,r2, lsl #0x4
+00600524  mov r2,r1, asr #0x5
+00600528  and r1,r1,#0x1f
+0060052c  add r0,r0,r2, lsl #0x2
+00600530  ldr r2,[r0,#0x4]
+00600534  bic r1,r2,r3, lsl r1
+00600538  str r1,[r0,#0x4]
+0060053c  bx lr

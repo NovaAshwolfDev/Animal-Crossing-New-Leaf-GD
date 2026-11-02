@@ -1,0 +1,9 @@
+0039cc1c  mov r1,#0x0
+0039cc20  str r1,[r0,#0x0]
+0039cc24  str r1,[r0,#0x4]
+0039cc28  str r1,[r0,#0x8]
+0039cc2c  str r1,[r0,#0xc]
+0039cc30  str r1,[r0,#0x10]
+0039cc34  str r1,[r0,#0x14]
+0039cc38  strh r1,[r0,#0x18]
+0039cc3c  cpy r0,r0

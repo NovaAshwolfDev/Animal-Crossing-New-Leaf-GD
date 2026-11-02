@@ -1,0 +1,20 @@
+00768c30  stmdb sp!,{r4,r5,r6,lr}
+00768c34  movs r4,r0
+00768c38  cmpne r4,#0x1
+00768c3c  beq 0x00768c4c
+00768c40  cmp r4,#0x2
+00768c44  cmpne r4,#0x3
+00768c48  bne 0x00768c78
+00768c4c  mov r0,#0x4
+00768c50  bl 0x0062f8d0
+00768c54  cpy r5,r0
+00768c58  nop
+00768c5c  bl 0x002d5e74
+00768c60  cmp r0,#0x0
+00768c64  nop
+00768c68  beq 0x00768c78
+00768c6c  cmp r4,r5
+00768c70  moveq r0,#0x1
+00768c74  beq 0x00768c7c
+00768c78  mov r0,#0x0
+00768c7c  ldmia sp!,{r4,r5,r6,pc}

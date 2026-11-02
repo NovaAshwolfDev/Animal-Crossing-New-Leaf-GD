@@ -1,0 +1,14 @@
+001ea94c  stmdb sp!,{r4,lr}
+001ea950  bl 0x00636e3c
+001ea954  add r0,r0,#0x54000
+001ea958  mov r1,#0x0
+001ea95c  add r0,r0,#0x3e80
+001ea960  bl 0x003c8434
+001ea964  bl 0x00292480
+001ea968  ldmia sp!,{r4,lr}
+001ea96c  cpy r0,r0
+001ea970  mov r2,#0x0
+001ea974  mov r1,#0x1e
+001ea978  strh r2,[r0,#0x0]
+001ea97c  strb r1,[r0,#0x2]
+001ea980  bx lr

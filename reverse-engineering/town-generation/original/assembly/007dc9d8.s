@@ -1,0 +1,14 @@
+007dc9d8  adds r3,r1,#0x8
+007dc9dc  str r4,[sp,#-0x4]!
+007dc9e0  ldmia r3,{r2,r12}
+007dc9e4  beq 0x007dc9fc
+007dc9e8  ldr r4,[r3,#0x0]
+007dc9ec  cmp r4,r2
+007dc9f0  ldrle r2,[r1,#0x0]
+007dc9f4  addle r12,r12,#0x1
+007dc9f8  addgt r2,r2,#0x1
+007dc9fc  stmia r0,{r1,r3}
+007dca00  add r0,r0,#0x8
+007dca04  stmia r0,{r2,r12}
+007dca08  ldr r4,[sp],#0x4
+007dca0c  bx lr

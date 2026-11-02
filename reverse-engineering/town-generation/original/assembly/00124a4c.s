@@ -1,0 +1,11 @@
+00124a4c  stmdb sp!,{r4,lr}
+00124a50  cpy r4,r0
+00124a54  ldr r1,[0x124a78]
+00124a58  ldr r0,[r0,#0x10]
+00124a5c  str r1,[r4,#0x0]
+00124a60  cmp r0,#0x0
+00124a64  cpyne r1,r4
+00124a68  blne 0x00127aec
+00124a6c  cpy r0,r4
+00124a70  ldmia sp!,{r4,lr}
+00124a74  b 0x001249fc

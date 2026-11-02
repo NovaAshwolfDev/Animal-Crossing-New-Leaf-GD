@@ -1,0 +1,17 @@
+007ec828  stmdb sp!,{r4,lr}
+007ec82c  sub sp,sp,#0x18
+007ec830  cpy r4,r0
+007ec834  mov r0,#0x0
+007ec838  str r0,[sp,#0x0]
+007ec83c  str r0,[sp,#0x4]
+007ec840  str r0,[sp,#0x8]
+007ec844  ldrb r3,[r1,#0x3]
+007ec848  ldrb r2,[r1,#0x2]
+007ec84c  ldrh r1,[r1,#0x0]
+007ec850  add r0,sp,#0xc
+007ec854  bl 0x005cd0b8
+007ec858  add r3,sp,#0xc
+007ec85c  ldmia r3,{r0,r1,r2}
+007ec860  stmia r4,{r0,r1,r2}
+007ec864  add sp,sp,#0x18
+007ec868  ldmia sp!,{r4,pc}

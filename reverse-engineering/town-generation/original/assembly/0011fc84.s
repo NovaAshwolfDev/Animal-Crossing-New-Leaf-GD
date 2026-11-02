@@ -1,0 +1,22 @@
+0011fc84  stmdb sp!,{r4,r5,r6,lr}
+0011fc88  cpy r6,r0
+0011fc8c  cpy r5,r1
+0011fc90  mov r4,#0x0
+0011fc94  cpy r1,r4
+0011fc98  cpy r0,r6
+0011fc9c  bl 0x0011fcdc
+0011fca0  movs r4,r0
+0011fca4  nop
+0011fca8  beq 0x0011fcd8
+0011fcac  ldr r0,[r4,#0x18]
+0011fcb0  cmp r0,r5
+0011fcb4  bhi 0x0011fc94
+0011fcb8  ldr r0,[r4,#0x1c]
+0011fcbc  cmp r5,r0
+0011fcc0  bcs 0x0011fc94
+0011fcc4  cpy r1,r5
+0011fcc8  add r0,r4,#0xc
+0011fccc  bl 0x0011fc84
+0011fcd0  cmp r0,#0x0
+0011fcd4  cpyeq r0,r4
+0011fcd8  ldmia sp!,{r4,r5,r6,pc}

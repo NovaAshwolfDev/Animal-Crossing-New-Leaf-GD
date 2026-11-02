@@ -1,0 +1,49 @@
+007ec1a4  stmdb sp!,{r4,r5,r6,r7,r8,r9,lr}
+007ec1a8  cpy r4,r0
+007ec1ac  sub sp,sp,#0x24
+007ec1b0  cpy r8,r1
+007ec1b4  cpy r9,r2
+007ec1b8  cpy r0,sp
+007ec1bc  add r1,r4,#0x16
+007ec1c0  bl 0x007edb08
+007ec1c4  add r2,sp,#0x4
+007ec1c8  ldrb r1,[r4,#0x23]
+007ec1cc  ldmia r2,{r5,r6}
+007ec1d0  ldrb r0,[r4,#0x22]
+007ec1d4  ldr r7,[sp,#0x0]
+007ec1d8  mov r2,r6, lsl #0x10
+007ec1dc  mov r2,r2, asr #0x18
+007ec1e0  stmia sp,{r0,r1,r2}
+007ec1e4  mov r0,r5, lsl #0x10
+007ec1e8  cpy r1,r7
+007ec1ec  mov r3,r0, asr #0x18
+007ec1f0  add r0,sp,#0xc
+007ec1f4  sxtb r2,r5
+007ec1f8  bl 0x005cd0b8
+007ec1fc  ldrb r0,[r4,#0x24]
+007ec200  tst r0,#0x1
+007ec204  beq 0x007ec230
+007ec208  add r4,sp,#0xc
+007ec20c  stmia sp,{r5,r6}
+007ec210  ldmia r4,{r0,r1,r2}
+007ec214  cpy r3,r7
+007ec218  bl 0x005cd080
+007ec21c  cmp r0,#0x0
+007ec220  bne 0x007ec230
+007ec224  mov r1,#0x1
+007ec228  add r0,sp,#0xc
+007ec22c  bl 0x005cd428
+007ec230  add r3,sp,#0xc
+007ec234  ldmia r3,{r0,r1,r2}
+007ec238  add r3,sp,#0x18
+007ec23c  stmia r3,{r0,r1,r2}
+007ec240  cpy r1,r9
+007ec244  add r0,sp,#0x18
+007ec248  bl 0x005cd7b0
+007ec24c  ldrd r0,r1,[sp,#0x1c]
+007ec250  strd r0,r1,[sp,#0x0]
+007ec254  ldmia r8,{r0,r1,r2}
+007ec258  ldr r3,[sp,#0x18]
+007ec25c  bl 0x005cd080
+007ec260  add sp,sp,#0x24
+007ec264  ldmia sp!,{r4,r5,r6,r7,r8,r9,pc}

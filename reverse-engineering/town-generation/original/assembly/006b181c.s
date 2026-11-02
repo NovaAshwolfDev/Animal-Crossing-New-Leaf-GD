@@ -1,0 +1,14 @@
+006b181c  stmdb sp!,{r4,lr}
+006b1820  bl 0x00610c2c
+006b1824  cpy r1,r0
+006b1828  mov r0,#0x20000
+006b182c  bl 0x00611914
+006b1830  cmp r0,#0x0
+006b1834  bne 0x006b184c
+006b1838  mov r0,#0x0
+006b183c  bl 0x001f4ae8
+006b1840  cmp r0,#0x9
+006b1844  moveq r0,#0x1
+006b1848  beq 0x006b1850
+006b184c  mov r0,#0x0
+006b1850  ldmia sp!,{r4,pc}

@@ -1,0 +1,14 @@
+00116d14  stmdb sp!,{r4,r5,r6,lr}
+00116d18  sub sp,sp,#0x18
+00116d1c  add lr,sp,#0x28
+00116d20  cpy r4,r0
+00116d24  ldmia lr,{r0,r5,r6,r12}
+00116d28  stmia sp,{r0,r5,r6,r12}
+00116d2c  add r0,sp,#0x10
+00116d30  bl 0x00110b20
+00116d34  add lr,sp,#0x10
+00116d38  cpy r0,r4
+00116d3c  ldmia lr,{r1,r2}
+00116d40  stmia r4,{r1,r2}
+00116d44  add sp,sp,#0x18
+00116d48  ldmia sp!,{r4,r5,r6,pc}

@@ -1,0 +1,13 @@
+0063ac18  stmdb sp!,{r4,lr}
+0063ac1c  cpy r4,r0
+0063ac20  sub sp,sp,#0x8
+0063ac24  cpy r0,r1
+0063ac28  bl 0x005cc318
+0063ac2c  strd r0,r1,[sp,#0x0]
+0063ac30  cpy r0,r4
+0063ac34  bl 0x0080c0b0
+0063ac38  cpy r1,sp
+0063ac3c  cpy r0,r4
+0063ac40  bl 0x0011a3e0
+0063ac44  add sp,sp,#0x8
+0063ac48  ldmia sp!,{r4,pc}

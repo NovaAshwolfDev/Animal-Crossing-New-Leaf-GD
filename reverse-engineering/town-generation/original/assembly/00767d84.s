@@ -1,0 +1,10 @@
+00767d84  cmp r0,#0x0
+00767d88  beq 0x00767da4
+00767d8c  cmp r0,#0x1
+00767d90  beq 0x00767da8
+00767d94  cmp r0,#0x2
+00767d98  cmpne r0,#0x3
+00767d9c  movne r0,#0x0
+00767da0  bne 0x00767da8
+00767da4  mov r0,#0x1
+00767da8  bx lr

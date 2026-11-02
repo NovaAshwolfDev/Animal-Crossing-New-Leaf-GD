@@ -1,0 +1,30 @@
+002d5ab4  stmdb sp!,{r4,r5,r6,r7,r8,r9,r10,lr}
+002d5ab8  cpy r6,r0
+002d5abc  cpy r7,r1
+002d5ac0  cpy r0,r1
+002d5ac4  bl 0x007f3734
+002d5ac8  cmp r0,#0x0
+002d5acc  movne r4,#0x0
+002d5ad0  cpyne r9,r4
+002d5ad4  beq 0x002d5b6c
+002d5ad8  and r0,r4,#0xff
+002d5adc  cmp r0,#0x4
+002d5ae0  cpycs r5,r9
+002d5ae4  bcs 0x002d5af4
+002d5ae8  ldr r1,[0x2d5b84]
+002d5aec  mul r1,r0,r1
+002d5af0  add r5,r6,r1, lsl #0x4
+002d5af4  cmp r5,#0x0
+002d5af8  beq 0x002d5b70
+002d5afc  cpy r0,r7
+002d5b00  bl 0x007f3734
+002d5b04  cmp r0,#0x0
+002d5b08  nop
+002d5b0c  beq 0x002d5b70
+002d5b10  bl 0x0063653c
+002d5b6c  ldmia sp!,{r4,r5,r6,r7,r8,r9,r10,pc}
+002d5b70  add r4,r4,#0x1
+002d5b74  cmp r4,#0x4
+002d5b78  blt 0x002d5ad8
+002d5b7c  mov r0,#0x0
+002d5b80  ldmia sp!,{r4,r5,r6,r7,r8,r9,r10,pc}

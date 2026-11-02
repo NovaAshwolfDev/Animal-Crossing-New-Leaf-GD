@@ -1,0 +1,14 @@
+0063d2ac  stmdb sp!,{r4,lr}
+0063d2b0  ldr r4,[0x63d2e4]
+0063d2b4  ldrb r0,[r4,#0x0]
+0063d2b8  cmp r0,#0x1
+0063d2bc  beq 0x0063d2e0
+0063d2c0  mov r0,#0x0
+0063d2c4  bl 0x00572674
+0063d2c8  cmp r0,#0x0
+0063d2cc  moveq r0,#0x1
+0063d2d0  movne r0,#0x0
+0063d2d4  strb r0,[r4,#0x0]
+0063d2d8  ldmia sp!,{r4,lr}
+0063d2dc  b 0x005728c8
+0063d2e0  ldmia sp!,{r4,pc}

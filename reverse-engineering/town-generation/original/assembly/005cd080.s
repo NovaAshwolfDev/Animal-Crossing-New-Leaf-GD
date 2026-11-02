@@ -1,0 +1,14 @@
+005cd080  stmdb sp!,{r0,r1,r2,r3}
+005cd084  stmdb sp!,{r4,r5,r6,lr}
+005cd088  add r0,sp,#0x10
+005cd08c  bl 0x005cc318
+005cd090  cpy r4,r0
+005cd094  cpy r5,r1
+005cd098  add r0,sp,#0x1c
+005cd09c  bl 0x005cc318
+005cd0a0  subs r0,r4,r0
+005cd0a4  sbcs r0,r5,r1
+005cd0a8  ldmia sp!,{r4,r5,r6}
+005cd0ac  movge r0,#0x1
+005cd0b0  movlt r0,#0x0
+005cd0b4  ldr pc,[sp],#0x14

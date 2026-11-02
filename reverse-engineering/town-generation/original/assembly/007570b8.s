@@ -1,0 +1,10 @@
+007570b8  mov r1,#0x0
+007570bc  str r1,[r0,#0x2]
+007570c0  str r1,[r0,#0x6]
+007570c4  str r1,[r0,#0xa]
+007570c8  str r1,[r0,#0xe]
+007570cc  strh r1,[r0,#0x12]
+007570d0  mov r2,#0xa
+007570d4  strh r1,[r0,#0x0]
+007570d8  strb r2,[r0,#0x14]
+007570dc  bx lr

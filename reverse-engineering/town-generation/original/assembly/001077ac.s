@@ -1,0 +1,25 @@
+001077ac  stmdb sp!,{r4,lr}
+001077b0  cpy r4,r0
+001077b4  bl 0x00107664
+001077b8  cpy r1,r0
+001077bc  and r1,r1,#0x80000000
+001077c0  cmp r1,#0x0
+001077c4  mov r0,#0x0
+001077c8  strbge r0,[r4,#0x0]
+001077cc  bge 0x001077e8
+001077d0  bl 0x0010b424
+001077d4  ands r0,r0,#0x80000000
+001077d8  bmi 0x001077ec
+001077dc  mov r0,#0x1
+001077e0  strb r0,[r4,#0x0]
+001077e4  mov r0,#0x0
+001077e8  ldmia sp!,{r4,pc}
+001077ec  nop
+001077f0  bl 0x0010b4a0
+001077f4  and r0,r0,#0x80000000
+001077f8  cmp r0,#0x0
+001077fc  movge r0,#0x2
+00107800  strbge r0,[r4,#0x0]
+00107804  ldrlt r0,[0x107810]
+00107808  movge r0,#0x0
+0010780c  ldmia sp!,{r4,pc}

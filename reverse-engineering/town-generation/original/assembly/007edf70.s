@@ -1,0 +1,14 @@
+007edf70  stmdb sp!,{r4,lr}
+007edf74  cpy r4,r1
+007edf78  sub sp,sp,#0x18
+007edf7c  cpy r1,r0
+007edf80  add r0,sp,#0xc
+007edf84  bl 0x007edb08
+007edf88  add r3,sp,#0xc
+007edf8c  ldmia r3,{r0,r1,r2}
+007edf90  stmia sp,{r0,r1,r2}
+007edf94  cpy r1,r4
+007edf98  cpy r0,sp
+007edf9c  bl 0x007e0078
+007edfa0  add sp,sp,#0x18
+007edfa4  ldmia sp!,{r4,pc}

@@ -1,0 +1,10 @@
+005a532c  ldrb r3,[r0,#0x4c]
+005a5330  cmp r3,#0x0
+005a5334  cmpne r2,#0x0
+005a5338  cmpne r1,#0x0
+005a533c  moveq r0,#0x0
+005a5340  beq 0x005a5350
+005a5344  ldr r3,[r0,#0x0]
+005a5348  ldr r3,[r3,#0x48]
+005a534c  bx r3
+005a5350  bx lr

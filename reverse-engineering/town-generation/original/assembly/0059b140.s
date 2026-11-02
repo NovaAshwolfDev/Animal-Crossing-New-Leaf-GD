@@ -1,0 +1,9 @@
+0059b140  add r0,r0,#0x24
+0059b144  stmdb sp!,{r4,lr}
+0059b148  cpy r0,r0
+0059b14c  sub r0,r0,#0x10
+0059b150  cpy r0,r0
+0059b154  ldmia sp!,{r4,lr}
+0059b158  sub r0,r0,#0x14
+0059b15c  cpy r0,r0
+0059b160  bx lr

@@ -1,0 +1,15 @@
+002fe5da  push {lr}
+002fe5dc  sub sp,#0x3c
+002fe5de  str r1,[sp,#0x8]
+002fe5e0  movs r1,#0x0
+002fe5e2  str r1,[sp,#0x14]
+002fe5e4  ldr r1,[0x002fe5fc]
+002fe5e6  str r3,[sp,#0x4]
+002fe5e8  add r1,pc
+002fe5ea  str r1,[sp,#0xc]
+002fe5ec  movs r1,r2
+002fe5ee  str r0,[sp,#0x10]
+002fe5f0  mov r0,sp
+002fe5f2  bl 0x002ff890
+002fe5f6  add sp,#0x3c
+002fe5f8  pop {pc}

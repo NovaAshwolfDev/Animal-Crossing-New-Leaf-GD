@@ -1,0 +1,39 @@
+00697df4  stmdb sp!,{r4,r5,r6,lr}
+00697df8  cpy r6,r2
+00697dfc  ldrb r2,[r0,#0x7]
+00697e00  cpy r4,r0
+00697e04  ldr r0,[r0,#0x0]
+00697e08  cpy r5,r1
+00697e0c  mov r1,r0, lsr #0x10
+00697e10  add r3,r0,r0, lsr #0x18
+00697e14  add r1,r1,r0, lsr #0x8
+00697e18  add r1,r1,r3
+00697e1c  add r1,r1,#0xba
+00697e20  and r1,r1,#0xff
+00697e24  cmp r2,r1
+00697e28  movne r0,#0x0
+00697e2c  bne 0x00697e54
+00697e30  ldrb r2,[r4,#0x6]
+00697e34  mov r1,#0x0
+00697e38  rsb r2,r2,#0x1c
+00697e3c  bl 0x00300d80
+00697e40  ldrh r2,[r4,#0x4]
+00697e44  ldr r3,[0x697e90]
+00697e48  adds r0,r0,r1
+00697e4c  add r2,r2,r3
+00697e50  subs r0,r0,r2
+00697e54  mov r3,#0x0
+00697e58  cpy r1,r6
+00697e5c  adds r6,r0,r5
+00697e60  cpy r2,r3
+00697e64  adc r3,r3,r3
+00697e68  subs r12,r1,r6
+00697e6c  sbcs r2,r2,r3
+00697e70  bcs 0x00697e80
+00697e74  cpy r0,r4
+00697e78  ldmia sp!,{r4,r5,r6,lr}
+00697e7c  b 0x00697eec
+00697e80  adds r1,r0,r5
+00697e84  cpy r0,r4
+00697e88  ldmia sp!,{r4,r5,r6,lr}
+00697e8c  b 0x00697eec

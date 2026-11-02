@@ -1,0 +1,10 @@
+0011919c  ldr r0,[0x1191c4]
+001191a0  stmdb sp!,{r4,lr}
+001191a4  cpy r4,r1
+001191a8  ldr r0,[r0,#0x0]
+001191ac  add r0,r0,#0x24
+001191b0  bl 0x0011e654
+001191b4  ldr r1,[r0,#0x64]
+001191b8  str r4,[r0,#0x64]
+001191bc  cpy r0,r1
+001191c0  ldmia sp!,{r4,pc}

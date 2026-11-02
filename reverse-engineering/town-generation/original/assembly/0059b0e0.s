@@ -1,0 +1,9 @@
+0059b0e0  ldr r3,[r1,#0x0]
+0059b0e4  str r3,[r0,#0x0]
+0059b0e8  ldr r1,[r1,#0x4]
+0059b0ec  str r1,[r0,#0x4]
+0059b0f0  ldr r3,[r2,#0x0]
+0059b0f4  str r3,[r0,#0x8]
+0059b0f8  ldr r2,[r2,#0x4]
+0059b0fc  str r2,[r0,#0xc]
+0059b100  bx lr

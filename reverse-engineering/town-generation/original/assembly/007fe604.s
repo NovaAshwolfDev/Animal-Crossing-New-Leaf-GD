@@ -1,0 +1,20 @@
+007fe604  stmdb sp!,{r4,r5,r6,r7,r8,lr}
+007fe608  cpy r6,r0
+007fe60c  bl 0x005a20f8
+007fe610  movs r4,r0
+007fe614  beq 0x007fe648
+007fe618  bl 0x007dcdcc
+007fe61c  ldrb r4,[r4,#0xa]
+007fe620  cpy r5,r0
+007fe624  cmp r4,#0x93
+007fe628  bcs 0x007fe644
+007fe62c  cmp r4,#0x33
+007fe630  cmpne r4,#0x34
+007fe634  beq 0x007fe64c
+007fe638  cmp r4,#0x75
+007fe63c  cmpne r4,#0x76
+007fe640  beq 0x007fe64c
+007fe644  cpy r0,r5
+007fe648  ldmia sp!,{r4,r5,r6,r7,r8,pc}
+007fe64c  nop
+007fe650  bl 0x0063653c

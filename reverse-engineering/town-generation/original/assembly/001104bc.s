@@ -1,0 +1,13 @@
+001104bc  stmdb sp!,{r4,r5,r6,lr}
+001104c0  cpy r4,r0
+001104c4  cpy r5,r1
+001104c8  add r0,r0,#0x4
+001104cc  bl 0x00110670
+001104d0  cmp r5,#0x0
+001104d4  mvnne r1,#0x1
+001104d8  mvneq r1,#0x0
+001104dc  ldrex r0,[r4]
+001104e0  strex r2,r1,[r4]
+001104e4  cmp r2,#0x0
+001104e8  bne 0x001104dc
+001104ec  ldmia sp!,{r4,r5,r6,pc}

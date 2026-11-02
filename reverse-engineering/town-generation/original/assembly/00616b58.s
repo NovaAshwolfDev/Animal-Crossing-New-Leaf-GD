@@ -1,0 +1,86 @@
+00616b58  cmp r2,#0x0
+00616b5c  bxeq lr
+00616b60  stmdb sp!,{r4,r5,r6,r7,lr}
+00616b64  cpy r6,r0
+00616b68  cpy r4,r1
+00616b6c  ldr r0,[0x616cb0]
+00616b70  sub sp,sp,#0x1c
+00616b74  ldr r1,[r0,#0x234]
+00616b78  add r0,r6,#0x17000
+00616b7c  add r0,r0,#0x30c
+00616b80  cpy r7,r0
+00616b84  bl 0x007ead28
+00616b88  cmp r0,#0x0
+00616b8c  beq 0x00616ca8
+00616b90  bl 0x005ee3a4
+00616b94  cmp r0,#0x25
+00616b98  bne 0x00616ca8
+00616b9c  cpy r1,sp
+00616ba0  cpy r0,r4
+00616ba4  cmp r1,r0
+00616ba8  beq 0x00616bc4
+00616bac  ldr r1,[r0,#0x0]
+00616bb0  str r1,[sp,#0x0]
+00616bb4  ldr r1,[r0,#0x4]
+00616bb8  str r1,[sp,#0x4]
+00616bbc  ldr r0,[r4,#0x8]
+00616bc0  str r0,[sp,#0x8]
+00616bc4  cpy r1,sp
+00616bc8  cpy r0,r7
+00616bcc  bl 0x007eb0d0
+00616bd0  cmp r0,#0x0
+00616bd4  nop
+00616bd8  beq 0x00616ca8
+00616bdc  bl 0x005cc158
+00616be0  cpy r5,r0
+00616be4  add r1,sp,#0xc
+00616be8  cpy r0,r7
+00616bec  bl 0x007eaec0
+00616bf0  cmp r0,#0x0
+00616bf4  nop
+00616bf8  beq 0x00616c28
+00616bfc  mov r0,#0x0
+00616c00  bl 0x0062e0bc
+00616c04  cmp r0,#0x0
+00616c08  moveq r5,#0x0
+00616c0c  beq 0x00616c50
+00616c10  add r0,r0,#0x8b00
+00616c14  ldrh r0,[r0,#0xec]
+00616c18  sub r0,r0,#0x7
+00616c1c  add r0,r0,r0, lsl #0x2
+00616c20  mov r5,r0, lsl #0x2
+00616c24  b 0x00616c50
+00616c28  mov r2,#0x1
+00616c2c  add r1,sp,#0xc
+00616c30  cpy r0,r5
+00616c34  bl 0x005cc1fc
+00616c38  cmp r0,#0x0
+00616c3c  movlt r0,#0x0
+00616c40  sub r0,r0,#0x4
+00616c44  add r5,r0,r0, lsl #0x2
+00616c48  cmp r5,#0x32
+00616c4c  movgt r5,#0x32
+00616c50  mov r0,#0x64
+00616c54  bl 0x0011df34
+00616c58  cmp r0,r5
+00616c5c  nop
+00616c60  bge 0x00616ca8
+00616c64  cpy r0,sp
+00616c68  bl 0x007f2db0
+00616c6c  add r6,r6,#0x17400
+00616c70  add r6,r6,#0x10c
+00616c74  strb r0,[r6,#0x0]
+00616c78  ldr r1,[r4,#0x0]
+00616c7c  cmp r1,r0
+00616c80  bls 0x00616ca8
+00616c84  ldr r1,[r4,#0x4]
+00616c88  mov r2,#0x1
+00616c8c  mov r0,r2, lsl r0
+00616c90  tst r1,r0
+00616c94  beq 0x00616ca8
+00616c98  ldr r2,[r4,#0x8]
+00616c9c  bic r0,r1,r0
+00616ca0  sub r1,r2,#0x1
+00616ca4  strd r0,r1,[r4,#0x4]
+00616ca8  add sp,sp,#0x1c
+00616cac  ldmia sp!,{r4,r5,r6,r7,pc}

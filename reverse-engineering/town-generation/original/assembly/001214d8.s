@@ -1,0 +1,10 @@
+001214d8  stmdb sp!,{r4,lr}
+001214dc  bl 0x0012188c
+001214e0  ldr r1,[0x121500]
+001214e4  cpy r4,r0
+001214e8  str r1,[r0],#0x10
+001214ec  mov r1,#0x0
+001214f0  str r1,[r0,#0x0]
+001214f4  bl 0x0011f974
+001214f8  cpy r0,r4
+001214fc  ldmia sp!,{r4,pc}

@@ -1,0 +1,15 @@
+00698008  stmdb sp!,{r4,r5,r6,r7,r8,lr}
+0069800c  cpy r5,r1
+00698010  cpy r6,r2
+00698014  cpy r4,r0
+00698018  cpy r7,r3
+0069801c  cpy r1,r3
+00698020  bl 0x00756ef4
+00698024  cpy r1,r7
+00698028  add r0,r4,#0x16
+0069802c  bl 0x00756ef4
+00698030  ldrh r0,[r5,#0x0]
+00698034  strh r0,[r4,#0x2c]
+00698038  ldrb r0,[r6,#0x0]
+0069803c  strb r0,[r4,#0x2e]
+00698040  ldmia sp!,{r4,r5,r6,r7,r8,pc}

@@ -1,0 +1,14 @@
+007ec268  ldr r2,[0x7ec2a0]
+007ec26c  stmdb sp!,{r4,lr}
+007ec270  ldr r2,[r2,#0x234]
+007ec274  cmp r2,#0x0
+007ec278  beq 0x007ec298
+007ec27c  cpy r1,r0
+007ec280  add r0,r2,#0x5500
+007ec284  add r0,r0,#0xa6
+007ec288  bl 0x007b8ef0
+007ec28c  cmp r0,#0x0
+007ec290  movne r0,#0x1
+007ec294  bne 0x007ec29c
+007ec298  mov r0,#0x0
+007ec29c  ldmia sp!,{r4,pc}

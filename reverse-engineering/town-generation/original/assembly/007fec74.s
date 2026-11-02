@@ -1,0 +1,14 @@
+007fec74  stmdb sp!,{r4,lr}
+007fec78  cpy r4,r0
+007fec7c  bl 0x005a20f8
+007fec80  cmp r0,#0x0
+007fec84  beq 0x007feca4
+007fec88  bl 0x007dcdac
+007fec8c  cmp r0,#0x0
+007fec90  beq 0x007feca4
+007fec94  cpy r0,r4
+007fec98  bl 0x005a20f8
+007fec9c  ldmia sp!,{r4,lr}
+007feca0  b 0x007dcc18
+007feca4  mov r0,#0x0
+007feca8  ldmia sp!,{r4,pc}

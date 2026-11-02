@@ -1,0 +1,23 @@
+007f2db0  stmdb sp!,{r4,lr}
+007f2db4  cpy r4,r0
+007f2db8  ldr r0,[r0,#0x8]
+007f2dbc  cmp r0,#0x0
+007f2dc0  beq 0x007f2e04
+007f2dc4  bl 0x0011df34
+007f2dc8  ldr r2,[r4,#0x0]
+007f2dcc  cpy r1,r0
+007f2dd0  mov r0,#0x0
+007f2dd4  cmp r2,#0x0
+007f2dd8  ldrgt r3,[r4,#0x4]
+007f2ddc  movgt r12,#0x1
+007f2de0  ble 0x007f2e04
+007f2de4  tst r3,r12, lsl r0
+007f2de8  beq 0x007f2df8
+007f2dec  cmp r1,#0x0
+007f2df0  subne r1,r1,#0x1
+007f2df4  beq 0x007f2e08
+007f2df8  add r0,r0,#0x1
+007f2dfc  cmp r2,r0
+007f2e00  bgt 0x007f2de4
+007f2e04  mvn r0,#0x0
+007f2e08  ldmia sp!,{r4,pc}

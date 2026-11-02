@@ -1,0 +1,30 @@
+006264e0  stmdb sp!,{r0,r4,r5,r6,r7,r8,r9,r10,r11,lr}
+006264e4  mov r7,#0x0
+006264e8  mov r9,#0x21
+006264ec  mov r10,#0xff
+006264f0  mov r11,#0x9
+006264f4  mvn r8,#0x0
+006264f8  ldr r0,[sp,#0x0]
+006264fc  mov r5,#0x0
+00626500  add r6,r0,r7, lsl #0x7
+00626504  add r4,r6,r5, lsl #0x6
+00626508  cpy r0,r4
+0062650c  strb r9,[r4,#0x8]
+00626510  bl 0x0063aca4
+00626514  strb r10,[r4,#0x9]
+00626518  add r0,r4,#0xc
+0062651c  strb r11,[r4,#0xa]
+00626520  bl 0x0069805c
+00626524  strb r8,[r4,#0x3d]
+00626528  mov r0,#0xe
+0062652c  add r5,r5,#0x1
+00626530  strb r8,[r4,#0x3c]
+00626534  cmp r5,#0x2
+00626538  strb r0,[r4,#0x3e]
+0062653c  blt 0x00626504
+00626540  add r7,r7,#0x1
+00626544  cmp r7,#0x4
+00626548  blt 0x006264f8
+0062654c  ldr r0,[sp,#0x0]
+00626550  strb r8,[r0,#0x200]
+00626554  ldmia sp!,{r3,r4,r5,r6,r7,r8,r9,r10,r11,pc}

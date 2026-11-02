@@ -1,0 +1,11 @@
+002fe6d8  ldr r1,[r1,#0x0]
+002fe6da  lsls r2,r1,#0x15
+002fe6dc  bpl 0x002fe6e4
+002fe6de  lsls r0,r0,#0x18
+002fe6e0  lsrs r0,r0,#0x18
+002fe6e2  bx lr
+002fe6e4  lsls r1,r1,#0x17
+002fe6e6  bpl 0x002fe6e2
+002fe6e8  lsls r0,r0,#0x10
+002fe6ea  lsrs r0,r0,#0x10
+002fe6ec  bx lr

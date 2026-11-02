@@ -1,0 +1,46 @@
+00617e68  stmdb sp!,{r4,r5,r6,lr}
+00617e6c  cpy r4,r0
+00617e70  ldr r0,[0x617f20]
+00617e74  add r1,r4,r0
+00617e78  cpy r0,r4
+00617e7c  bl 0x006164ec
+00617e80  add r1,r4,#0x17000
+00617e84  add r1,r1,#0x264
+00617e88  cpy r0,r4
+00617e8c  bl 0x006164ec
+00617e90  ldr r0,[0x617f24]
+00617e94  add r5,r4,r0
+00617e98  add r4,r4,#0x17000
+00617e9c  add r4,r4,#0x2b0
+00617ea0  cpy r0,r5
+00617ea4  bl 0x007eb480
+00617ea8  cmp r0,#0x0
+00617eac  beq 0x00617efc
+00617eb0  bl 0x00636e3c
+00617eb4  cpy r1,r4
+00617eb8  add r0,r0,#0x20
+00617ebc  bl 0x007b8ff8
+00617ec0  cmp r0,#0x0
+00617ec4  beq 0x00617ed4
+00617ec8  ldrb r0,[r5,#0x9]
+00617ecc  cmp r0,#0x4
+00617ed0  beq 0x00617ee8
+00617ed4  cpy r0,r4
+00617ed8  bl 0x00626fc4
+00617edc  nop
+00617ee0  nop
+00617ee4  b 0x00617efc
+00617ee8  add r0,r4,#0x52
+00617eec  bl 0x00802710
+00617ef0  cmp r0,#0x0
+00617ef4  nop
+00617ef8  bne 0x00617ed4
+00617efc  nop
+00617f00  bl 0x005800b8
+00617f04  ldr r0,[0x617f28]
+00617f08  ldr r0,[r0,#0x0]
+00617f0c  bl 0x00326af0
+00617f10  ldr r1,[0x617f2c]
+00617f14  mov r0,#0x0
+00617f18  strb r0,[r1,#0x1]
+00617f1c  ldmia sp!,{r4,r5,r6,pc}

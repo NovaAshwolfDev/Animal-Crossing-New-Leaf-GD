@@ -1,0 +1,15 @@
+0080c170  stmdb sp!,{r4,r5,r6,lr}
+0080c174  cpy r4,r0
+0080c178  mvn r5,#0x0
+0080c17c  mov r2,#0x0
+0080c180  cpy r3,r2
+0080c184  strb r5,[r4,#0x9]
+0080c188  strd r2,r3,[r4,#0x0]
+0080c18c  add r0,r0,#0xa
+0080c190  cpy r1,r5
+0080c194  strb r5,[r4,#0x8]
+0080c198  bl 0x0080c1ac
+0080c19c  cpy r1,r5
+0080c1a0  add r0,r4,#0x12
+0080c1a4  ldmia sp!,{r4,r5,r6,lr}
+0080c1a8  cpy r0,r0

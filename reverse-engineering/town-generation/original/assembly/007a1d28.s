@@ -1,0 +1,16 @@
+007a1d28  stmdb sp!,{r4,r5,r6,r7,lr}
+007a1d2c  sub sp,sp,#0x14
+007a1d30  cpy r7,r0
+007a1d34  cpy r6,r1
+007a1d38  mov r4,#0x8
+007a1d3c  mov r5,#0x6
+007a1d40  add r1,sp,#0xc
+007a1d44  add r0,sp,#0x8
+007a1d48  bl 0x007a1ae0
+007a1d4c  strd r4,r5,[sp,#0x0]
+007a1d50  cpy r1,r6
+007a1d54  cpy r0,r7
+007a1d58  ldrd r2,r3,[sp,#0x8]
+007a1d5c  bl 0x00745ff8
+007a1d60  add sp,sp,#0x14
+007a1d64  ldmia sp!,{r4,r5,r6,r7,pc}

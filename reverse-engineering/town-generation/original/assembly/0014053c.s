@@ -1,0 +1,26 @@
+0014053c  stmdb sp!,{r4,r5,r6,r7,r8,lr}
+00140540  cpy r5,r0
+00140544  cpy r6,r1
+00140548  ldrh r0,[r0,#0xa]
+0014054c  mov r4,#0x0
+00140550  cmp r0,#0x0
+00140554  movhi r7,#0x4
+00140558  bls 0x0014059c
+0014055c  ldr r0,[r5,#0xc]
+00140560  add r1,r7,r4, lsl #0x4
+00140564  mov r2,#0x4
+00140568  add r0,r0,r1
+0014056c  cpy r1,r6
+00140570  bl 0x00140468
+00140574  cmp r0,#0x0
+00140578  nop
+0014057c  beq 0x00140588
+00140580  cpy r0,r4
+00140584  ldmia sp!,{r4,r5,r6,r7,r8,pc}
+00140588  ldrh r0,[r5,#0xa]
+0014058c  add r1,r4,#0x1
+00140590  uxth r4,r1
+00140594  cmp r0,r4
+00140598  bhi 0x0014055c
+0014059c  mvn r0,#0x0
+001405a0  ldmia sp!,{r4,r5,r6,r7,r8,pc}

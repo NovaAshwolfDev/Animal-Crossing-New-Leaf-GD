@@ -1,0 +1,17 @@
+00797a2c  stmdb sp!,{r4,r5,r6,lr}
+00797a30  cpy r4,r0
+00797a34  cpy r5,r1
+00797a38  cpy r6,r2
+00797a3c  bl 0x00636e3c
+00797a40  cpy r1,r5
+00797a44  add r0,r0,#0x20
+00797a48  bl 0x002d57fc
+00797a4c  cmp r0,#0x0
+00797a50  beq 0x00797a6c
+00797a54  cpy r2,r6
+00797a58  cpy r1,r4
+00797a5c  ldmia sp!,{r4,r5,r6,lr}
+00797a60  add r0,r0,#0x8800
+00797a64  add r0,r0,#0x1f4
+00797a68  b 0x00797ac8
+00797a6c  ldmia sp!,{r4,r5,r6,pc}

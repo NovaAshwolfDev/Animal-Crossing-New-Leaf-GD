@@ -1,0 +1,72 @@
+00798424  stmdb sp!,{r3,r4,r5,r6,r7,r8,r9,r10,r11,lr}
+00798428  cpy r6,r1
+0079842c  mov r1,#0x0
+00798430  cpy r7,r0
+00798434  cpy r2,r1
+00798438  ldr r0,[r7,r2,lsl #0x2]
+0079843c  cmp r0,#0x0
+00798440  beq 0x00798454
+00798444  tst r0,#0x1
+00798448  addne r1,r1,#0x1
+0079844c  movs r0,r0, lsr #0x1
+00798450  bne 0x00798444
+00798454  add r2,r2,#0x1
+00798458  cmp r2,#0x8e
+0079845c  bcc 0x00798438
+00798460  cpy r0,r1
+00798464  bl 0x0011df38
+00798468  cpy r1,r0
+0079846c  cpy r0,r7
+00798470  bl 0x008072dc
+00798474  cpy r8,r0
+00798478  mov r1,#0x2000
+0079847c  cpy r0,sp
+00798480  bl 0x00756d40
+00798484  cpy r0,sp
+00798488  nop
+0079848c  bl 0x005a20f8
+00798490  ldr r10,[0x798544]
+00798494  cpy r5,r0
+00798498  mov r4,#0x0
+0079849c  mov r9,#0x1
+007984a0  cpy r0,r5
+007984a4  bl 0x007dcdcc
+007984a8  cmp r0,r6
+007984ac  nop
+007984b0  bcs 0x007984c8
+007984b4  mov r0,r4, lsr #0x5
+007984b8  and r1,r4,#0x1f
+007984bc  ldr r2,[r7,r0,lsl #0x2]
+007984c0  bic r1,r2,r9, lsl r1
+007984c4  str r1,[r7,r0,lsl #0x2]
+007984c8  add r4,r4,#0x1
+007984cc  cmp r4,r10
+007984d0  add r5,r5,#0x22
+007984d4  bcc 0x007984a0
+007984d8  mov r2,#0x0
+007984dc  cpy r1,r2
+007984e0  ldr r0,[r7,r1,lsl #0x2]
+007984e4  cmp r0,#0x0
+007984e8  beq 0x007984fc
+007984ec  tst r0,#0x1
+007984f0  addne r2,r2,#0x1
+007984f4  movs r0,r0, lsr #0x1
+007984f8  bne 0x007984ec
+007984fc  add r1,r1,#0x1
+00798500  cmp r1,#0x8e
+00798504  bcc 0x007984e0
+00798508  cmp r2,#0x0
+0079850c  beq 0x00798520
+00798510  cpy r0,sp
+00798514  cpy r0,r0
+00798518  mov r0,#0x1
+0079851c  ldmia sp!,{r3,r4,r5,r6,r7,r8,r9,r10,r11,pc}
+00798520  mov r0,r8, lsr #0x5
+00798524  and r1,r8,#0x1f
+00798528  ldr r2,[r7,r0,lsl #0x2]
+0079852c  orr r1,r2,r9, lsl r1
+00798530  str r1,[r7,r0,lsl #0x2]
+00798534  cpy r0,sp
+00798538  cpy r0,r0
+0079853c  mov r0,#0x0
+00798540  ldmia sp!,{r3,r4,r5,r6,r7,r8,r9,r10,r11,pc}

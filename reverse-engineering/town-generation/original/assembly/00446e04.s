@@ -1,0 +1,13 @@
+00446e04  stmdb sp!,{r4,lr}
+00446e08  ldr r4,[0x446e38]
+00446e0c  ldr r0,[r4,#0x0]
+00446e10  cmp r0,#0x0
+00446e14  bne 0x00446e30
+00446e18  ldr r0,[0x446e3c]
+00446e1c  mov r1,#0x0
+00446e20  bl 0x0011690c
+00446e24  ldr r0,[r4,#0x0]
+00446e28  cmp r0,#0x0
+00446e2c  beq 0x00446e18
+00446e30  mov r0,#0x0
+00446e34  ldmia sp!,{r4,pc}

@@ -1,0 +1,24 @@
+007b8ff8  stmdb sp!,{r4,r5,r6,lr}
+007b8ffc  add r5,r0,#0x24000
+007b9000  add r5,r5,#0x3c40
+007b9004  cmp r0,r5
+007b9008  cpy r4,r0
+007b900c  cpy r6,r1
+007b9010  bcs 0x007b9050
+007b9014  add r0,r4,#0x5500
+007b9018  cpy r1,r6
+007b901c  add r0,r0,#0xa6
+007b9020  bl 0x007b8ef0
+007b9024  cmp r0,#0x0
+007b9028  nop
+007b902c  beq 0x007b9040
+007b9030  cmp r4,#0x0
+007b9034  movne r0,#0x1
+007b9038  bne 0x007b9054
+007b903c  b 0x007b9050
+007b9040  add r4,r4,#0x9000
+007b9044  add r4,r4,#0xf10
+007b9048  cmp r4,r5
+007b904c  bcc 0x007b9014
+007b9050  mov r0,#0x0
+007b9054  ldmia sp!,{r4,r5,r6,pc}

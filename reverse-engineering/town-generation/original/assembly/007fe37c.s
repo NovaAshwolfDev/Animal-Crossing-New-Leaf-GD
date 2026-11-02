@@ -1,0 +1,13 @@
+007fe37c  stmdb sp!,{r4,lr}
+007fe380  ldrh r1,[r0,#0x0]
+007fe384  bic r1,r1,#0x8000
+007fe388  cmp r1,#0xfd
+007fe38c  movhi r0,#0x1d
+007fe390  bhi 0x007fe3ac
+007fe394  bl 0x005f2ff4
+007fe398  cmp r0,#0x0
+007fe39c  beq 0x007fe3ac
+007fe3a0  ldrb r0,[r0,#0x8]
+007fe3a4  cmp r0,#0x1d
+007fe3a8  movcs r0,#0x0
+007fe3ac  ldmia sp!,{r4,pc}

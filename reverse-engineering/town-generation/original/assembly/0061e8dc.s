@@ -1,0 +1,29 @@
+0061e8dc  stmdb sp!,{r3,r4,r5,r6,r7,lr}
+0061e8e0  cmp r1,#0x10
+0061e8e4  cpy r7,r3
+0061e8e8  cpy r5,r0
+0061e8ec  cpy r4,r1
+0061e8f0  cpy r6,r2
+0061e8f4  bcs 0x0061e988
+0061e8f8  cmp r4,#0xc
+0061e8fc  blt 0x0061e90c
+0061e900  sub r1,r4,#0xc
+0061e904  bl 0x0061daf4
+0061e908  b 0x0061e940
+0061e90c  cmp r4,#0xa
+0061e910  addgt r0,r5,#0x2400
+0061e914  addgt r0,r0,#0xca
+0061e918  addeq r0,r5,#0x2400
+0061e91c  cpyge r1,r2
+0061e920  addeq r0,r0,#0xc6
+0061e924  blt 0x0061e938
+0061e928  bl 0x00756eb0
+0061e92c  nop
+0061e930  nop
+0061e934  b 0x0061e940
+0061e938  nop
+0061e93c  bl 0x00620ff8
+0061e940  cmp r7,#0x0
+0061e944  beq 0x0061e988
+0061e948  bl 0x0063653c
+0061e988  ldmia sp!,{r3,r4,r5,r6,r7,pc}

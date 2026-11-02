@@ -1,0 +1,11 @@
+002d5734  mov r1,#0x0
+002d5738  strh r1,[r0,#0x0]
+002d573c  str r1,[r0,#0x2]
+002d5740  str r1,[r0,#0x6]
+002d5744  str r1,[r0,#0xa]
+002d5748  str r1,[r0,#0xe]
+002d574c  strh r1,[r0,#0x12]
+002d5750  strb r1,[r0,#0x14]
+002d5754  add r2,r0,#0x2
+002d5758  strb r1,[r0,#0x15]
+002d575c  bx lr

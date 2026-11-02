@@ -1,0 +1,27 @@
+00444c0c  stmdb sp!,{r4,lr}
+00444c10  bl 0x00446b90
+00444c14  ldmia sp!,{r4,lr}
+00444c18  cpy r0,r0
+00444c1c  stmdb sp!,{r4,r5,r6,lr}
+00444c20  mov r4,#0x0
+00444c24  ldr r5,[0x444c78]
+00444c28  ldrb r0,[r5,#0x0]
+00444c2c  cmp r0,#0x0
+00444c30  bne 0x00444c70
+00444c34  bl 0x00446e40
+00444c38  movs r1,r0, lsr #0x1f
+00444c3c  bne 0x00444c74
+00444c40  bl 0x00446e04
+00444c44  bl 0x0010785c
+00444c48  ands r1,r0,#0x80000000
+00444c4c  cpy r4,r0
+00444c50  bmi 0x00444c74
+00444c54  mov r6,#0x1
+00444c58  strb r6,[r5,#0x1]
+00444c5c  bl 0x00104df8
+00444c60  bl 0x0010563c
+00444c64  strb r0,[r5,#0x4]
+00444c68  bl 0x00110754
+00444c6c  strb r6,[r5,#0x0]
+00444c70  cpy r0,r4
+00444c74  ldmia sp!,{r4,r5,r6,pc}

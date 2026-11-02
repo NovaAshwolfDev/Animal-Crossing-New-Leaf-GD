@@ -1,0 +1,17 @@
+001219e8  stmdb sp!,{r4,r5,r6,lr}
+001219ec  cpy r4,r0
+001219f0  ldr r0,[r0,#0x38]
+001219f4  cmp r0,#0x0
+001219f8  beq 0x00121a28
+001219fc  ldr r0,[0x121a2c]
+00121a00  cpy r5,r0
+00121a04  bl 0x0011f990
+00121a08  ldr r0,[r4,#0x38]
+00121a0c  cpy r1,r4
+00121a10  bl 0x00127aec
+00121a14  mov r0,#0x0
+00121a18  str r0,[r4,#0x38]
+00121a1c  cpy r0,r5
+00121a20  bl 0x001214d0
+00121a24  mov r0,#0x1
+00121a28  ldmia sp!,{r4,r5,r6,pc}

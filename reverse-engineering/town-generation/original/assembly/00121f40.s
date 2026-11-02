@@ -1,0 +1,10 @@
+00121f40  stmdb sp!,{r4,lr}
+00121f44  cpy r4,r0
+00121f48  ldr r0,[r0,#0x0]
+00121f4c  cmp r0,#0x0
+00121f50  beq 0x00121f64
+00121f54  bl 0x00122a0c
+00121f58  mov r0,#0x0
+00121f5c  str r0,[r4,#0x0]
+00121f60  str r0,[r4,#0x4]
+00121f64  ldmia sp!,{r4,pc}

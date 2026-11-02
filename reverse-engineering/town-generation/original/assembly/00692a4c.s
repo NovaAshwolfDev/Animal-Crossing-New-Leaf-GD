@@ -1,0 +1,13 @@
+00692a4c  ldrh r2,[r1,#0x0]
+00692a50  strh r2,[r0,#0x0]
+00692a54  ldrh r2,[r1,#0x2]
+00692a58  strh r2,[r0,#0x2]
+00692a5c  ldrh r2,[r1,#0x4]
+00692a60  strh r2,[r0,#0x4]
+00692a64  ldrh r2,[r1,#0x6]
+00692a68  strh r2,[r0,#0x6]
+00692a6c  ldrb r2,[r1,#0x8]
+00692a70  strb r2,[r0,#0x8]
+00692a74  ldrb r1,[r1,#0x9]
+00692a78  strb r1,[r0,#0x9]
+00692a7c  bx lr

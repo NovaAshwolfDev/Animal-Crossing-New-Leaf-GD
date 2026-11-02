@@ -1,0 +1,15 @@
+005a5590  stmdb sp!,{r4,lr}
+005a5594  ldrb r12,[r0,#0x4c]
+005a5598  cpy r4,r1
+005a559c  ldr r1,[sp,#0x8]
+005a55a0  cmp r12,#0x0
+005a55a4  cmpne r4,#0x0
+005a55a8  moveq r0,#0x0
+005a55ac  beq 0x005a55c8
+005a55b0  str r1,[r4,#0x34]
+005a55b4  ldr r1,[r0,#0x0]
+005a55b8  ldr r12,[r1,#0x2c]
+005a55bc  cpy r1,r4
+005a55c0  blx r12
+005a55c4  str r0,[r4,#0x10]
+005a55c8  ldmia sp!,{r4,pc}

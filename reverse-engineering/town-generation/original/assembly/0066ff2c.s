@@ -1,0 +1,25 @@
+0066ff2c  ldr r3,[0x66ff90]
+0066ff30  stmdb sp!,{r4,r5,r6,r7}
+0066ff34  mov r12,#0x0
+0066ff38  ldr r3,[r3,#0x14]
+0066ff3c  str r3,[r0,#0x4]
+0066ff40  str r3,[r0,#0x8]
+0066ff44  add r3,r0,#0xc
+0066ff48  ldr r4,[r3,#0x50]
+0066ff4c  cmp r4,#0x0
+0066ff50  beq 0x0066ff70
+0066ff54  ldr r4,[r3,#0x50]
+0066ff58  sub r4,r4,#0x1
+0066ff5c  str r4,[r3,#0x50]
+0066ff60  add r5,r3,r4, lsl #0x3
+0066ff64  str r12,[r5,#0x0]
+0066ff68  str r12,[r5,#0x4]
+0066ff6c  b 0x0066ff48
+0066ff70  ldr r1,[r1,#0x0]
+0066ff74  str r1,[r0,#0x4]
+0066ff78  ldr r1,[r2,#0x0]
+0066ff7c  str r1,[r0,#0x8]
+0066ff80  ldr r1,[r0,#0x0]
+0066ff84  ldr r1,[r1,#0x8]
+0066ff88  ldmia sp!,{r4,r5,r6,r7}
+0066ff8c  bx r1

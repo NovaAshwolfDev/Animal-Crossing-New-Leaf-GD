@@ -1,0 +1,29 @@
+0010563c  ldr r0,[0x1056b0]
+00105640  ldrb r0,[r0,#0x14]
+00105644  tst r0,#0x1
+00105648  movne r0,#0x0
+0010564c  bxne lr
+00105650  str lr,[sp,#-0x4]!
+00105654  sub sp,sp,#0xc
+00105658  add r0,sp,#0x4
+0010565c  bl 0x001077ac
+00105660  ands r1,r0,#0x80000000
+00105664  bpl 0x00105674
+00105668  cpy r1,pc
+0010566c  movs r2,r0, lsr #0x1f
+00105670  blne 0x00116b58
+00105674  cpy r0,sp
+00105678  mov r2,#0x130000
+0010567c  mov r1,#0x4
+00105680  bl 0x0010b520
+00105684  cpy r1,pc
+00105688  movs r2,r0, lsr #0x1f
+0010568c  blne 0x00116b58
+00105690  ldrb r0,[sp,#0x4]
+00105694  nop
+00105698  bl 0x00107714
+0010569c  ldrb r0,[sp,#0x1]
+001056a0  add sp,sp,#0xc
+001056a4  ands r0,r0,#0x1
+001056a8  movne r0,#0x1
+001056ac  ldr pc,[sp],#0x4

@@ -1,0 +1,15 @@
+007dca50  ldr r2,[r1,#0x0]
+007dca54  ldr r3,[r0,#0x0]
+007dca58  cmp r3,r2
+007dca5c  ldrle r3,[r0,#0x8]
+007dca60  cmple r2,r3
+007dca64  bgt 0x007dca84
+007dca68  ldr r1,[r1,#0x4]
+007dca6c  ldr r2,[r0,#0x4]
+007dca70  cmp r2,r1
+007dca74  ldrle r0,[r0,#0xc]
+007dca78  cmple r1,r0
+007dca7c  movle r0,#0x1
+007dca80  ble 0x007dca88
+007dca84  mov r0,#0x0
+007dca88  bx lr

@@ -1,0 +1,168 @@
+00293dd4  stmdb sp!,{r4,r5,r6,r7,lr}
+00293dd8  sub sp,sp,#0x1c
+00293ddc  cpy r5,r0
+00293de0  mov r4,#0x0
+00293de4  mov r1,#0x16
+00293de8  rsb r0,r4,r4, lsl #0x4
+00293dec  add r0,r0,r0, lsl #0x3
+00293df0  add r0,r5,r0, lsl #0x4
+00293df4  add r0,r0,#0x7c
+00293df8  bl 0x001b7e8c
+00293dfc  add r4,r4,#0x1
+00293e00  cmp r4,#0x8
+00293e04  blt 0x00293de4
+00293e08  mov r4,#0x0
+00293e0c  nop
+00293e10  bl 0x00636e3c
+00293e14  nop
+00293e18  nop
+00293e1c  bl 0x006378a0
+00293e20  cpy r1,r4
+00293e24  add r0,r0,#0x4
+00293e28  bl 0x006138d4
+00293e2c  cmp r0,#0x0
+00293e30  nop
+00293e34  beq 0x00294030
+00293e38  cmp r4,#0xa
+00293e3c  bcs 0x00293e84
+00293e40  ldr r1,[0x294074]
+00293e44  cpy r0,sp
+00293e48  bl 0x00756d40
+00293e4c  add r2,r5,#0x24
+00293e50  cpy r1,r0
+00293e54  mov r6,#0x78
+00293e58  cpy r0,r2
+00293e5c  bl 0x00756eb0
+00293e60  add r0,r4,#0x4
+00293e64  strb r0,[r5,#0x38]
+00293e68  add r0,r5,#0x5c
+00293e6c  cpy r1,r6
+00293e70  bl 0x00697eec
+00293e74  cpy r0,sp
+00293e78  nop
+00293e7c  cpy r0,r0
+00293e80  add r4,r4,#0x1
+00293e84  ldr r7,[0x294078]
+00293e88  nop
+00293e8c  bl 0x00636e3c
+00293e90  nop
+00293e94  nop
+00293e98  bl 0x006378a0
+00293e9c  cpy r1,r4
+00293ea0  add r0,r0,#0x4
+00293ea4  bl 0x006138d4
+00293ea8  cmp r0,#0x0
+00293eac  nop
+00293eb0  beq 0x00294040
+00293eb4  cmp r4,#0xa
+00293eb8  bcs 0x00293f28
+00293ebc  ldrd r0,r1,[r7,#0x8]
+00293ec0  strd r0,r1,[sp,#0xc]
+00293ec4  add r0,r7,#0x1a0
+00293ec8  ldmia r0,{r0,r1,r2}
+00293ecc  stmia sp,{r0,r1,r2}
+00293ed0  mov r0,#0x3
+00293ed4  bl 0x0011df38
+00293ed8  cpy r6,r0
+00293edc  add r0,sp,#0xc
+00293ee0  add r0,r0,r6, lsl #0x1
+00293ee4  ldrh r1,[r0,#0x0]
+00293ee8  add r0,sp,#0x14
+00293eec  bl 0x00756d40
+00293ef0  add r2,r5,#0x28
+00293ef4  cpy r1,r0
+00293ef8  ldr r6,[sp,r6,lsl #0x2]
+00293efc  cpy r0,r2
+00293f00  bl 0x00756eb0
+00293f04  add r0,r4,#0x4
+00293f08  strb r0,[r5,#0x39]
+00293f0c  add r0,r5,#0x64
+00293f10  cpy r1,r6
+00293f14  bl 0x00697eec
+00293f18  add r0,sp,#0x14
+00293f1c  nop
+00293f20  cpy r0,r0
+00293f24  add r4,r4,#0x1
+00293f28  nop
+00293f2c  bl 0x00636e3c
+00293f30  nop
+00293f34  nop
+00293f38  bl 0x006378a0
+00293f3c  cpy r1,r4
+00293f40  add r0,r0,#0x4
+00293f44  bl 0x006138d4
+00293f48  cmp r0,#0x0
+00293f4c  nop
+00293f50  beq 0x00294050
+00293f54  cmp r4,#0xa
+00293f58  bcs 0x00293fa0
+00293f5c  ldr r1,[0x29407c]
+00293f60  cpy r0,sp
+00293f64  bl 0x00756d40
+00293f68  add r2,r5,#0x2c
+00293f6c  cpy r1,r0
+00293f70  mov r6,#0x1f4
+00293f74  cpy r0,r2
+00293f78  bl 0x00756eb0
+00293f7c  add r0,r4,#0x4
+00293f80  strb r0,[r5,#0x3a]
+00293f84  add r0,r5,#0x6c
+00293f88  cpy r1,r6
+00293f8c  bl 0x00697eec
+00293f90  cpy r0,sp
+00293f94  nop
+00293f98  cpy r0,r0
+00293f9c  add r4,r4,#0x1
+00293fa0  nop
+00293fa4  bl 0x00636e3c
+00293fa8  nop
+00293fac  nop
+00293fb0  bl 0x006378a0
+00293fb4  cpy r1,r4
+00293fb8  add r0,r0,#0x4
+00293fbc  bl 0x006138d4
+00293fc0  cmp r0,#0x0
+00293fc4  nop
+00293fc8  beq 0x00294060
+00293fcc  cmp r4,#0xa
+00293fd0  bcs 0x00294028
+00293fd4  ldrd r0,r1,[r7,#0x10]
+00293fd8  strd r0,r1,[sp,#0x0]
+00293fdc  mov r0,#0x3
+00293fe0  bl 0x0011df38
+00293fe4  cpy r1,sp
+00293fe8  add r0,r1,r0, lsl #0x1
+00293fec  ldrh r1,[r0,#0x0]
+00293ff0  add r0,sp,#0x8
+00293ff4  bl 0x00756d40
+00293ff8  cpy r1,r0
+00293ffc  mov r6,#0x320
+00294000  add r0,r5,#0x30
+00294004  bl 0x00756eb0
+00294008  add r0,r4,#0x4
+0029400c  strb r0,[r5,#0x3b]
+00294010  add r0,r5,#0x74
+00294014  cpy r1,r6
+00294018  bl 0x00697eec
+0029401c  add r0,sp,#0x8
+00294020  nop
+00294024  cpy r0,r0
+00294028  add sp,sp,#0x1c
+0029402c  ldmia sp!,{r4,r5,r6,r7,pc}
+00294030  cmp r4,#0xa
+00294034  addcc r4,r4,#0x1
+00294038  bcc 0x00293e0c
+0029403c  b 0x00293e84
+00294040  cmp r4,#0xa
+00294044  addcc r4,r4,#0x1
+00294048  bcc 0x00293e88
+0029404c  b 0x00293f28
+00294050  cmp r4,#0xa
+00294054  addcc r4,r4,#0x1
+00294058  bcc 0x00293f28
+0029405c  b 0x00293fa0
+00294060  cmp r4,#0xa
+00294064  addcc r4,r4,#0x1
+00294068  bcc 0x00293fa0
+0029406c  add sp,sp,#0x1c
+00294070  ldmia sp!,{r4,r5,r6,r7,pc}

@@ -1,0 +1,17 @@
+0059af60  ldr r0,[0x59afa4]
+0059af64  stmdb sp!,{r4,lr}
+0059af68  ldr r0,[r0,#0x0]
+0059af6c  tst r0,#0x1
+0059af70  bne 0x0059af9c
+0059af74  ldr r0,[0x59afa4]
+0059af78  blx 0x003025cc
+0059af7c  cmp r0,#0x0
+0059af80  beq 0x0059af9c
+0059af84  ldr r0,[0x59afa8]
+0059af88  mov r1,#0x0
+0059af8c  cpy r2,r1
+0059af90  stmia r0,{r1,r2}
+0059af94  sub r0,r0,#0x4
+0059af98  cpy r0,r0
+0059af9c  ldr r0,[0x59afa8]
+0059afa0  ldmia sp!,{r4,pc}

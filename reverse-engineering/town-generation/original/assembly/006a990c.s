@@ -1,0 +1,9 @@
+006a990c  ldr r0,[0x6a9930]
+006a9910  stmdb sp!,{r4,lr}
+006a9914  mov r4,#0x0
+006a9918  ldr r0,[r0,#0x0]
+006a991c  bl 0x007f3a8c
+006a9920  cmp r0,#0x1
+006a9924  movhi r4,#0x1
+006a9928  cpy r0,r4
+006a992c  ldmia sp!,{r4,pc}

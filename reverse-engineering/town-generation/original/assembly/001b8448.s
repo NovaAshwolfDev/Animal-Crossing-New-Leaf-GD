@@ -1,0 +1,17 @@
+001b8448  stmdb sp!,{r4,r5,r6,lr}
+001b844c  cpy r4,r0
+001b8450  mov r1,#0x2a
+001b8454  bl 0x002fff30
+001b8458  add r0,r4,#0x2a
+001b845c  bl 0x001b8b00
+001b8460  mov r1,#0xf
+001b8464  add r0,r4,#0x58
+001b8468  bl 0x002fff30
+001b846c  mov r5,#0x0
+001b8470  strb r5,[r4,#0x67]
+001b8474  mov r1,#0x800
+001b8478  add r0,r4,#0x6c
+001b847c  strb r5,[r4,#0x68]
+001b8480  bl 0x002fff30
+001b8484  strb r5,[r4,#0x86c]
+001b8488  ldmia sp!,{r4,r5,r6,pc}

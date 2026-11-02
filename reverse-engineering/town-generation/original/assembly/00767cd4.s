@@ -1,0 +1,16 @@
+00767cd4  ldr r2,[0x767d14]
+00767cd8  mov r1,#0x0
+00767cdc  ldrb r3,[r2,r1]
+00767ce0  cmp r3,r0
+00767ce4  beq 0x00767cf8
+00767ce8  add r3,r2,r1
+00767cec  ldrb r3,[r3,#0x1]
+00767cf0  cmp r3,r0
+00767cf4  bne 0x00767d00
+00767cf8  mov r0,#0x1
+00767cfc  bx lr
+00767d00  add r1,r1,#0x2
+00767d04  cmp r1,#0xa
+00767d08  bcc 0x00767cdc
+00767d0c  mov r0,#0x0
+00767d10  bx lr

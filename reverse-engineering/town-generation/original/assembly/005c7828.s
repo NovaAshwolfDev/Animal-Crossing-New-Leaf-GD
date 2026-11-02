@@ -1,0 +1,14 @@
+005c7828  stmdb sp!,{r4,lr}
+005c782c  cpy r4,r0
+005c7830  ldr r0,[0x5c7860]
+005c7834  str r0,[r4,#0x0]
+005c7838  ldr r0,[r4,#0x4]
+005c783c  cmp r0,#0x0
+005c7840  beq 0x005c7858
+005c7844  ldr r1,[r0,#0x0]
+005c7848  ldr r1,[r1,#0x10]
+005c784c  blx r1
+005c7850  mov r0,#0x0
+005c7854  str r0,[r4,#0x4]
+005c7858  cpy r0,r4
+005c785c  ldmia sp!,{r4,pc}

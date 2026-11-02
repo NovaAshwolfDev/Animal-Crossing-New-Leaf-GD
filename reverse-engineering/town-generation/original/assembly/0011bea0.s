@@ -1,0 +1,10 @@
+0011bea0  stmdb sp!,{r4,lr}
+0011bea4  cpy r4,r0
+0011bea8  ldr r0,[r0,#0x18]
+0011beac  cmp r0,#0x0
+0011beb0  beq 0x0011bec4
+0011beb4  add r0,r4,#0x18
+0011beb8  bl 0x00123de4
+0011bebc  mov r0,#0x0
+0011bec0  str r0,[r4,#0x18]
+0011bec4  ldmia sp!,{r4,pc}

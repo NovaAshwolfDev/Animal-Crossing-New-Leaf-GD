@@ -1,0 +1,16 @@
+007edfa8  str lr,[sp,#-0x4]!
+007edfac  sub sp,sp,#0xc
+007edfb0  cpy r1,r0
+007edfb4  cpy r0,sp
+007edfb8  bl 0x0011a3e0
+007edfbc  ldr r1,[sp,#0x0]
+007edfc0  ldr r0,[sp,#0x4]
+007edfc4  mvn r2,#0x0
+007edfc8  mvn r3,#0x80000000
+007edfcc  eor r1,r1,r2
+007edfd0  eor r0,r0,r3
+007edfd4  orrs r0,r0,r1
+007edfd8  add sp,sp,#0xc
+007edfdc  movne r0,#0x1
+007edfe0  moveq r0,#0x0
+007edfe4  ldr pc,[sp],#0x4

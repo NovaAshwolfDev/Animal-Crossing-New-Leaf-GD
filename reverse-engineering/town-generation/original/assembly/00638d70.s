@@ -1,0 +1,16 @@
+00638d70  ldrb r1,[r0,#0x30]
+00638d74  cmp r1,#0x1
+00638d78  beq 0x00638da8
+00638d7c  cmp r1,#0x2
+00638d80  beq 0x00638d9c
+00638d84  cmp r1,#0x3
+00638d88  beq 0x00638da8
+00638d8c  cmp r1,#0x4
+00638d90  movne r1,#0x5
+00638d94  strbne r1,[r0,#0x30]
+00638d98  bne 0x00638da4
+00638d9c  mov r1,#0x4
+00638da0  strb r1,[r0,#0x30]
+00638da4  bx lr
+00638da8  mov r1,#0x3
+00638dac  b 0x00638da0

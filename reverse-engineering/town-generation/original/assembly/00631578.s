@@ -1,0 +1,35 @@
+00631578  ldr r3,[0x631604]
+0063157c  mov r2,#0x0
+00631580  cpy r0,r2
+00631584  str r4,[sp,#-0x4]!
+00631588  add r1,r2,r2, lsl #0x3
+0063158c  mov r12,#0x98
+00631590  add r4,r3,r1, lsl #0x2
+00631594  add r1,r4,#0x27c00
+00631598  add r4,r4,#0x27c00
+0063159c  str r0,[r1,#0x54]
+006315a0  str r0,[r1,#0x58]
+006315a4  str r0,[r1,#0x5c]
+006315a8  str r0,[r1,#0x60]
+006315ac  str r0,[r1,#0x64]
+006315b0  str r0,[r1,#0x68]
+006315b4  str r0,[r1,#0x6c]
+006315b8  add r4,r4,#0x54
+006315bc  str r0,[r1,#0x70]
+006315c0  str r0,[r1,#0x74]
+006315c4  strb r12,[r4,#0x0]
+006315c8  ldr r12,[r1,#0x54]
+006315cc  str r0,[r1,#0xe8]
+006315d0  add r2,r2,#0x1
+006315d4  str r12,[r1,#0xe4]
+006315d8  str r0,[r1,#0xec]
+006315dc  str r0,[r1,#0xf0]
+006315e0  str r0,[r1,#0xf4]
+006315e4  str r0,[r1,#0xf8]
+006315e8  str r0,[r1,#0xfc]
+006315ec  str r0,[r1,#0x100]
+006315f0  cmp r2,#0x4
+006315f4  str r0,[r1,#0x104]
+006315f8  bcc 0x00631588
+006315fc  ldr r4,[sp],#0x4
+00631600  bx lr

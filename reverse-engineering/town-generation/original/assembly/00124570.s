@@ -1,0 +1,11 @@
+00124570  stmdb sp!,{r3,lr}
+00124574  ldr r0,[r0,#0x0]
+00124578  ldr r1,[r0,#0x28]!
+0012457c  cmp r1,#0x0
+00124580  addne r0,r0,r1
+00124584  moveq r0,#0x0
+00124588  cmp r0,#0x0
+0012458c  str r0,[sp,#0x0]
+00124590  cpyne r0,sp
+00124594  blne 0x00126ef4
+00124598  ldmia sp!,{r3,pc}

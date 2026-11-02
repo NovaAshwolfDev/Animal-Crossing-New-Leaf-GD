@@ -1,0 +1,9 @@
+003025cc  ldr r1,[r0,#0x0]
+003025ce  cmp r1,#0x0
+003025d0  beq 0x003025d6
+003025d2  movs r0,#0x0
+003025d4  bx lr
+003025d6  movs r1,#0x1
+003025d8  str r1,[r0,#0x0]
+003025da  movs r0,r1
+003025dc  bx lr

@@ -1,0 +1,10 @@
+00124a80  stmdb sp!,{r4,lr}
+00124a84  cpy r4,r0
+00124a88  ldr r0,[0x124aa8]
+00124a8c  str r0,[r4,#0x0]
+00124a90  cpy r0,r4
+00124a94  bl 0x00121a94
+00124a98  add r0,r4,#0xc
+00124a9c  bl 0x00124a4c
+00124aa0  sub r0,r0,#0xc
+00124aa4  ldmia sp!,{r4,pc}

@@ -1,0 +1,15 @@
+007fede8  stmdb sp!,{r4,lr}
+007fedec  cpy r4,r0
+007fedf0  bl 0x005a20f8
+007fedf4  cmp r0,#0x0
+007fedf8  mvneq r0,#0x0
+007fedfc  beq 0x007fee20
+007fee00  ldrb r0,[r0,#0xa]
+007fee04  ldrh r1,[r4,#0x0]
+007fee08  cmp r0,#0x93
+007fee0c  bic r4,r1,#0x8000
+007fee10  movcs r0,#0x0
+007fee14  bl 0x005a19a0
+007fee18  ldrh r0,[r0,#0x0]
+007fee1c  sub r0,r4,r0
+007fee20  ldmia sp!,{r4,pc}

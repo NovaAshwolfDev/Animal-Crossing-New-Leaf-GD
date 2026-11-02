@@ -1,0 +1,15 @@
+0012841c  cmp r1,#0x4
+00128420  bcc 0x00128444
+00128424  ands r12,r0,#0x3
+00128428  beq 0x002fff34
+0012842c  rsb r12,r12,#0x4
+00128430  cmp r12,#0x2
+00128434  strbne r2,[r0],#0x1
+00128438  sub r1,r1,r12
+0012843c  strhge r2,[r0],#0x2
+00128440  b 0x002fff34
+00128444  movs r12,r1, lsl #0x1f
+00128448  strbcs r2,[r0],#0x1
+0012844c  strbcs r2,[r0],#0x1
+00128450  strbmi r2,[r0],#0x1
+00128454  bx lr

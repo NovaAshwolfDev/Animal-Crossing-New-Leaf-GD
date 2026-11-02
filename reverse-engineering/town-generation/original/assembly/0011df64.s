@@ -1,0 +1,16 @@
+0011df64  ldr r1,[r0,#0x44]
+0011df68  cmp r1,#0x0
+0011df6c  bxeq lr
+0011df70  add r0,r0,#0xc
+0011df74  stmdb sp!,{r4,lr}
+0011df78  bl 0x001219e8
+0011df7c  ldr r0,[0x11dfa4]
+0011df80  cpy r4,r0
+0011df84  bl 0x0011f990
+0011df88  ldr r0,[0x11dfa8]
+0011df8c  ldrb r1,[r0,#0x2]
+0011df90  sub r1,r1,#0x1
+0011df94  strb r1,[r0,#0x2]
+0011df98  cpy r0,r4
+0011df9c  ldmia sp!,{r4,lr}
+0011dfa0  b 0x001214d0

@@ -1,0 +1,10 @@
+007eaaa8  ldrb r1,[r0,#0x9]
+007eaaac  cmp r1,#0x1
+007eaab0  movls r0,#0x1
+007eaab4  bls 0x007eaacc
+007eaab8  cmp r1,#0x3
+007eaabc  movne r0,#0x0
+007eaac0  bne 0x007eaacc
+007eaac4  mov r1,#0x1
+007eaac8  b 0x007edf70
+007eaacc  bx lr

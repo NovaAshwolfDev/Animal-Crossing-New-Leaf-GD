@@ -1,0 +1,11 @@
+007f37c0  ldrb r0,[r0,#0x2e]
+007f37c4  cmp r0,#0x8
+007f37c8  bcs 0x007f37d4
+007f37cc  cmp r0,#0x3
+007f37d0  bhi 0x007f37dc
+007f37d4  mov r0,#0x0
+007f37d8  bx lr
+007f37dc  cmp r0,#0x7
+007f37e0  movls r0,#0x1
+007f37e4  movhi r0,#0x2
+007f37e8  bx lr

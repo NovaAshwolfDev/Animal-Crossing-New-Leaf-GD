@@ -1,0 +1,9 @@
+00658b40  stmdb sp!,{r4,lr}
+00658b44  bl 0x0066ffa0
+00658b48  ldr r1,[0x658b64]
+00658b4c  str r1,[r0,#0x0]
+00658b50  mov r1,#0x0
+00658b54  str r1,[r0,#0x60]
+00658b58  str r1,[r0,#0x64]
+00658b5c  strb r1,[r0,#0x68]
+00658b60  ldmia sp!,{r4,pc}

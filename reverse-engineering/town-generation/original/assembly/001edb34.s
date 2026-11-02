@@ -1,0 +1,10 @@
+001edb34  cpy r0,r0
+001edb38  stmdb sp!,{r4,r5,r6,lr}
+001edb3c  mov r5,#0x0
+001edb40  cpy r4,r0
+001edb44  str r5,[r0,#0x4]
+001edb48  str r5,[r0,#0x8]!
+001edb4c  add r0,r0,#0x4
+001edb50  bl 0x002d5734
+001edb54  strh r5,[r4,#0x22]
+001edb58  ldmia sp!,{r4,r5,r6,pc}

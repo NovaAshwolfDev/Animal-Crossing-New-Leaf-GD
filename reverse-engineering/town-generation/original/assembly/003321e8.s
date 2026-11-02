@@ -1,0 +1,11 @@
+003321e8  stmdb sp!,{r3,r4,r5,lr}
+003321ec  cpy r4,r0
+003321f0  ldr r1,[0x332214]
+003321f4  cpy r0,sp
+003321f8  bl 0x00756d40
+003321fc  cpy r1,r0
+00332200  cpy r0,r4
+00332204  bl 0x00756eb0
+00332208  cpy r0,sp
+0033220c  cpy r0,r0
+00332210  ldmia sp!,{r3,r4,r5,pc}

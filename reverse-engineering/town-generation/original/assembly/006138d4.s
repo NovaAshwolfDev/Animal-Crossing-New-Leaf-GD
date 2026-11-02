@@ -1,0 +1,14 @@
+006138d4  cmp r1,#0xa
+006138d8  stmdb sp!,{r4,lr}
+006138dc  bcs 0x00613904
+006138e0  ldr r2,[0x61390c]
+006138e4  mul r1,r1,r2
+006138e8  adds r4,r0,r1, lsl #0x3
+006138ec  beq 0x00613904
+006138f0  cpy r0,r4
+006138f4  bl 0x007f3768
+006138f8  cmp r0,#0x0
+006138fc  cpyne r0,r4
+00613900  bne 0x00613908
+00613904  mov r0,#0x0
+00613908  ldmia sp!,{r4,pc}

@@ -1,0 +1,13 @@
+007acd1c  ldr r2,[r0,#0x4]
+007acd20  cmp r2,#0x0
+007acd24  ldrne r2,[r1,#0x4]
+007acd28  cmpne r2,#0x0
+007acd2c  beq 0x007acd44
+007acd30  ldr r0,[r0,#0x0]
+007acd34  ldr r1,[r1,#0x0]
+007acd38  cmp r0,r1
+007acd3c  moveq r0,#0x1
+007acd40  beq 0x007acd48
+007acd44  mov r0,#0x0
+007acd48  eor r0,r0,#0x1
+007acd4c  bx lr

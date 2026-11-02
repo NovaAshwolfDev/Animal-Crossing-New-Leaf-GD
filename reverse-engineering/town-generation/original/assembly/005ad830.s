@@ -1,0 +1,14 @@
+005ad830  mov r2,#0x0
+005ad834  str r2,[r0,#0x8]
+005ad838  str r2,[r0,#0xc]
+005ad83c  cpy r3,r2
+005ad840  add r12,r0,#0x14
+005ad844  strb r2,[r0,#0x10]
+005ad848  stmia r0,{r3,r12}
+005ad84c  add r3,r0,#0x18
+005ad850  ldr r12,[0x5ad868]
+005ad854  str r12,[r0,#0x14]
+005ad858  stmia r3,{r1,r2}
+005ad85c  ldr r1,[r1,#0x4]
+005ad860  strb r2,[r1,#0x0]
+005ad864  bx lr

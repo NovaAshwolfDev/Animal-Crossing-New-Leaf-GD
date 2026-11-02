@@ -1,0 +1,85 @@
+0061bdcc  stmdb sp!,{r4,r5,r6,r7,r8,lr}
+0061bdd0  cpy r5,r0
+0061bdd4  mov r4,#0x0
+0061bdd8  ldr r0,[0x61bf20]
+0061bddc  mul r0,r4,r0
+0061bde0  add r0,r5,r0, lsl #0x3
+0061bde4  bl 0x00620b00
+0061bde8  add r4,r4,#0x1
+0061bdec  cmp r4,#0xa
+0061bdf0  blt 0x0061bdd8
+0061bdf4  add r0,r5,#0x17000
+0061bdf8  mov r7,#0x0
+0061bdfc  str r7,[r0,#0x1b0]
+0061be00  str r7,[r0,#0x1b4]
+0061be04  add r0,r5,#0x17000
+0061be08  add r0,r0,#0x1b8
+0061be0c  bl 0x00627ba8
+0061be10  add r0,r5,#0x17000
+0061be14  add r0,r0,#0x264
+0061be18  bl 0x00628810
+0061be1c  ldr r0,[0x61bf24]
+0061be20  add r0,r0,r5
+0061be24  bl 0x00628810
+0061be28  add r0,r5,#0x17000
+0061be2c  add r0,r0,#0x2b0
+0061be30  bl 0x00626ef4
+0061be34  add r0,r5,#0x17000
+0061be38  add r0,r0,#0x30c
+0061be3c  bl 0x006264e0
+0061be40  ldr r0,[0x61bf28]
+0061be44  add r0,r0,r5
+0061be48  bl 0x00627138
+0061be4c  ldr r0,[0x61bf2c]
+0061be50  ldr r2,[0x61bf30]
+0061be54  mov r1,#0x8
+0061be58  add r0,r0,r5
+0061be5c  sub r0,r0,#0x2
+0061be60  subs r1,r1,#0x1
+0061be64  strh r2,[r0,#0x2]
+0061be68  strh r2,[r0,#0x4]!
+0061be6c  bne 0x0061be60
+0061be70  ldr r0,[0x61bf34]
+0061be74  add r6,r5,r0
+0061be78  cpy r0,r6
+0061be7c  bl 0x0069805c
+0061be80  mov r4,#0x0
+0061be84  rsb r0,r4,r4, lsl #0x4
+0061be88  add r0,r6,r0, lsl #0x4
+0061be8c  add r0,r0,#0x30
+0061be90  bl 0x00622390
+0061be94  add r4,r4,#0x1
+0061be98  cmp r4,#0x10
+0061be9c  bcc 0x0061be84
+0061bea0  add r0,r6,#0xf00
+0061bea4  add r0,r0,#0x46
+0061bea8  bl 0x002d5734
+0061beac  mvn r6,#0x0
+0061beb0  ldr r0,[0x61bf38]
+0061beb4  add r4,r5,#0x18400
+0061beb8  add r1,r6,r6, lsr #0x11
+0061bebc  strh r1,[r4,#0x9e]
+0061bec0  strb r6,[r0,r5]
+0061bec4  add r0,r5,#0x18000
+0061bec8  mov r1,#0x2a
+0061becc  add r0,r0,#0x4a0
+0061bed0  bl 0x002fff30
+0061bed4  ldr r0,[0x61bf3c]
+0061bed8  add r2,r0,#0x3
+0061bedc  orr r1,r0,r0, asr #0xf
+0061bee0  strb r7,[r0,r5]
+0061bee4  strb r6,[r1,r5]
+0061bee8  add r3,r0,#0x2
+0061beec  strb r6,[r2,r5]
+0061bef0  orr r12,r0,r0, asr #0xd
+0061bef4  ldr r0,[0x61bf40]
+0061bef8  strb r6,[r3,r5]
+0061befc  sub r1,r1,#0x33
+0061bf00  strb r7,[r12,r5]
+0061bf04  add r2,r1,#0x2
+0061bf08  strh r0,[r4,#0x96]
+0061bf0c  orr r3,r1,r1, asr #0xd
+0061bf10  strh r0,[r1,r5]
+0061bf14  strh r0,[r2,r5]
+0061bf18  strh r0,[r3,r5]
+0061bf1c  ldmia sp!,{r4,r5,r6,r7,r8,pc}

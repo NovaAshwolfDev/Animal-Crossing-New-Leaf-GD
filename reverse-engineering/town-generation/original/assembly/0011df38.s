@@ -1,0 +1,10 @@
+0011df38  stmdb sp!,{r4,lr}
+0011df3c  cpy r4,r0
+0011df40  ldr r0,[0x11df60]
+0011df44  bl 0x001218f0
+0011df48  vmov s1,r4
+0011df4c  vcvt.f32.s32 s1,s1
+0011df50  vmul.f32 s0,s0,s1
+0011df54  vcvt.s32.f32 s0,s0
+0011df58  vmov r0,s0
+0011df5c  ldmia sp!,{r4,pc}

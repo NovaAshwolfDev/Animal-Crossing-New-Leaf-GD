@@ -1,0 +1,9 @@
+007fe108  stmdb sp!,{r4,lr}
+007fe10c  bl 0x005a20f8
+007fe110  cmp r0,#0x0
+007fe114  moveq r0,#0x93
+007fe118  beq 0x007fe128
+007fe11c  ldrb r0,[r0,#0xa]
+007fe120  cmp r0,#0x93
+007fe124  movcs r0,#0x0
+007fe128  ldmia sp!,{r4,pc}

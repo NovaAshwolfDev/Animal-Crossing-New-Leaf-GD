@@ -1,0 +1,27 @@
+007e206c  stmdb sp!,{r4,r5,r6,r7,lr}
+007e2070  sub sp,sp,#0xc
+007e2074  cpy r4,r0
+007e2078  cpy r7,r1
+007e207c  cpy r6,r2
+007e2080  cpy r0,sp
+007e2084  stmia r0,{r1,r2}
+007e2088  cpy r1,r0
+007e208c  cpy r0,r4
+007e2090  bl 0x007dca50
+007e2094  cpy r5,r0
+007e2098  cpy r0,sp
+007e209c  cpy r0,r0
+007e20a0  cmp r5,#0x0
+007e20a4  ldrne r0,[r4,#0x24]
+007e20a8  cmpne r0,#0x0
+007e20ac  moveq r0,#0x0
+007e20b0  beq 0x007e20d0
+007e20b4  cpy r0,r4
+007e20b8  bl 0x007dca3c
+007e20bc  mla r0,r6,r0,r7
+007e20c0  ldr r1,[0x7e20d8]
+007e20c4  ldr r2,[r4,#0x24]
+007e20c8  mul r0,r0,r1
+007e20cc  add r0,r2,r0, lsl #0x2
+007e20d0  add sp,sp,#0xc
+007e20d4  ldmia sp!,{r4,r5,r6,r7,pc}

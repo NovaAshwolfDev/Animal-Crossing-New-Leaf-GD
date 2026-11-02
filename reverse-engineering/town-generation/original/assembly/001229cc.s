@@ -1,0 +1,9 @@
+001229cc  stmdb sp!,{r0,r4}
+001229d0  ldr r0,[sp,#0x8]
+001229d4  ldr r4,[sp,#0xc]
+001229d8  swi 0x25
+001229dc  ldr r2,[sp,#0x0]
+001229e0  str r1,[r2,#0x0]
+001229e4  add sp,sp,#0x4
+001229e8  ldr r4,[sp],#0x4
+001229ec  bx lr

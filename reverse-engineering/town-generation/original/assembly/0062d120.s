@@ -1,0 +1,31 @@
+0062d120  stmdb sp!,{r4,lr}
+0062d124  cpy r4,r0
+0062d128  bl 0x00689d10
+0062d12c  cmp r0,#0x0
+0062d130  bne 0x0062d194
+0062d134  cpy r0,r4
+0062d138  bl 0x002d5e74
+0062d13c  cmp r0,#0x0
+0062d140  beq 0x0062d158
+0062d144  bl 0x00636e3c
+0062d148  cpy r1,r4
+0062d14c  ldmia sp!,{r4,lr}
+0062d150  add r0,r0,#0x20
+0062d154  b 0x002d57dc
+0062d158  cpy r0,r4
+0062d15c  bl 0x002d5e58
+0062d160  cmp r0,#0x0
+0062d164  nop
+0062d168  beq 0x0062d194
+0062d16c  cpy r0,r4
+0062d170  bl 0x002d589c
+0062d174  cmp r0,#0x4
+0062d178  nop
+0062d17c  bcs 0x0062d194
+0062d180  ldr r1,[0x62d19c]
+0062d184  mul r0,r0,r1
+0062d188  ldr r1,[0x62d1a0]
+0062d18c  add r0,r1,r0, lsl #0x4
+0062d190  ldmia sp!,{r4,pc}
+0062d194  mov r0,#0x0
+0062d198  ldmia sp!,{r4,pc}

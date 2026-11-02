@@ -1,0 +1,25 @@
+00110b20  stmdb sp!,{r4,r5,r6,r7,r8,r9,lr}
+00110b24  cpy r7,r0
+00110b28  cpy r0,r1
+00110b2c  cpy r1,r2
+00110b30  cpy r2,r3
+00110b34  add r3,sp,#0x1c
+00110b38  ldr r4,[sp,#0x28]
+00110b3c  ldmia r3,{r5,r8}
+00110b40  ldr r6,[sp,#0x24]
+00110b44  bl 0x00116c18
+00110b48  cpy r9,r0
+00110b4c  ldr r0,[0x110b84]
+00110b50  ldr r1,[0x110b88]
+00110b54  mov r2,#0x3e8
+00110b58  mov r12,r4, asr #0x1f
+00110b5c  smull r3,r0,r8,r0
+00110b60  smlal r4,r12,r5,r1
+00110b64  smlal r3,r0,r6,r2
+00110b68  ldr r8,[0x110b8c]
+00110b6c  adds r1,r3,r4
+00110b70  adc r0,r0,r12
+00110b74  smlal r1,r0,r9,r8
+00110b78  str r0,[r7,#0x4]
+00110b7c  str r1,[r7,#0x0]
+00110b80  ldmia sp!,{r4,r5,r6,r7,r8,r9,pc}

@@ -1,0 +1,11 @@
+0027461c  ldr r1,[0x274648]
+00274620  stmdb sp!,{r4,lr}
+00274624  str r1,[r0],#0xc8
+00274628  cpy r0,r0
+0027462c  sub r0,r0,#0xc
+00274630  cpy r0,r0
+00274634  sub r0,r0,#0xc
+00274638  cpy r0,r0
+0027463c  ldmia sp!,{r4,lr}
+00274640  sub r0,r0,#0xb0
+00274644  b 0x0064ced8

@@ -1,0 +1,10 @@
+00100c5c  push {r4,lr}
+00100c5e  movs r4,r0
+00100c60  ldr r0,[r2,#0x0]
+00100c62  movs r1,r4
+00100c64  bl 0x002fe6d8
+00100c68  movs r2,r0
+00100c6a  movs r3,#0x0
+00100c6c  movs r0,r4
+00100c6e  bl 0x00100c18
+00100c72  pop {r4,pc}

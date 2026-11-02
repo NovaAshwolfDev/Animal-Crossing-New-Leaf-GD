@@ -1,0 +1,13 @@
+0011dfac  cmp r1,#0x0
+0011dfb0  ldrne r0,[r0,#0x4]
+0011dfb4  cmpne r0,#0x0
+0011dfb8  beq 0x0011dfd8
+0011dfbc  cmp r0,r1
+0011dfc0  bne 0x0011dfcc
+0011dfc4  mov r0,#0x1
+0011dfc8  bx lr
+0011dfcc  ldr r0,[r0,#0x8]
+0011dfd0  cmp r0,#0x0
+0011dfd4  bne 0x0011dfbc
+0011dfd8  mov r0,#0x0
+0011dfdc  bx lr

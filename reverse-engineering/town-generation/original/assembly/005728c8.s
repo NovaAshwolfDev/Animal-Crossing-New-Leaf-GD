@@ -1,0 +1,10 @@
+005728c8  ldr r0,[0x5728f0]
+005728cc  stmdb sp!,{r4,lr}
+005728d0  ldr r4,[r0,#0x0]
+005728d4  cpy r0,r4
+005728d8  bl 0x007c7cd8
+005728dc  cmp r0,#0x0
+005728e0  cpyne r0,r4
+005728e4  blne 0x00123be0
+005728e8  ldmia sp!,{r4,lr}
+005728ec  b 0x00444f04

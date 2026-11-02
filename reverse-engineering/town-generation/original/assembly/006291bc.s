@@ -1,0 +1,13 @@
+006291bc  ldr r2,[0x6291f0]
+006291c0  mov r12,#0xc
+006291c4  mov r1,#0x0
+006291c8  ldr r3,[r2,r1,lsl #0x2]
+006291cc  cmp r0,r3
+006291d0  bge 0x006291dc
+006291d4  and r12,r1,#0xff
+006291d8  b 0x006291e8
+006291dc  add r1,r1,#0x1
+006291e0  cmp r1,#0xc
+006291e4  blt 0x006291c8
+006291e8  cpy r0,r12
+006291ec  bx lr

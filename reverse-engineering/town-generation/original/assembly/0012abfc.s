@@ -1,0 +1,11 @@
+0012abfc  cpy r12,r0
+0012ac00  ldr r0,[0x12ac28]
+0012ac04  cpy r2,r1
+0012ac08  ldr r0,[r0,#0x4]
+0012ac0c  cmp r0,#0x0
+0012ac10  beq 0x0012ac24
+0012ac14  ldr r1,[r0,#0x0]
+0012ac18  ldr r3,[r1,#0x0]
+0012ac1c  cpy r1,r12
+0012ac20  bx r3
+0012ac24  bx lr

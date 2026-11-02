@@ -1,0 +1,13 @@
+0011e318  stmdb sp!,{r4,lr}
+0011e31c  cpy r4,r0
+0011e320  ldrb r0,[r0,#0x0]
+0011e324  cmp r0,#0x0
+0011e328  beq 0x0011e338
+0011e32c  add r0,r4,#0x14
+0011e330  bl 0x00121a94
+0011e334  b 0x0011e340
+0011e338  add r0,r4,#0x4
+0011e33c  bl 0x00121940
+0011e340  mov r0,#0x0
+0011e344  strb r0,[r4,#0x1]
+0011e348  ldmia sp!,{r4,pc}

@@ -1,0 +1,11 @@
+007aae1c  stmdb sp!,{r4,lr}
+007aae20  ldrh r1,[r0,#0x0]
+007aae24  cmp r1,#0x0
+007aae28  beq 0x007aae40
+007aae2c  add r0,r0,#0x16
+007aae30  bl 0x008028d0
+007aae34  cmp r0,#0x0
+007aae38  movne r0,#0x1
+007aae3c  bne 0x007aae44
+007aae40  mov r0,#0x0
+007aae44  ldmia sp!,{r4,pc}

@@ -1,0 +1,14 @@
+0011f998  stmdb sp!,{r4,lr}
+0011f99c  cpy r4,r0
+0011f9a0  mrc p15,0x0,r0,cr13,cr0,0x3
+0011f9a4  ldr r1,[r4,#0x4]
+0011f9a8  cmp r0,r1
+0011f9ac  beq 0x0011f9c0
+0011f9b0  cpy r0,r4
+0011f9b4  bl 0x001165e8
+0011f9b8  mrc p15,0x0,r0,cr13,cr0,0x3
+0011f9bc  str r0,[r4,#0x4]
+0011f9c0  ldr r0,[r4,#0x8]
+0011f9c4  add r0,r0,#0x1
+0011f9c8  str r0,[r4,#0x8]
+0011f9cc  ldmia sp!,{r4,pc}

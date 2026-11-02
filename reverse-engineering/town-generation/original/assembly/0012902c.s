@@ -1,0 +1,19 @@
+0012902c  cmp r0,#0x4
+00129030  ldrcs r0,[0x129048]
+00129034  bcs 0x00129044
+00129038  mov r1,#0x1
+0012903c  mov r0,r1, lsl r0
+00129040  b 0x0012ac2c
+00129044  bx lr
+0012ac2c  stmdb sp!,{r4,lr}
+0012ac30  mrc p15,0x0,r4,cr13,cr0,0x3
+0012ac34  ldr r1,[0x12ac5c]
+0012ac38  str r1,[r4,#0x80]!
+0012ac3c  str r0,[r4,#0x4]
+0012ac40  ldr r0,[0x12ac60]
+0012ac44  ldr r0,[r0,#0x0]
+0012ac48  swi 0x32
+0012ac4c  and r1,r0,#0x80000000
+0012ac50  cmp r1,#0x0
+0012ac54  ldrge r0,[r4,#0x4]
+0012ac58  ldmia sp!,{r4,pc}

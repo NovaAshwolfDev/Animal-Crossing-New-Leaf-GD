@@ -1,0 +1,20 @@
+0010f710  stmdb sp!,{r4,lr}
+0010f714  movs r4,r1, asr #0x1
+0010f718  eor r4,r4,r3, lsr #0x1
+0010f71c  bpl 0x0010f728
+0010f720  rsbs r0,r0,#0x0
+0010f724  rsc r1,r1,#0x0
+0010f728  tst r3,r3
+0010f72c  bpl 0x0010f738
+0010f730  rsbs r2,r2,#0x0
+0010f734  rsc r3,r3,#0x0
+0010f738  bl 0x00115920
+0010f73c  tst r4,#0x40000000
+0010f740  beq 0x0010f74c
+0010f744  rsbs r0,r0,#0x0
+0010f748  rsc r1,r1,#0x0
+0010f74c  tst r4,#0x80000000
+0010f750  beq 0x0010f75c
+0010f754  rsbs r2,r2,#0x0
+0010f758  rsc r3,r3,#0x0
+0010f75c  ldmia sp!,{r4,pc}

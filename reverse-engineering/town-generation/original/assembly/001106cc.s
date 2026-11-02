@@ -1,0 +1,21 @@
+001106cc  stmdb sp!,{r4,r5,r6,lr}
+001106d0  cpy r4,r0
+001106d4  cpy r5,r1
+001106d8  bl 0x001110ec
+001106dc  movs r0,r0, lsr #0x1f
+001106e0  blne 0x0011afc4
+001106e4  ldr r0,[r4,#0x0]
+001106e8  cmp r0,#0x0
+001106ec  ldrne r0,[0x110720]
+001106f0  bne 0x0011071c
+001106f4  cpy r0,r5
+001106f8  bl 0x00301bac
+001106fc  cpy r2,r0
+00110700  mov r3,#0x0
+00110704  cpy r1,r5
+00110708  cpy r0,r4
+0011070c  bl 0x00111154
+00110710  and r1,r0,#0x80000000
+00110714  cmp r1,#0x0
+00110718  ldrlt r0,[0x110724]
+0011071c  ldmia sp!,{r4,r5,r6,pc}

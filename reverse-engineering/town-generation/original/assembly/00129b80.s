@@ -1,0 +1,12 @@
+00129b80  movs r2,#0x0
+00129b84  rsbs r3,r1,r0, lsr #0x2
+00129b88  bcc 0x0030093c
+00129b8c  rsbs r3,r1,r0, lsr #0x5
+00129b90  bcc 0x00300918
+00129b94  rsbs r3,r1,r0, lsr #0x8
+00129b98  bcc 0x003008f4
+00129b9c  rsbs r3,r1,r0, lsr #0xc
+00129ba0  bcc 0x003008c0
+00129ba4  rsbs r3,r1,r0, lsr #0x10
+00129ba8  bcc 0x00300890
+00129bac  b 0x00300868

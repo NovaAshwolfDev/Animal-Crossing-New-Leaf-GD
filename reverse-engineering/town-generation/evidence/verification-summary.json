@@ -1,0 +1,73 @@
+{
+  "status": "all included differential suites passed",
+  "scope": "RNGs, seed setup, template/variant selection, full terrain phase, fixed record readers, one candidate-position checker; not full town generation",
+  "reports": {
+    "acre-verification.json": {
+      "executable_sha256": "1ca065692824c8b95c57cc7dfdcb99a517302139b5beab0bcb4415db2de36b04",
+      "template_expansion_cases": 112,
+      "variant_selection_cases": 1024,
+      "result": "all matched original ARM execution",
+      "runtime_initialization": "static rectangle initialized to [0,0,6,5]; platform guard marked initialized"
+    },
+    "field-template-verification.json": {
+      "executable_sha256": "1ca065692824c8b95c57cc7dfdcb99a517302139b5beab0bcb4415db2de36b04",
+      "cases": 1686,
+      "acre_tables": {
+        "field": 356,
+        "structures": 261
+      },
+      "records": {
+        "field": 2079,
+        "structures": 69
+      },
+      "result": "counts, payload bytes, capacity checks, and untouched output bytes matched original ARM execution",
+      "scope": "fixed per-acre records; randomized placement and collision checks remain separate"
+    },
+    "placement-checker-verification.json": {
+      "executable_sha256": "1ca065692824c8b95c57cc7dfdcb99a517302139b5beab0bcb4415db2de36b04",
+      "function": "0x005893d4",
+      "cases": 3888,
+      "accepted_positions": 152,
+      "result": "predicate, callback return, coordinate allocation, and output list update matched original ARM execution",
+      "runtime_initialization": "static 16x16 bounds initialized; synthetic tile data; only allocator at 0x5ca634 replaced with a fixed valid allocation",
+      "scope": "one structure-0x5c candidate checker; does not verify full placement or town generation"
+    },
+    "rng-verification.json": {
+      "executable_sha256": "1ca065692824c8b95c57cc7dfdcb99a517302139b5beab0bcb4415db2de36b04",
+      "seed_cases": 512,
+      "next_calls": 32768,
+      "state_comparisons": 33280,
+      "result": "all matched original ARM execution"
+    },
+    "seed-setup-verification.json": {
+      "executable_sha256": "1ca065692824c8b95c57cc7dfdcb99a517302139b5beab0bcb4415db2de36b04",
+      "global_float_outputs": 16384,
+      "complete_candidate_seed_setup_cases": 512,
+      "compared": [
+        "float return bits",
+        "global RNG state",
+        "four candidate seeds",
+        "four coastline bytes"
+      ],
+      "result": "all matched original ARM/VFP execution",
+      "runtime_initialization": "VFP enabled, FPSCR round-to-nearest; caller-supplied initial global RNG state"
+    },
+    "terrain-verification.json": {
+      "executable_sha256": "1ca065692824c8b95c57cc7dfdcb99a517302139b5beab0bcb4415db2de36b04",
+      "function": "0x00593474",
+      "cases": 524,
+      "templates_observed": {
+        "left": 56,
+        "right": 56
+      },
+      "compared": [
+        "all 42 final acre IDs",
+        "all four RNG state words",
+        "ocean side byte"
+      ],
+      "result": "all matched original ARM execution",
+      "runtime_initialization": "static rectangle [0,0,6,5] initialized; no generation calls hooked",
+      "scope": "terrain phase only; no buildings, trees, rocks, villagers, or candidate rejection"
+    }
+  }
+}

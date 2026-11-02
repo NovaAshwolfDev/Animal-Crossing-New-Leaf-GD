@@ -1,0 +1,13 @@
+0010b7dc  stmdb sp!,{r4,lr}
+0010b7e0  ldrsh r12,[r1,#0xa]
+0010b7e4  ldrsb r3,[r1,#0x8]
+0010b7e8  ldrsb r4,[r1,#0x9]
+0010b7ec  ldrsb r2,[r1,#0x7]
+0010b7f0  sub sp,sp,#0x10
+0010b7f4  stmia sp,{r2,r3,r4,r12}
+0010b7f8  ldrsb r3,[r1,#0x5]
+0010b7fc  ldrsb r2,[r1,#0x4]
+0010b800  ldr r1,[r1,#0x0]
+0010b804  bl 0x00110b20
+0010b808  add sp,sp,#0x10
+0010b80c  ldmia sp!,{r4,pc}

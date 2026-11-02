@@ -1,0 +1,107 @@
+006b08b8  stmdb sp!,{r4,r5,r6,r7,r8,lr}
+006b08bc  cmp r1,#0x9
+006b08c0  cpy r7,r0
+006b08c4  cpy r6,r3
+006b08c8  mov r4,#0x1
+006b08cc  mov r5,#0x3
+006b08d0  ldrcc pc,[pc,r1,lsl #0x2]
+006b08d4  b 0x006b0a78
+006b08fc  nop
+006b0900  bl 0x001bcf64
+006b0904  nop
+006b0908  nop
+006b090c  b 0x006b0a28
+006b0910  nop
+006b0914  bl 0x001bcf64
+006b0918  movs r4,r0
+006b091c  nop
+006b0920  bne 0x006b0a78
+006b0924  cpy r0,r7
+006b0928  bl 0x001bd1f0
+006b092c  movs r4,r0
+006b0930  nop
+006b0934  bne 0x006b0a78
+006b0938  b 0x006b0a44
+006b093c  nop
+006b0940  bl 0x001bd1f0
+006b0944  cpy r4,r0
+006b0948  nop
+006b094c  b 0x006b0a78
+006b0950  nop
+006b0954  bl 0x001bcf64
+006b0958  movs r4,r0
+006b095c  nop
+006b0960  bne 0x006b0a78
+006b0964  cpy r0,r7
+006b0968  bl 0x001bd1f0
+006b096c  movs r4,r0
+006b0970  nop
+006b0974  bne 0x006b0a78
+006b0978  b 0x006b09d8
+006b097c  nop
+006b0980  bl 0x0062ef88
+006b0984  cmp r0,#0x0
+006b0988  nop
+006b098c  beq 0x006b0a78
+006b0990  add r0,r0,#0x6c00
+006b0994  add r0,r0,#0x338
+006b0998  cpy r8,r0
+006b099c  bl 0x007bcf30
+006b09a0  cmp r0,#0x0
+006b09a4  nop
+006b09a8  blt 0x006b09c4
+006b09ac  cpy r1,r7
+006b09b0  cpy r0,r8
+006b09b4  bl 0x003633f0
+006b09b8  nop
+006b09bc  nop
+006b09c0  b 0x006b0a78
+006b09c4  cpy r0,r7
+006b09c8  bl 0x001bcf64
+006b09cc  movs r4,r0
+006b09d0  nop
+006b09d4  bne 0x006b0a78
+006b09d8  mov r5,#0x2
+006b09dc  b 0x006b0a78
+006b09e0  nop
+006b09e4  bl 0x001bcf64
+006b09e8  movs r4,r0
+006b09ec  nop
+006b09f0  beq 0x006b0a20
+006b09f4  b 0x006b0a78
+006b09f8  cmp r2,#0x1
+006b09fc  beq 0x006b0a0c
+006b0a00  cmp r2,#0x0
+006b0a04  beq 0x006b0a30
+006b0a08  b 0x006b0a78
+006b0a0c  nop
+006b0a10  bl 0x001bcf64
+006b0a14  movs r4,r0
+006b0a18  nop
+006b0a1c  bne 0x006b0a78
+006b0a20  cpy r0,r7
+006b0a24  bl 0x001bd1f0
+006b0a28  cpy r4,r0
+006b0a2c  b 0x006b0a78
+006b0a30  nop
+006b0a34  bl 0x001bd1f0
+006b0a38  movs r4,r0
+006b0a3c  nop
+006b0a40  bne 0x006b0a78
+006b0a44  mov r5,#0x1
+006b0a48  b 0x006b0a78
+006b0a4c  nop
+006b0a50  bl 0x001bd1f0
+006b0a54  movs r4,r0
+006b0a58  nop
+006b0a5c  bne 0x006b0a78
+006b0a60  b 0x006b09d8
+006b0a64  nop
+006b0a68  bl 0x001bcf64
+006b0a6c  movs r4,r0
+006b0a70  nop
+006b0a74  beq 0x006b09d8
+006b0a78  cmp r6,#0x0
+006b0a7c  cpy r0,r4
+006b0a80  strbne r5,[r6,#0x0]
+006b0a84  ldmia sp!,{r4,r5,r6,r7,r8,pc}

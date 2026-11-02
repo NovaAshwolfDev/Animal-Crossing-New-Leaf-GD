@@ -1,0 +1,10 @@
+007dc958  str r4,[sp,#-0x4]!
+007dc95c  ldr r3,[r1,#0x0]
+007dc960  ldmia r2,{r4,r12}
+007dc964  ldr r1,[r1,#0x4]
+007dc968  add r2,r3,r4
+007dc96c  add r1,r1,r12
+007dc970  str r1,[r0,#0x4]
+007dc974  str r2,[r0,#0x0]
+007dc978  ldr r4,[sp],#0x4
+007dc97c  bx lr

@@ -1,0 +1,15 @@
+00404cf0  stmdb sp!,{r4,r5,r6,r7,r8,lr}
+00404cf4  add r6,r0,#0x40
+00404cf8  cmp r0,r6
+00404cfc  add r5,r0,#0x40
+00404d00  cpy r4,r0
+00404d04  movcc r7,#0x0
+00404d08  bcs 0x00404d28
+00404d0c  ldr r1,[0x404d2c]
+00404d10  cpy r0,r4
+00404d14  bl 0x00756eb0
+00404d18  add r4,r4,#0x4
+00404d1c  cmp r4,r6
+00404d20  strb r7,[r5],#0x1
+00404d24  bcc 0x00404d0c
+00404d28  ldmia sp!,{r4,r5,r6,r7,r8,pc}

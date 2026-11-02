@@ -1,0 +1,51 @@
+00697944  stmdb sp!,{r4,r5,r6,r7,r8,lr}
+00697948  mov r1,#0x2
+0069794c  cpy r7,r0
+00697950  mov r0,#0x3
+00697954  strb r1,[r7,#0x0]
+00697958  strb r0,[r7,#0x1]
+0069795c  mov r6,#0x0
+00697960  strb r0,[r7,#0x2]
+00697964  rsb r0,r6,r6, lsl #0x3
+00697968  mov r4,#0x0
+0069796c  add r5,r7,r0, lsl #0x1
+00697970  add r0,r5,r4, lsl #0x1
+00697974  add r0,r0,#0x4
+00697978  bl 0x00697420
+0069797c  add r4,r4,#0x1
+00697980  cmp r4,#0x7
+00697984  bcc 0x00697970
+00697988  add r6,r6,#0x1
+0069798c  cmp r6,#0x6
+00697990  bcc 0x00697964
+00697994  mov r6,#0x0
+00697998  mov r4,#0x0
+0069799c  add r0,r6,r6, lsl #0x2
+006979a0  add r5,r7,r0, lsl #0xa
+006979a4  add r0,r5,r4, lsl #0xa
+006979a8  add r0,r0,#0x58
+006979ac  bl 0x0079762c
+006979b0  add r4,r4,#0x1
+006979b4  cmp r4,#0x5
+006979b8  bcc 0x006979a4
+006979bc  add r6,r6,#0x1
+006979c0  cmp r6,#0x4
+006979c4  bcc 0x00697998
+006979c8  mov r6,#0x0
+006979cc  mov r4,#0x0
+006979d0  add r0,r6,r6, lsl #0x2
+006979d4  add r5,r7,r0, lsl #0x8
+006979d8  add r0,r5,r4, lsl #0x8
+006979dc  add r0,r0,#0x5000
+006979e0  add r0,r0,#0x58
+006979e4  bl 0x00128410
+006979e8  add r4,r4,#0x1
+006979ec  cmp r4,#0x5
+006979f0  bcc 0x006979d8
+006979f4  add r6,r6,#0x1
+006979f8  cmp r6,#0x4
+006979fc  bcc 0x006979cc
+00697a00  add r0,r7,#0x4000
+00697a04  ldmia sp!,{r4,r5,r6,r7,r8,lr}
+00697a08  add r0,r0,#0x2480
+00697a0c  cpy r0,r0

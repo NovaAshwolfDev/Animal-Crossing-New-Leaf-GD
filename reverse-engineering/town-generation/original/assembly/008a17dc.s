@@ -1,0 +1,15 @@
+008a17dc  add r1,r0,#0xc
+008a17e0  str r1,[r0,#0x4]
+008a17e4  mov r2,#0x20
+008a17e8  ldr r1,[0x8a1818]
+008a17ec  str r2,[r0,#0x8]
+008a17f0  ldr r1,[r0,#0x4]
+008a17f4  mov r3,#0x0
+008a17f8  sub r1,r1,#0x1
+008a17fc  strb r3,[r2,r1]
+008a1800  ldr r1,[r0,#0x4]
+008a1804  ldr r2,[0x8a181c]
+008a1808  strb r3,[r1,#0x0]
+008a180c  ldr r1,[0x8a1820]
+008a1810  str r1,[r0,#0x0]
+008a1814  bx lr

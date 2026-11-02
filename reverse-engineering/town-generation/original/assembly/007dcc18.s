@@ -1,0 +1,15 @@
+007dcc18  ldrb r1,[r0,#0x14]
+007dcc1c  cmp r1,#0x4b
+007dcc20  bcs 0x007dcc4c
+007dcc24  cmp r1,#0x0
+007dcc28  beq 0x007dcc4c
+007dcc2c  ldrb r0,[r0,#0x1c]
+007dcc30  and r0,r0,#0xf
+007dcc34  cmp r0,#0x6
+007dcc38  bcs 0x007dcc4c
+007dcc3c  cmp r0,#0x4
+007dcc40  cmpne r0,#0x5
+007dcc44  moveq r0,#0x1
+007dcc48  beq 0x007dcc50
+007dcc4c  mov r0,#0x0
+007dcc50  bx lr

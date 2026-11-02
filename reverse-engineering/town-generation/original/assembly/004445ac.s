@@ -1,0 +1,32 @@
+004445ac  stmdb sp!,{r3,r4,r5,r6,r7,lr}
+004445b0  cpy r5,r0
+004445b4  ldr r6,[0x44462c]
+004445b8  ldr r0,[r6,#0x0]
+004445bc  cmp r0,#0x0
+004445c0  ldreq r0,[0x444630]
+004445c4  beq 0x00444618
+004445c8  mov r1,#0x0
+004445cc  add r4,r5,#0x18
+004445d0  cpy r0,sp
+004445d4  str r1,[sp,#0x0]
+004445d8  bl 0x00136cfc
+004445dc  movs r1,r0, lsr #0x1f
+004445e0  bne 0x004445f0
+004445e4  ldr r0,[sp,#0x0]
+004445e8  str r0,[r4,#0x0]
+004445ec  mov r0,#0x0
+004445f0  cpy r4,r0
+004445f4  and r0,r0,#0x7e00000
+004445f8  cmp r0,#0x600000
+004445fc  beq 0x0044460c
+00444600  movs r1,r4, lsr #0x1f
+00444604  cpy r0,r4
+00444608  blne 0x00123b70
+0044460c  ldr r1,[r6,#0x0]
+00444610  cpy r0,r4
+00444614  str r1,[r5,#0x14]
+00444618  movs r1,r0, lsr #0x1f
+0044461c  beq 0x00444628
+00444620  ldmia sp!,{r3,r4,r5,r6,r7,lr}
+00444624  b 0x00123b70
+00444628  ldmia sp!,{r3,r4,r5,r6,r7,pc}
